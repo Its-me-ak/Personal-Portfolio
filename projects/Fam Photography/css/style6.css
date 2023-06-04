@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+}
+
+html {
+    font-size: 10px;
+}
+
+.container_fluid {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    background-color: #202020;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.row {
+    width: 100%;
+    height: 100%;
+}
+
+/* header  */
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+}
+
+.header_item {
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 20%;
+    height: 100px;
+    /* background-color: #567; */
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    width: 60%;
+    height: 100px;
+    /* background-color: #906; */
+}
+
+#checkbtn {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    display: none;
+    cursor: pointer;
+    font-size: 3rem;
+    color: #AAD305;
+}
+
+#check {
+    display: none;
+}
+
+.menu ul {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-bottom: 1rem;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: transparent;
+    padding: 1rem 1.8rem;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.2s all;
+}
+
+.menu ul li a:hover {
+    background-color: #a9d305;
+    color: #111;
+    padding: 1rem 1.8rem;
+    transition: 0.2s all;
+}
+
+.active5 {
+    background-color: #a9d305 !important;
+    color: #111 !important;
+    padding: 1rem 1.8rem;
+    font-weight: 700 !important;
+}
+
+/* header end */
+/* about div */
+.about-padding {
+    padding: 3rem 0rem;
+}
+
+.about-main-div {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 550px;
+    column-gap: 3.5rem;
+}
+
+.about-left-content h1 {
+    margin-top: 1rem;
+    color: #a9d305;
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding-top: 2rem;
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
+
+.about-left-content h4 {
+    color: #B5B5B5;
+    font-size: 1.8rem;
+}
+
+.about-left-content h5 {
+    color: #B5B5B5;
+    font-size: 1.5rem;
+    padding-top: 1.4rem;
+}
+
+.about-left-content p {
+    color: #908B8B;
+    font-size: 1.5rem;
+    padding-top: 1.5rem;
+    line-height: 2.6rem;
+}
+
+.about-right-img {
+    margin-top: 3rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/blonde-girl-model-camera.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 3rem;
+    margin-bottom: 5rem;
+}
+
+/* about div end */
+/* footer */
+.footer {
+    width: 100%;
+    height: 80px;
+    background-color: #000000;
+}
+
+.footer_item {
+    width: 40%;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    /* margin-top: 3rem; */
+}
+
+.footer_item p {
+    font-size: 1.5rem;
+    color: #999;
+    padding-top: 1rem;
+}
+
+.footer_item a {
+    text-decoration: none;
+    color: #a9d305;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0rem .5rem;
+}
+
+.footer_icons i {
+    padding: 1rem 0.5rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.footer_icons i.fa-youtube {
+    color: #f51c0d;
+}
+
+.footer_icons i.fa-facebook-square {
+    color: #465993;
+}
+
+.footer_icons i.fa-instagram {
+    color: #973b5c;
+}
+
+.footer_icons i.fa-google-plus-g {
+    color: #ed4b39;
+}
+
+.footer_icons i.fa-twitter {
+    color: #76a9ea;
+}
+
+.footer_icons i.fa-linkedin {
+    color: #0078b7;
+}
+
+.footer_icons i.fa-pinterest {
+    color: #931927;
+}
+
+/* footer end */
+
+#check:checked~ul {
+    left: 0;
+    transition: 0.5s;
+}
+/* responsive */
+/* tablet */
+@media screen and (max-width:991px) {
+    .container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .header {
+        width: 100%;
+        height: 80px;
+    }
+
+    .logo img {
+        width: 100%;
+        height: 70px;
+    }
+
+    #checkbtn {
+        display: block;
+        font-size: 2.8rem;
+    }
+
+    .menu ul {
+        width: 100%;
+        height: 85vh;
+        background-color: #000;
+        display: block;
+        text-align: center;
+        position: absolute;
+        top: 75px;
+        left: -100%;
+        transition: 0.5s;
+        z-index: 1111;
+    }
+
+    .menu ul li {
+        line-height: 6rem;
+        margin-top: 1rem;
+    }
+
+    .about-main-div {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 500px);
+        padding: 0rem 3rem;
+    }
+
+    .about-right-img {
+        height: auto;
+        margin-right: 3rem;
+    }
+
+
+    .footer {
+        width: 100%;
+        /* height: 60px; */
+    }
+
+    .footer_item {
+        width: 80%;
+        /* height: 60px; */
+        flex-flow: column wrap;
+    }
+
+    .footer_item p {
+        font-size: 1.4rem;
+        color: #999;
+        padding-top: 1rem;
+    }
+
+    .footer_icons i {
+        font-size: 1.4rem;
+    }
+
+}
+
+/* mobile */
+@media screen and (max-width:576px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .header {
+        width: 100%;
+        height: 70px;
+    }
+
+    .logo img {
+        width: 100%;
+        height: 60px;
+    }
+
+    #checkbtn {
+        display: block;
+        font-size: 2.8rem;
+    }
+
+    .menu ul {
+        width: 100%;
+        height: 85vh;
+        background-color: #000;
+        display: block;
+        text-align: center;
+        position: absolute;
+        top: 70px;
+        left: -100%;
+        transition: 0.5s;
+        z-index: 1111;
+    }
+
+    .menu ul li {
+        line-height: 6rem;
+        margin-top: 1rem;
+    }
+
+    .about-main-div {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 500px);
+        padding: 0rem 2rem;
+
+    }
+
+    .about-right-img {
+        margin-right: 2rem;
+    }
+
+    .footer {
+        width: 100%;
+        /* height: 60px; */
+    }
+
+    .footer_item {
+        width: 100%;
+        /* height: 60px; */
+        flex-flow: row wrap;
+        padding: 0rem 1rem;
+    }
+
+    .footer_item p {
+        font-size: 1.2rem;
+        color: #999;
+        padding-top: 1rem;
+    }
+
+    .footer_icons i {
+        font-size: 1.2rem;
+    }
+}

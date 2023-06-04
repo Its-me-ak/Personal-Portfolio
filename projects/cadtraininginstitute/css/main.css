@@ -1,0 +1,1906 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --primary-color: #fff;
+    --secondary-color: #f0f1f1;
+    --contrast-color: #ff7350;
+    --btn-color: #ff7350;
+    --border-color: #ff7350;
+    --dark-text: #333;
+    --light-text: #777;
+    --title-color: #161616;
+    --blue-bg-text: #a3abb9;
+}
+
+html {
+    font-size: 10px;
+}
+
+body a {
+    text-decoration: none;
+}
+
+body h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+body h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+body h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+body p {
+    font-size: 1.6rem;
+    margin-bottom: 0;
+}
+
+/* header top */
+.header-top-bg {
+    background-color: #125774;
+    padding: 1.5rem 0rem;
+}
+
+.header-top-bg .header-social-icon span {
+    font-size: 1.6rem;
+    color: var(--blue-bg-text);
+}
+
+.social-link a {
+    text-decoration: none;
+    color: var(--blue-bg-text);
+    font-size: 1.6rem;
+    padding: 0 1rem;
+    transition: 0.2s;
+}
+
+.social-link a:hover {
+    color: var(--primary-color);
+}
+
+.header-phone-info,
+.header-mail-info,
+.header-location-info {
+    padding: 0 1.5rem;
+}
+
+.header-phone-info .phone-icon i,
+.header-mail-info .mail-icon i,
+.header-location-info .location-icon i {
+    height: 32px;
+    width: 32px;
+    border: 1px solid var(--blue-bg-text);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #919bad;
+    font-size: 1.2rem;
+}
+
+.header-phone-info .phone-title a,
+.header-mail-info .mail-title a,
+.header-location-info .location-title a {
+    font-size: 1.4rem;
+    padding-left: 1rem;
+    color: var(--blue-bg-text);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.header-phone-info .phone-title a:hover,
+.header-mail-info .mail-title a:hover,
+.header-location-info .location-title a:hover {
+    color: var(--primary-color);
+}
+
+/* header navbar */
+.navbar-toggler:focus{
+    outline: none !important;
+}
+.navbar{
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+}
+
+.navbar a.navbar-brand img{
+    max-width: 40%;
+}
+
+.navbar button{
+    border: 1px solid var(--contrast-color);
+    background: transparent;
+    outline: none;
+}
+
+.navbar button:focus{
+    outline: none !important;
+}
+
+ .navbar-collapse{
+    justify-content: end !important;
+}
+.navbar .nav-menu ul li {
+    padding: 0.5rem 2rem;
+}
+
+.navbar .nav-menu ul li a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #125774;
+    background-color: transparent;
+    text-transform: capitalize;
+    font-family: "Poppins", sans-serif;
+    transition: 0.3s;
+}
+
+.navbar .nav-menu ul li a:hover {
+    color: var(--contrast-color);
+}
+
+.navbar .nav-menu ul li a.active{
+    color: var(--contrast-color);
+}
+
+/* hero slider */
+.slide-bg {
+    width: 100%;
+}
+
+.slide-bg .slide {
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("../img/slide-2_0.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 15.5rem 0 15.5rem 8rem;
+}
+
+.slick-initialized .slide.slick-slide {
+    display: flex;
+}
+
+.slide-content {
+    max-width: 65rem;
+    padding: 2rem;
+}
+
+.slide-content span {
+    font-size: 1.5rem;
+    color: var(--contrast-color);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.slide-content h1 {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.slide-btn-wrap a {
+    text-decoration: none;
+    padding: 1.3rem 2.5rem;
+    background-color: var(--contrast-color);
+    color: var(--primary-color);
+    outline: 1px solid var(--primary-color);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-weight: 700;
+    border: none;
+    border-radius: 0px;
+    transition: 0.3s;
+}
+
+.slide-btn-wrap a:hover {
+    background-color: var(--primary-color);
+    color: var(--contrast-color);
+    outline-color: var(--primary-color);
+    outline-offset: 3px;
+}
+
+.slide-btn-wrap a.btn-transparent {
+    background-color: transparent;
+    outline-color: var(--primary-color);
+}
+
+.slide-btn-wrap a.btn-transparent:hover {
+    background-color: var(--primary-color);
+    color: var(--contrast-color);
+}
+
+/* backgroung padding */
+.white-main-bg {
+    padding: 7rem 0;
+}
+
+.contrast-main-bg {
+    padding: 7rem 0;
+    background-color: #f8f8f8;
+}
+
+.feature-main-bg {
+    background-color: #125774;
+    padding: 7rem 0;
+}
+
+/* feature area */
+.feature-area-bg {
+    padding: 0 0 6rem 0;
+    margin-top: -62px;
+    position: relative;
+}
+
+.single-feature {
+    text-align: center;
+    cursor: pointer;
+}
+
+.single-feature .feature-title {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1.65rem 0;
+    transition: 0.3s;
+}
+
+.single-feature:hover .feature-title {
+    background: var(--contrast-color);
+}
+
+.single-feature .feature-title h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.single-feature .feature-desc {
+    padding: 1rem;
+    background-color: var(--primary-color);
+    box-shadow: 0px 10px 30px 0px rgb(153 153 153 / 15%);
+}
+
+.single-feature .feature-desc p {
+    line-height: 2.8rem;
+    color: var(--light-text);
+    padding: 1rem 0;
+}
+
+.single-feature .join-wrap {
+    background-color: var(--light-text);
+    padding: 1rem;
+}
+
+.single-feature:hover .join-wrap {
+    background-color: var(--contrast-color);
+    color: var(--primary-color);
+}
+
+.single-feature .feature-desc a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.single-feature:hover .feature-desc a {
+    color: var(--primary-color);
+}
+
+/* About the institute */
+.about-institute-img img {
+    border-radius: 0rem 0rem 0rem 15rem;
+}
+
+.about-institute-content>span {
+    font-size: 1.5rem;
+    color: var(--contrast-color);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.about-institute-content h1 {
+    color: var(--title-color);
+}
+
+.about-institute-content p {
+    color: var(--light-text);
+    line-height: 2.8rem;
+}
+
+.institute-speacial .diploma-degree span h2,
+.institute-speacial .global-student span h2 {
+    font-size: 1.5rem;
+    background-color: var(--contrast-color);
+    padding: 1.5rem;
+    border-radius: 50%;
+    color: var(--primary-color);
+    margin-right: 1rem;
+}
+
+.institute-speacial .diploma-degree div h2,
+.institute-speacial .global-student div h2 {
+    font-size: 1.8rem;
+    color: var(--dark-text);
+    font-weight: 700;
+}
+
+.about-institute-link a {
+    padding: 1.5rem 2.5rem;
+    background-color: var(--contrast-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    text-transform: capitalize;
+    border-radius: 0px;
+}
+
+/* Select course */
+.course-heading span {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--contrast-color);
+    font-weight: 600;
+}
+
+.course-heading h1 {
+    color: var(--title-color);
+}
+
+.course-title {
+    padding: 2rem;
+    background-color: var(--primary-color);
+    box-shadow: 0px 10px 30px 0px rgb(153 153 153 / 15%);
+}
+
+.course-title a {
+    text-decoration: none;
+}
+
+.course-title a h3 {
+    font-size: 2rem;
+    color: var(--dark-text);
+}
+
+.course-title p {
+    color: var(--light-text);
+    line-height: 2.8rem;
+    margin-top: 6px;
+}
+
+.slick-slide {
+    padding: 1rem 1.5rem;
+}
+
+.slick-next.slick-arrow,
+.slick-prev.slick-arrow {
+    background-color: var(--contrast-color);
+}
+
+.slick-slide img{
+    display: inline-block !important;
+    overflow: none;
+}
+
+/* Our best features */
+.feature-content h2,
+.feature-content h3 {
+    color: var(--primary-color);
+}
+
+.feature-content p {
+    line-height: 2.8rem;
+    color: var(--blue-bg-text);
+}
+
+.feature-content .skilled-teacher span i,
+.feature-content .affordable-course span i,
+.feature-content .flexible span i {
+    color: #3db166;
+    font-size: 2rem;
+    padding-right: 1rem;
+    padding-top: 5px;
+}
+
+/* Accordion faqs and contact */
+.accordion-faqs p {
+    color: var(--light-text);
+    line-height: 2.8rem;
+}
+
+.accordion-item {
+    border: none;
+}
+
+.accordion-item h2 {
+    background-color: var(--contrast-color) !important;
+}
+
+.accordion-item h2 button {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 1.6rem 1rem;
+}
+
+.accordion-button {
+    border: none;
+    outline: none;
+}
+
+.accordion-button.collapsed {
+    background-color: #f3f3f3;
+    border: none;
+    outline: none;
+    color: var(--contrast-color);
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--primary-color) !important;
+    background-color: var(--contrast-color) !important;
+}
+
+.accordion-button:focus {
+    outline: none !important;
+}
+
+.accordion-body {
+    font-size: 1.5rem;
+    color: var(--light-text);
+    ;
+    line-height: 2.8rem;
+}
+
+.accordion-button{
+    --bs-accordion-btn-color: var(--contrast-color);
+    --bs-accordion-btn-bg: var(--bs-accordion-bg);
+}
+
+.faq-contact {
+    background-color: #f3f3f3;
+    padding: 4rem;
+}
+
+.faq-contact h3 {
+    color: var(--title-color);
+    font-weight: 700;
+}
+
+.faq-contact form input {
+    padding: 1.5rem 1rem;
+    background-color: var(--primary-color);
+    font-size: 1.5rem;
+    color: var(--light-text);
+    border-radius: 0px;
+    border: none;
+}
+
+.faq-contact form textarea {
+    padding: 1.5rem 1rem;
+    background-color: var(--primary-color);
+    font-size: 1.5rem;
+    color: var(--light-text);
+    resize: none;
+    border-radius: 0px;
+    outline: none;
+    border: none;
+}
+
+/* submit btn */
+.submit-btn {
+    background: #3db166;
+    border: none;
+    border-radius: 0px;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+/* Client feedback */
+.testimonial-heading span {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--contrast-color);
+    font-weight: 600;
+}
+
+.testimonial-heading h1 {
+    color: var(--title-color);
+}
+
+.testimonial-box {
+    background-color: var(--primary-color);
+    box-shadow: 0px 10px 30px 0px rgb(153 153 153 / 15%);
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.testimonial-box .testi-img img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-box span.star i {
+    font-size: 1.4rem;
+    padding: 0 4px;
+    color: var(--contrast-color);
+}
+
+.testimonial-box .testi-review {
+    font-size: 1.6rem;
+    color: var(--light-text);
+    line-height: 2.8rem;
+    margin: 1.5rem 0;
+}
+
+.testimonial-box .testi-name h2 {
+    font-size: 2rem;
+    color: var(--title-color);
+    font-weight: 700;
+}
+
+.testimonial-box .testi-name h6 {
+    font-size: 1.4rem;
+    color: var(--contrast-color);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Search courses */
+.courses-main-bg {
+    padding: 6rem 0rem;
+    background-color: #125774;
+}
+
+.search-course-form h1 {
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.search-course-form p {
+    color: var(--blue-bg-text);
+    line-height: 2.8rem;
+}
+
+.search-course-form input,
+.search-course-form select {
+    padding: 1.2rem 1rem;
+    font-size: 1.5rem;
+    color: var(--light-text);
+    border: none;
+    border-radius: 0px;
+}
+
+.search-course-form .search-course-btn {
+    width: 100%;
+    padding: 1.2rem 1rem;
+    text-align: center;
+    background-color: #3db166;
+    outline: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+/* Addmission and aid */
+.addmission-content p {
+    color: var(--light-text);
+    line-height: 2.8rem;
+    margin: 1rem 0 3rem;
+}
+
+.addmission-content a {
+    padding: 1.5rem 2.5rem;
+    background-color: var(--contrast-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    text-transform: capitalize;
+    border-radius: 5px;
+}
+
+/* Blogs */
+.blog.hide-desktop {
+    display: none;
+}
+
+.blog-heading span {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--contrast-color);
+    font-weight: 600;
+}
+
+.blog-heading h2 {
+    color: var(--title-color);
+}
+
+.blog-content {
+    background-color: var(--primary-color);
+    box-shadow: 0px 10px 30px 0px rgb(153 153 153 / 15%);
+    padding: 2rem 1.5rem;
+}
+
+.blog-content .blog-comment span {
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    color: var(--light-text);
+}
+
+.blog-content .blog-comment span i {
+    color: var(--contrast-color);
+    font-size: 1.3rem;
+    padding-right: 5px;
+}
+
+.blog-content a>h3 {
+    color: var(--title-color);
+    font-size: 2rem;
+}
+
+.blog-content p {
+    color: var(--light-text);
+    margin-bottom: 1rem;
+}
+
+.blog-content a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--contrast-color);
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.blog-content a i {
+    padding-left: 3px;
+    transition: 0.3s;
+}
+
+.blog-content a:hover i {
+    padding-left: 6px;
+}
+
+
+
+/* Footer */
+.footer {
+    background-color: #032e3f;
+    padding: 6rem 0;
+}
+
+.footer .footer-about-institue h1 {
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+
+.footer .footer-about-institue p {
+    color: var(--blue-bg-text);
+    line-height: 2.8rem;
+    margin-top: 1.5rem;
+}
+
+.footer .footer-explore h1 {
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.footer-explore .footer-nav {
+    padding-left: 0;
+}
+
+.footer-explore .footer-nav li {
+    list-style: none;
+    padding: 1rem 0;
+}
+
+.footer-explore .footer-nav li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--blue-bg-text);
+    text-transform: capitalize;
+    transition: 0.2s;
+}
+
+.footer-explore .footer-nav li a:hover {
+    color: var(--primary-color);
+}
+
+.footer .institute-timing h1 {
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.footer .institute-timing p {
+    color: var(--blue-bg-text);
+    line-height: 2.8rem;
+    margin-top: 1.5rem;
+}
+
+.footer .footer-contact h1 {
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.footer .footer-contact p {
+    color: var(--blue-bg-text);
+    line-height: 2.8rem;
+    margin: 1rem 0;
+}
+
+.footer-contact .footer-call-icon i,
+.footer-contact .footer-mail i {
+    font-size: 1.8rem;
+    color: var(--blue-bg-text);
+    padding-right: 1rem;
+}
+
+.footer-contact .footer-social-icon a i {
+    font-size: 1.8rem;
+    color: var(--blue-bg-text);
+    padding: 0 2rem 0 0;
+    transition: 0.2s;
+}
+
+.footer-contact .footer-social-icon a i:hover {
+    color: var(--primary-color);
+}
+
+/* Important footer links */
+.educational-portals h3,
+.popular-courses h3,
+.diploma-courses h3 {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.footer-links ul {
+    padding-left: 0;
+}
+
+.footer-links ul li {
+    list-style: none;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--blue-bg-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links ul li a {
+    font-size: 1.6rem;
+    color: var(--blue-bg-text);
+    text-transform: capitalize;
+    transition: 0.2s;
+}
+
+.footer-links ul li a:hover {
+    color: var(--secondary-color);
+    padding-left: 5px;
+}
+
+.footer-links ul li i {
+    font-size: 1.6rem;
+    color: var(--blue-bg-text);
+}
+
+
+/* Copyright */
+.copy-bg {
+    background-color: #032a3a;
+    padding: 2.5rem 0;
+}
+
+.copyright p {
+    color: var(--blue-bg-text);
+    line-height: 2.8rem;
+    margin: 0;
+}
+
+/* ABOUT PAGE */
+/* hero wrapper */
+.wrapper-hero-bg {
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/slide-2_0.jpg');
+    position: relative;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.wrapper-hero-content {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper-hero-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.wrapper-hero-content span {
+    position: absolute;
+    bottom: -2rem;
+    background-color: var(--contrast-color);
+    padding: 1.5rem 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3rem;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.wrapper-hero-content span a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.wrapper-hero-content span i {
+    padding: 0 5px;
+}
+
+/* hero-wrapper end */
+
+/* Institute Tour */
+.campus-tour {
+    background-color: #125774;
+    padding: 10rem 5rem 10rem 10rem;
+    height: auto;
+}
+
+.powerful-alumni {
+    background-color: #032e3f;
+    padding: 10rem 5rem 10rem 10rem;
+    height: auto;
+}
+
+.campus-tour-content,
+.powerful-alumni-content {
+    padding: 0rem 0rem 0rem 2rem;
+}
+
+.campus-tour-content span,
+.powerful-alumni-content span {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    width: 50px;
+    height: 50px;
+    background-color: var(--contrast-color);
+    border-radius: 50%;
+}
+
+.campus-tour-content h2,
+.powerful-alumni-content h2 {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 3.5rem;
+}
+
+.campus-tour-content p,
+.powerful-alumni-content p {
+    color: var(--blue-bg-text);
+    line-height: 2.8rem;
+}
+
+/* COURSES PAGE */
+.course {
+    margin: 3rem 0rem;
+}
+
+/* COURSE DETAIL PAGE */
+/* course img */
+.course-details .course-wrap {
+    background-color: #125774;
+    padding: 1.5rem 1rem;
+    border-radius: 5px;
+}
+
+.course-details .course-wrap-teacher img {
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--contrast-color);
+}
+
+.course-details h6 {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+
+.course-details .course-wrap p {
+    margin-bottom: 0;
+    color: var(--blue-bg-text);
+    font-size: 1.1rem;
+    text-transform: capitalize;
+}
+
+/* course overview */
+.course-overview h3 {
+    font-size: 2rem;
+    color: var(--title-color);
+}
+
+.course-overview p {
+    color: var(--light-text);
+    line-height: 2.8rem;
+    margin: 1rem 0 2rem;
+}
+
+/* course sidebar */
+.course-feature {
+    box-shadow: 0px 10px 30px 0px rgb(153 153 153 / 15%);
+}
+
+.course-feature-wrap .course-feature-heading {
+    background-color: #125774;
+    padding: 1.5rem 2rem;
+    border-radius: 6px 6px 0 0;
+}
+
+.course-feature-wrap .course-feature-heading h3 {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+.course-feature-wrap .course-feature-body {
+    padding: 2rem 1rem 4rem;
+}
+
+.course-feature-body h5 {
+    font-size: 1.4rem;
+    color: var(--title-color);
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+
+.course-feature-body p {
+    font-size: 1.4rem;
+    color: var(--light-text);
+    text-transform: capitalize;
+    padding-left: 1rem;
+}
+
+.course-feature-body .course-enroll a {
+    background-color: var(--contrast-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: 0.9px;
+    padding: 1.5rem 8rem;
+    border-radius: 5px;
+}
+
+/* new courses */
+.latest-courses {
+    margin-top: 5rem;
+}
+
+.latest-courses h4 {
+    font-size: 2rem;
+    color: var(--title-color);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.latest-courses .course-name img {
+    width: 25%;
+}
+
+.latest-courses .course-name h5 {
+    font-size: 1.5rem;
+    color: var(--title-color);
+    padding-left: 1rem;
+    font-weight: 600;
+}
+
+/* BLOG PAGE */
+.blog {
+    margin: 2rem 0rem;
+}
+
+.divider {
+    border: 1px solid var(--blue-bg-text);
+    opacity: 0.1;
+    margin: 1rem 0rem;
+}
+
+/* BLOG DETAIL PAGE */
+.blog-content-details {
+    padding: 2rem 3rem;
+    border: 1px solid rgb(153 153 153 / 15%);
+}
+
+.blog-content-details .blog-details p {
+    line-height: 2.8rem;
+    color: var(--light-text);
+}
+
+.blog-content-details .blog-img h1 {
+    color: var(--title-color);
+    margin-top: 1.5rem;
+}
+
+/* related tags */
+.blog-content-details .blog-tags h4 {
+    color: var(--title-color);
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.blog-tags .tags-link a {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--light-text);
+    border: 1px solid rgb(153 153 153 / 30%);
+    padding: 6px 15px;
+    margin-right: 1.2rem;
+    transition: 0.3s;
+}
+
+.blog-tags .tags-link a:hover {
+    background-color: var(--contrast-color);
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+}
+
+.blog-content-details .blog-social-icons h4 {
+    color: var(--title-color);
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.blog-social-icons a i {
+    color: var(--light-text);
+    font-size: 1.6rem;
+    padding-right: 1.5rem;
+    transition: 0.2s;
+}
+
+.blog-social-icons a i:hover {
+    color: var(--contrast-color);
+}
+
+/* blog comment */
+.blog-content-details .blog-comment {
+    margin-top: 5rem;
+}
+
+.blog-content-details .blog-comment h3 {
+    color: var(--title-color);
+}
+
+.blog-comment .blog-comment-form {
+    background-color: #f3f3f3;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.blog-comment .blog-comment-form input,
+.blog-comment .blog-comment-form textarea {
+    padding: 1.2rem 1rem;
+    border: none;
+    border-radius: 0px;
+    outline: none;
+    font-size: 1.5rem;
+    color: var(--light-text);
+}
+
+/* blog sidebar */
+.blog-sidebar {
+    padding: 2rem 3rem;
+    border: 1px solid rgb(153 153 153 / 15%);
+}
+
+.blog-sidebar h2 {
+    font-size: 1.8rem;
+    border-bottom: 1px solid rgb(153 153 153 / 15%);
+    padding-bottom: 1rem;
+    position: relative;
+    text-align: left;
+}
+
+.blog-sidebar h2::after {
+    content: '';
+    position: absolute;
+    border: 1px solid #125774;
+    width: 30%;
+    bottom: -1px;
+    left: 0;
+}
+
+.blog-sidebar .institute-details {
+    margin-bottom: 4rem;
+}
+
+.blog-sidebar .institute-details img {
+    margin: 2rem 0;
+    border-radius: 50%;
+}
+
+.blog-sidebar .institute-details p {
+    line-height: 2.8rem;
+    color: var(--light-text);
+}
+
+.blog-search input {
+    display: inline-block;
+    width: 80%;
+    padding: 1.2rem 1rem;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background-color: #f7f7f7;
+    font-size: 1.5rem;
+    color: var(--light-text);
+}
+
+.blog-search button {
+    background-color: #3db166;
+    padding: 1.2rem 1.7rem;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    border: none;
+    margin-left: -5px;
+}
+
+.blog-sidebar .popular-post {
+    margin: 5rem 0;
+}
+
+.popular-post .popular-post-img img {
+    max-width: 100px;
+}
+
+.popular-post .popular-post-title h4 {
+    font-size: 1.5rem;
+    color: var(--title-color);
+    font-weight: 600;
+}
+
+.popular-post .popular-post-title span {
+    font-size: 1.2rem;
+    color: var(--light-text);
+}
+
+.popular-post .popular-post-title span i {
+    color: var(--contrast-color);
+    padding-right: 4px;
+}
+
+.blog-categories .category-topic {
+    margin: 2rem 0;
+}
+
+.blog-categories .category-topic h5 {
+    font-size: 1.5rem;
+    color: var(--light-text);
+    text-transform: capitalize;
+}
+
+.blog-categories .category-topic h6 {
+    color: var(--title-color);
+    font-size: 1.5rem;
+}
+
+/* CONTACT PAGE */
+.contact-info-heading span {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--contrast-color);
+    font-weight: 600;
+}
+
+.contact-info-heading h1 {
+    color: var(--title-color);
+}
+
+.contact-phone,
+.contact-mail,
+.contact-location {
+    background-color: #ffebb78c;
+    padding: 4rem 1.5rem;
+    height: 250px;
+}
+
+.contact-phone i,
+.contact-mail i,
+.contact-location i {
+    height: 60px;
+    width: 60px;
+    font-size: 2.5rem;
+    color: var(--title-color);
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    padding-top: 1.7rem;
+    box-shadow: 0px 6px 20px 0px rgba(34, 34, 34, 0.116);
+}
+
+.contact-phone h3,
+.contact-mail h3,
+.contact-location h3 {
+    font-size: 1.8rem;
+    text-transform: none;
+    color: var(--dark-text);
+    margin-top: 2rem;
+}
+
+.contact-phone p,
+.contact-mail p,
+.contact-location p {
+    text-transform: capitalize;
+    color: var(--light-text);
+    line-height: 2.8rem;
+}
+
+/* Contact Form */
+.contact-form-heading span {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--contrast-color);
+    font-weight: 600;
+}
+
+.contact-form-heading h1 {
+    color: var(--title-color);
+}
+
+.contact-form form input,
+.contact-form form select,
+.contact-form form textarea {
+    font-size: 1.5rem;
+    padding: 1.2rem;
+    color: var(--light-text);
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background-color: var(--primary-color);
+}
+
+textarea {
+    height: 160px;
+}
+
+.contact-form form button {
+    background-color: #3db166;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    padding: 1.2rem;
+    width: 100%;
+}
+
+/* RESPONSIVE DESIGN */
+/* TABLET PORTRAIT AND MINI LAPTOP */
+@media screen and (min-width:769px) and (max-width:1023px) {
+
+    body h1 {
+        font-size: 3.2rem;
+    }
+
+    body h2 {
+        font-size: 2.8rem;
+    }
+
+    /* header */
+    .header-social-icon {
+        justify-content: center !important;
+        margin-bottom: 8px;
+    }
+    .header-info {
+        justify-content: center !important;
+    }
+
+    .header-main .logo img {
+        width: 100%;
+    }
+
+    /* feature area */
+    .single-feature.sf-two,
+    .single-feature.sf-three {
+        margin-top: 4rem;
+    }
+
+    .single-feature .feature-title {
+        background: var(--contrast-color);
+    }
+
+    .single-feature .feature-title h2 {
+        color: var(--primary-color);
+    }
+
+    /* About the institute */
+    .about-institute-img {
+        margin-top: 5rem;
+    }
+
+    /* Our feature */
+    .feature-img {
+        margin-top: 5rem;
+    }
+
+    /* Blogs */
+    .blog.hide-desktop {
+        display: inline-block;
+    }
+
+    /* ABOUT PAGE */
+    /* Institute Tour */
+    .campus-tour {
+        padding: 3rem 2rem;
+    }
+
+    .powerful-alumni {
+        padding: 3rem 2rem;
+    }
+
+    .campus-tour-content,
+    .powerful-alumni-content {
+        padding: 0rem 0rem 0rem 1rem;
+    }
+
+    .campus-tour-content span,
+    .powerful-alumni-content span {
+        font-size: 1.6rem;
+    }
+
+    .campus-tour-content h2,
+    .powerful-alumni-content h2 {
+        font-size: 3rem;
+    }
+
+    /* BLOG DETAIL PAGE */
+    /* blog content */
+    .blog-content-details {
+        padding: 1.5rem;
+    }
+
+    /* related tags */
+    .blog-content-details .blog-tags h4 {
+        font-size: 1.6rem;
+    }
+
+    .blog-tags .tags-link a {
+        font-size: 1.2rem;
+        padding: 6px 10px;
+    }
+
+    .blog-content-details .blog-social-icons h4 {
+        font-size: 1.6rem;
+    }
+
+    .blog-social-icons a i {
+        font-size: 1.4rem;
+    }
+
+    /* blog comment */
+    .blog-comment .blog-comment-form input,
+    .blog-comment .blog-comment-form textarea {
+        font-size: 1.4rem;
+    }
+
+    /* blog sidebar */
+    .blog-sidebar {
+        padding: 1.5rem;
+    }
+
+    .blog-sidebar h2 {
+        font-size: 1.6rem;
+    }
+
+    .blog-sidebar .institute-details {
+        margin-bottom: 4rem;
+    }
+
+    .blog-search input {
+        width: 75%;
+        padding: 1.2rem 0.7rem;
+        font-size: 1.3rem;
+    }
+
+    .blog-search button {
+        padding: 1.1rem 1.5rem;
+    }
+
+    .popular-post div {
+        flex-direction: column;
+        align-items: start !important;
+    }
+
+    .popular-post .popular-post-img img {
+        max-width: 100%;
+        min-width: 100px;
+    }
+
+    .popular-post .popular-post-title {
+        padding: 1rem 0rem !important;
+    }
+
+    .popular-post .popular-post-title span i {
+        padding-right: 6px;
+    }
+}
+
+/* TABLET*/
+@media screen and (min-width:481px) and (max-width:768px) {
+
+    body h1 {
+        font-size: 3rem;
+    }
+
+    body h2 {
+        font-size: 2.7rem;
+    }
+
+    /* header */
+    .header-social-icon {
+        justify-content: center !important;
+        margin-bottom: 8px;
+    }
+
+    .header-info {
+        justify-content: center !important;
+    }
+
+    .header-location-info .location-icon,
+    .header-location-info .location-title {
+        display: none;
+    }
+
+    .header-main .logo img {
+        width: 100%;
+    }
+
+    /* feature area */
+    .single-feature.sf-two,
+    .single-feature.sf-three {
+        margin-top: 4rem;
+    }
+
+    .single-feature .feature-title {
+        background: var(--contrast-color);
+    }
+
+    .single-feature .feature-title h2 {
+        color: var(--primary-color);
+    }
+
+    /* About the institute */
+    .about-institute-img {
+        margin-top: 5rem;
+    }
+
+    /* Our feature */
+    .feature-img {
+        margin-top: 5rem;
+    }
+
+    /* Accordion faq */
+    .faq-contact {
+        margin-top: 5rem;
+    }
+
+    /* Search courses*/
+    .search-course-img {
+        margin-top: 5rem;
+    }
+
+    /* Addmission and add */
+    .addmission-img {
+        margin-bottom: 2rem;
+    }
+
+    /* Blogs */
+    .blog.hide-desktop {
+        display: inline-block;
+    }
+
+    /* Footer */
+    .footer-explore,
+    .institute-timing,
+    .footer-contact {
+        margin-top: 1.2rem;
+    }
+
+    /* ABOUT PAGE */
+    /* Institute Tour */
+    .campus-tour {
+        padding: 3rem 2rem;
+    }
+
+    .powerful-alumni {
+        padding: 3rem 2rem;
+    }
+
+    .campus-tour-content,
+    .powerful-alumni-content {
+        padding: 0rem 0rem 0rem 1rem;
+    }
+
+    .campus-tour-content span,
+    .powerful-alumni-content span {
+        font-size: 1.6rem;
+    }
+
+    .campus-tour-content h2,
+    .powerful-alumni-content h2 {
+        font-size: 3rem;
+    }
+
+    /* BLOG DETAIL PAGE */
+    /* blog content */
+    .blog-content-details {
+        padding: 1.5rem;
+    }
+
+    /* related tags */
+    .blog-content-details .blog-tags h4 {
+        font-size: 1.6rem;
+    }
+
+    .blog-tags .tags-link a {
+        font-size: 1.2rem;
+        padding: 6px 10px;
+    }
+
+    .blog-content-details .blog-social-icons h4 {
+        font-size: 1.6rem;
+    }
+
+    .blog-social-icons a i {
+        font-size: 1.4rem;
+    }
+
+    /* blog comment */
+    .blog-comment .blog-comment-form input,
+    .blog-comment .blog-comment-form textarea {
+        font-size: 1.4rem;
+    }
+
+    /* blog sidebar */
+    .blog-sidebar {
+        padding: 1.5rem;
+    }
+
+    .blog-sidebar h2 {
+        font-size: 1.6rem;
+    }
+
+    .blog-sidebar .institute-details {
+        margin-bottom: 4rem;
+    }
+
+    .blog-search input {
+        width: 75%;
+        padding: 1.2rem 0.7rem;
+        font-size: 1.3rem;
+    }
+
+    .blog-search button {
+        padding: 1.1rem 1.5rem;
+    }
+
+    .popular-post div {
+        flex-direction: column;
+        align-items: start !important;
+    }
+
+    .popular-post .popular-post-img img {
+        max-width: 100%;
+        min-width: 100px;
+    }
+
+    .popular-post .popular-post-title {
+        padding: 1rem 0rem !important;
+    }
+
+    .popular-post .popular-post-title span i {
+        padding-right: 6px;
+    }
+}
+
+/* MOBILE */
+@media screen and (min-width:320px) and (max-width:480px) {
+
+    body h1 {
+        font-size: 2.8rem;
+    }
+
+    body h2 {
+        font-size: 2.5rem;
+    }
+
+    body h3 {
+        font-size: 1.8rem;
+    }
+
+    body p {
+        font-size: 1.5rem;
+    }
+
+    /* header */
+    .header-social-icon {
+        justify-content: center !important;
+        margin-bottom: 8px;
+    }
+
+    .header-top-bg .header-social-icon {
+        margin-bottom: 5px;
+    }
+
+    .header-top-bg .header-social-icon span {
+        font-size: 1.4rem;
+    }
+
+    .social-link a {
+        font-size: 1.4rem;
+    }
+
+    .header-info {
+        justify-content: center !important;
+    }
+
+    .header-location-info .location-icon,
+    .header-location-info .location-title {
+        display: none;
+    }
+
+    .header-phone-info .phone-icon i,
+    .header-mail-info .mail-icon i {
+        height: 26px;
+        width: 26px;
+        font-size: 1rem;
+    }
+
+    .header-phone-info .phone-title a,
+    .header-mail-info .mail-title a {
+        font-size: 1.1rem;
+    }
+
+    .navbar-brand{
+        width: 80%;
+    }
+
+    /* Hero slider */
+    .slide-bg .slide {
+        padding: 10rem 0 15rem 1rem;
+    }
+
+    .slide-content span {
+        font-size: 1.4rem;
+    }
+
+    .slide-content h1 {
+        font-size: 3rem;
+    }
+
+    .slide-btn-wrap a {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+    }
+
+
+    /* feature area */
+    .single-feature.sf-two,
+    .single-feature.sf-three {
+        margin-top: 4rem;
+    }
+
+    .single-feature .feature-title {
+        background: var(--contrast-color);
+    }
+
+    .single-feature .feature-title h2 {
+        font-size: 1.8rem;
+    }
+
+    /* About the institute */
+    .about-institute-img {
+        margin-top: 5rem;
+    }
+
+    .institute-speacial {
+        flex-direction: column;
+    }
+
+    .institute-speacial .global-student {
+        margin-top: 1.5rem;
+    }
+
+    /* Courses */
+    .course-title a h3 {
+        font-size: 1.8rem;
+    }
+
+    /* Our feature */
+    .feature-img {
+        margin-top: 5rem;
+    }
+
+    /* Accordion faq */
+    .faq-contact {
+        margin-top: 5rem;
+    }
+
+    /* Search courses*/
+    .search-course-img {
+        margin-top: 5rem;
+    }
+
+    /* Addmission and add */
+    .addmission-img {
+        margin-bottom: 2rem;
+    }
+
+    /* Blogs */
+    .blog.hide-desktop {
+        display: none;
+    }
+
+    /* Footer */
+    .footer-explore,
+    .institute-timing,
+    .footer-contact {
+        margin-top: 1.2rem;
+    }
+
+    .footer-links ul li a {
+        font-size: 1.5rem;
+    }
+
+    /* ABOUT PAGE */
+    .wrapper-hero-content span {
+        padding: 1.5rem 2rem;
+        font-size: 1.4rem;
+        width: 60%;
+    }
+
+    /* Institute Tour */
+    .campus-tour,
+    .powerful-alumni {
+        padding: 3rem 2rem;
+    }
+
+    .campus-tour-content,
+    .powerful-alumni-content {
+        padding: 0rem 0rem 0rem 1rem;
+    }
+
+    .campus-tour-content span,
+    .powerful-alumni-content span {
+        font-size: 1.6rem;
+    }
+
+    .campus-tour-content h2,
+    .powerful-alumni-content h2 {
+        font-size: 3rem;
+    }
+
+    /* BLOG DETAIL PAGE */
+    /* blog content */
+    .blog-content-details {
+        padding: 1.5rem;
+    }
+
+    /* related tags */
+    .blog-content-details .blog-tags h4 {
+        font-size: 1.6rem;
+    }
+
+    .blog-tags .tags-link a {
+        font-size: 1rem;
+        padding: 6px 8px;
+    }
+
+    .blog-content-details .blog-social-icons h4 {
+        font-size: 1.6rem;
+    }
+
+    .blog-social-icons a i {
+        font-size: 1.4rem;
+    }
+
+    .tag-and-icon{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    /* blog comment */
+    .blog-comment .blog-comment-form input,
+    .blog-comment .blog-comment-form textarea {
+        font-size: 1.4rem;
+    }
+
+    /* blog sidebar */
+    .blog-sidebar {
+        padding: 1.5rem;
+    }
+
+    .blog-sidebar h2 {
+        font-size: 1.6rem;
+    }
+
+    .blog-sidebar .institute-details {
+        margin-bottom: 4rem;
+    }
+
+    .blog-search input {
+        width: 80%;
+        padding: 1.2rem 0.7rem;
+        font-size: 1.3rem;
+    }
+
+    .blog-search button {
+        padding: 1.1rem 1.5rem;
+    }
+
+    .popular-post div {
+        flex-direction: column;
+        align-items: start !important;
+    }
+
+    .popular-post .popular-post-img img {
+        max-width: 100%;
+        min-width: 100px;
+    }
+
+    .popular-post .popular-post-title {
+        padding: 1rem 0rem !important;
+    }
+
+    .popular-post .popular-post-title span i {
+        padding-right: 6px;
+    }
+}

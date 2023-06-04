@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch in Javascript</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        width: 100%;
+        height: 100vh;
+        background: #d5e0ed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .wrapper {
+        width: 20%;
+        height: 380px;
+        background-color: #292a2e;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 2px 3px 14px rgba(0, 0, 0, 0.445);
+      }
+
+      .wrapper h1 {
+        text-align: center;
+        font-size: 24px;
+        color: #fff;
+        margin-top: 15px;
+      }
+
+      .border1 {
+        width: 75%;
+        height: 205px;
+        background: none;
+        border: 7px solid #292a2e;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 25px 33px;
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.63),
+          -2px -2px 8px rgba(201, 201, 201, 0.274);
+      }
+
+      .border2 {
+        width: 100%;
+        height: 189px;
+        border: 7px solid #af6fff;
+        border-radius: 50%;
+      }
+
+      .box {
+        width: 100%;
+        height: 100%;
+        background-color: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .box p span {
+        font-size: 36px;
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+
+      .button-start,
+      .button-stop,
+      .button-reset {
+        padding: 9px 20px;
+        background-color: #292a2e;
+        border: none;
+        color: #fff;
+        font-weight: 700;
+        /* letter-spacing: 1px; */
+        outline: none;
+        border-radius: 5px;
+        margin-left: 3px;
+        margin-right: 3px;
+        cursor: pointer;
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.63),
+          -2px -2px 8px rgba(201, 201, 201, 0.274);
+      }
+
+      @media screen and (min-width: 481px) and (max-width: 991px) {
+        .wrapper {
+          width: 290px;
+          height: 420px;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        .wrapper {
+          width: 330px;
+          height: 420px;
+        }
+
+        .border1 {
+          width: 70%;
+          height: 245px;
+          margin: 25px 50px;
+        }
+
+        .border2 {
+          width: 100%;
+          height: 230px;
+        }
+      }
+
+      @media screen and (max-width: 340px) {
+        .wrapper {
+          width: 95%;
+          height: 420px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h1>Stopwatch</h1>
+      <div class="circle-box">
+        <div class="border1">
+          <div class="border2">
+            <div class="box">
+              <p>
+                <span id="minutes">00</span><span>:</span
+                ><span id="seconds">00</span><span>.</span
+                ><span id="tens">00</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-grp">
+        <button class="button-start" id="start-btn">Start</button>
+        <button class="button-stop" id="stop-btn">Stop</button>
+        <button class="button-reset" id="reset-btn">Reset</button>
+      </div>
+    </div>
+
+    <script>
+      window.onload = function () {
+        var minutes = 00;
+        var seconds = 00;
+        var tens = 00;
+
+        var theMinute = document.querySelector("#minutes");
+        var theSecond = document.querySelector("#seconds");
+        var theTens = document.querySelector("#tens");
+
+        var buttonStart = document.getElementById("start-btn");
+        var buttonStop = document.getElementById("stop-btn");
+        var buttonReset = document.getElementById("reset-btn");
+        var Interval;
+
+        // start
+        buttonStart.onclick = function () {
+          Interval = setInterval(startTimer, 10);
+        };
+
+        // stop
+        buttonStop.onclick = function () {
+          clearInterval(Interval);
+        };
+        // reset
+        buttonReset.onclick = function () {
+          clearInterval(Interval);
+          tens = "00";
+          seconds = "00";
+          minutes = "00";
+          theTens.innerHTML = tens;
+          theSecond.innerHTML = seconds;
+          theMinute.innerHTML = minutes;
+        };
+
+        function startTimer() {
+          tens++;
+          if (tens < 9) {
+            theTens.innerHTML = "0" + tens;
+          }
+          if (tens > 9) {
+            theTens.innerHTML = tens;
+          }
+          if (tens > 99) {
+            seconds++;
+            theSecond.innerHTML = "0" + seconds;
+            tens = 0;
+            theTens.innerHTML = "0" + 0;
+          }
+          if (seconds > 9) {
+            theSecond.innerHTML = seconds;
+          }
+          if (seconds > 59) {
+            minutes++;
+            theMinute.innerHTML = "0" + minutes;
+            seconds = 0;
+            theSecond.innerHTML = "0" + 0;
+          }
+          if (minutes > 9) {
+            theMinute.innerHTML = minutes;
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

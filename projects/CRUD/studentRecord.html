@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application for Student Record</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .top-head {
+            text-align: center;
+            font-size: 30px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-top: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table thead th {
+            padding: 7px 0px;
+            background-color: rgb(122, 122, 122);
+            color: #fff;
+        }
+
+        table td {
+            padding: 15px 0px;
+        }
+
+        table tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        .popup form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: #000000be;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            visibility: hidden;
+        }
+
+        .form {
+            width: 700px;
+            height: auto;
+            background-color: #fff;
+            padding: 40px 0px;
+            border-radius: 7px;
+        }
+
+        .popup-input {
+            width: 300px;
+            margin: 10px 5px;
+            padding: 8px 10px;
+            background-color: rgb(231, 231, 231);
+            border: none;
+            outline: none;
+            text-align: left;
+            border-radius: 2px;
+            /* display: block; */
+        }
+
+        .form2 {
+            width: 700px;
+            height: auto;
+            background-color: #fff;
+            padding: 40px 0px;
+            border-radius: 7px;
+        }
+
+        .form2 .popup-input {
+            width: 300px;
+            margin: 10px 5px;
+            padding: 8px 10px;
+            background-color: rgb(231, 231, 231);
+            border: none;
+            outline: none;
+            text-align: left;
+            border-radius: 2px;
+            /* display: flex; */
+        }
+
+
+        .addstudentpbtn {
+            outline: none;
+            border: none;
+            background-color: #5cb85c;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 8px 0px;
+            cursor: pointer;
+            width: 300px;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+
+        .closebtn,
+        .viewStudentbtn {
+            outline: none;
+            border: none;
+            background-color: #a70000;
+            color: #fff;
+            margin-top: 15px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            width: 300px;
+            padding: 8px 0px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .addnew {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .addnew button {
+            padding: 10px 18px;
+            font-size: 15px;
+            background-color: #5cb85c;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: 700;
+            cursor: pointer;
+
+        }
+
+        /* js button */
+        .editbtn {
+            padding: 7px 12px;
+            /* font-size: 15px; */
+            background-color: #5cb85c;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .viewbtn {
+            padding: 7px 12px;
+            /* font-size: 15px; */
+            background-color: #2d7ab7;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: 700;
+            cursor: pointer;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .delbtn {
+            padding: 7px 12px;
+            /* font-size: 15px; */
+            background-color: #d45755;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        /* view student */
+        .view-student {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: #000000be;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            visibility: hidden;
+        }
+
+        .view-form {
+            background-color: #fff;
+            padding: 30px 20px;
+            border-radius: 7px;
+
+        }
+
+        .view-input label {
+            display: block;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .view-input input {
+            display: block;
+            width: 300px;
+            background-color: #e7e7e7de;
+            border: none;
+            outline: none;
+            padding: 6px 8px;
+            margin: 5px 0px;
+            text-align: left;
+        }
+
+        .errVal {
+            color: red;
+            font-size: 12px;
+            text-align: left;
+            margin-top: -8px;
+            margin-bottom: 10px;
+            margin-left: 40px;
+            display: inline-block;
+        }
+
+        .subErr {
+            margin-top: 5px;
+        }
+        .search{
+            display: flex;
+            justify-content: end;
+            margin-right: 20px;
+        }
+        .search input{
+            padding: 4px 8px;
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="popup">
+        <form action="" onsubmit="return addStudentName(this);">
+            <div class="form">
+                <input type="text" placeholder="Student name" name="studName" id="studName" class="popup-input"
+                    onkeyup="studentName();" autocomplete="off">
+                <div class="errVal" id="nameErr"></div>
+                <input type="text" placeholder="Student mail ID" name="studMail" id="studMail" class="popup-input"
+                    onkeyup="studentMail();" autocomplete="off">
+                <div class="errVal" id="mailErr"></div>
+                <input type="password" placeholder="Student Password" name="studPass" id="studPass" class="popup-input"
+                    onkeyup="studentPassword();" autocomplete="off">
+                <div class="errVal" id="passErr"></div>
+                <input type="text" placeholder="Student gender" name="studGender" id="studGender" class="popup-input"
+                    onkeyup="studentGender();" autocomplete="off">
+                <div class="errVal" id="genderErr"></div>
+                <input type="text" placeholder="Student address" name="studAddress" id="studAddress" class="popup-input"
+                    onkeyup="studentAddress();" autocomplete="off">
+                <div class="errVal" id="addressErr"></div>
+                <input type="text" placeholder="Student Course" name="studCourse" id="studCourse" class="popup-input"
+                    autocomplete="off">
+                <input type="text" placeholder="Student age" name="studAge" id="studAge" class="popup-input"
+                    autocomplete="off">
+                <input type="text" placeholder="Student mobile" name="studMob" id="studMob" class="popup-input"
+                    autocomplete="off">
+                <input type="text" placeholder="Student roll no." name="studRollNum" id="studRollNum"
+                    class="popup-input" autocomplete="off">
+                <input type="text" placeholder="Student date of birth." name="studDob" id="studDob"
+                    class="popup-input" autocomplete="off">
+
+                <input type="submit" value="Submit" id="addEmpName" class="addstudentpbtn"
+                    onclick="return submitForm();">
+                <div id="submitErr" class="errVal subErr"></div>
+                <button type="button" id="closebtn" class="closebtn" onclick="closePopup();">Close</button>
+            </div>
+        </form>
+    </div>
+
+    <div>
+        <h1 class="top-head">
+            student record
+        </h1>
+        <div  class="search">
+            <input type="search" placeholder="Search students" id="searchBtn" onkeyup="searchStudentData(this)">
+        </div>
+        <table width="1340" border="1" align="center" style="text-align: center; margin: 10px auto;">
+            <thead>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Student Name</th>
+                    <th>Email ID</th>
+                    <th>Password</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                    <th>Action</th>
+                </tr>
+            <tbody id="tablebodyData"></tbody>
+            </thead>
+        </table>
+    </div>
+
+    <!-- view data of  student -->
+    <form action="" id="viewStudData" class="view-student">
+        <div class="view-form">
+            <div class="view-input">
+                <label for="">Student course</label>
+                <input type="text" id="viewStudCourse" readonly>
+            </div>
+            <div class="view-input">
+                <label for="">Student age</label>
+                <input type="text" id="viewStudAge" readonly>
+            </div>
+            <div class="view-input">
+                <label for="">Student mobile no.</label>
+                <input type="text" id="viewStudPhone" readonly>
+            </div>
+            <div class="view-input">
+                <label for="">Student roll no.</label>
+                <input type="text" id="viewStudRollNum" readonly>
+            </div>
+            <div class="view-input">
+                <label for=""> Date of birth</label>
+                <input type="text" id="viewStudDob" readonly>
+            </div>
+            <button type="button" class="viewStudentbtn" id="viewStudbtn">Close</button>
+        </div>
+    </form>
+
+    <!-- Edit Student data -->
+    <div class="popup">
+        <form action="" id="editStudentData">
+            <div class="form2">
+                <input type="text" placeholder="Student name" name="studName" id="editStudName" class="popup-input"
+                    autocomplete="off">
+                <input type="text" placeholder="Student mail ID" name="studMail" id="editStudMail" class="popup-input"
+                    autocomplete="off">
+                <input type="text" placeholder="Student Password" name="studPass" id="editStudPass" class="popup-input"
+                    autocomplete="off">
+                <input type="text" placeholder="Student gender" name="studGender" id="editStudGender"
+                    class="popup-input" autocomplete="off">
+                <input type="text" placeholder="Student address" name="studAddress" id="editStudAddress"
+                    class="popup-input" autocomplete="off">
+                <input type="text" placeholder="Student Course" name="studCourse" id="editStudCourse"
+                    class="popup-input" autocomplete="off">
+                <input type="text" placeholder="Student age" name="editStudAge" id="editStudAge" class="popup-input"
+                    autocomplete="off">
+
+                <input type="text" placeholder="Student mobile" name="editStudMob" id="editStudMob" class="popup-input"
+                    autocomplete="off">
+
+                <input type="text" placeholder="Student roll no." name="editStudRollNum" id="editStudRollNum"
+                    class="popup-input" autocomplete="off">
+
+                <input type="text" placeholder="Date of birth." name="editDob" id="editDob" class="popup-input"
+                    autocomplete="off">
+
+                <input type="submit" value="Update" id="updateStudentName" class="addstudentpbtn">
+                <button type="button" id="closeEditBtn" class="closebtn" onclick="closeEditPopup();">Close</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="addnew">
+        <button type="button" value="addnew" onclick="viewPopup();">Add New Student</button>
+    </div>
+
+    <script src="./js/studentData.js"></script>
+</body>
+
+</html>

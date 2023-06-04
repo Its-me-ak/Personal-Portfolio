@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #b7986c;
+        }
+
+        .counter-main {
+            width: 25%;
+            height: 350px;
+            background-color: #b7986c;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.37), -3px -4px 12px rgba(0, 0, 0, 0.363);
+            align-items: center;
+            flex-direction: column;
+            border: 2px solid rgb(211, 211, 211);
+            border-radius: 5px;
+        }
+
+        h1 {
+            margin-top: 25px;
+        }
+
+        h2 {
+            font-size: 100px;
+            color: rgb(0, 110, 0);
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background-color: #032653;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.705);
+            margin: 0px 5px 25px 5px;
+        }
+
+        @media screen and (min-width:481px) and (max-width:991px) {
+            .counter-main {
+                width: 80%;
+                height: 370px;
+            }
+        }
+
+        @media screen and (max-width:480px) {
+            .counter-main {
+                width: 90%;
+                height: 370px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="counter-main">
+        <h1>Counter</h1>
+        <h2 id="count">0</h2>
+       <div class="counter-btn">
+         <button type="button" class="btn" onclick="minusCount();">Decrement</button>
+        <button type="button" class="btn" onclick="plusCount();">Increment</button>
+        <button type="button" class="btn" onclick="resetCount();">Reset</button>
+       </div>
+
+    </div>
+
+    <script>
+        let counter = 0;
+        function minusCount() {
+            counter--;
+            document.querySelector("#count").innerHTML = counter;
+        }
+
+        function plusCount() {
+            counter++;
+            document.querySelector("#count").innerHTML = counter;
+        }
+
+        function resetCount (){
+           counter = 0
+            document.querySelector("#count").innerHTML = counter;
+        }
+    </script>
+</body>
+
+</html>

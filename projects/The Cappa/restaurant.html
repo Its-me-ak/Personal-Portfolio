@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;500;600&family=Gilda+Display&display=swap"
+        rel="stylesheet">
+    <!-- bootstrp -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>The Cappa Luxery Hotel</title>
+</head>
+
+<body>
+    <a href="#res-main">
+        <div class="gtt-btn fixBtn" id="topBtn">
+            <i class="fa-solid fa-angle-up"></i>
+        </div>
+    </a>
+    <div class="restaurant-hero" id="res-main">
+        <div class="row">
+            <!-- slider -->
+            <!-- header -->
+            <header class="header d-flex align-items-center ">
+                <div class="container d-flex justify-content-between">
+                    <div class="logo d-flex justify-content-center align-items-center">
+                        <img src="./img/logo.png" class="img-fluid" alt="">
+                    </div>
+                    <nav class="navigation">
+                        <label for="" class="checkbtn" id="check">
+                            <i class="fas fa-bars"></i>
+                        </label>
+                        <ul id="menulink" class="hide">
+                            <li><a href="index.html">home</a></li>
+                            <li><a href="about.html">about</a></li>
+                            <li><a href="restaurant.html" class="active">restaurant</a></li>
+                            <li><a href="gallary.html">gallary</a></li>
+                            <li><a href="contact.html">contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <div class="col-12">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators d-flex justify-content-end">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active hero">
+                            <img src="./img/res-hero1.jpg" class="d-block w-100 img-fluid" alt="...">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="carousel-item hero">
+                            <img src="./img/res-hero2.jpg" class="d-block w-100 img-fluid" alt="...">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="carousel-item hero">
+                            <img src="./img/res-hero3.jpg" class="d-block w-100 img-fluid" alt="...">
+                            <div class="overlay"></div>
+                        </div>
+                        <a href="#ruleBg">
+                            <span class="res-hero-icon animate__animated animate__bounce">
+                                <i class="fa-solid fa-arrow-down display-6"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- rule section -->
+    <div class="container-fluid rule-bg" id="ruleBg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="rule-content">
+                        <span class="rule-ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <h5>An Experience for the Senses</h5>
+                        <H1>The Restaurant</H1>
+                        <p>Led by Chef de Micheal Martin, The Restaurant is celebrated for its excellent cuisine and
+                            unique ambience. The gorgeous dining room features three open studio kitchens, allowing you
+                            to enjoy the sights and sounds of the culinary artistry on display. The menu showcases both
+                            Asian and European influences, with a tempting selection of classic favorites and creative
+                            dishes for you to sample. Cheese connoisseurs will be drawn to the The Wine and Cheese
+                            Cellar, housed in five-meter-high glass walls, where our knowledgeable staff can introduce
+                            you to some of New York's greatest culinary treasures.</p>
+                        <div class="hours">
+                            <h2>hours</h2>
+                            <span class="hours-icon d-flex align-items-center">
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+                                <p>Breakfast: 7.00 am – 11.00 am (daily)</p>
+                            </span>
+                            <span class="hours-icon d-flex align-items-center">
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+                                <p>Lunch: 12.00 noon – 2.00 pm (daily)</p>
+                            </span>
+                            <span class="hours-icon d-flex align-items-center">
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+                                <p>Dinner: open from 6.30 pm, last order at 10.00 pm (daily)</p>
+                            </span>
+                        </div>
+                        <div class="dc">
+                            <h2>dress code</h2>
+                            <p>Smart casual (no shorts, hats, or sandals permitted)</p>
+                        </div>
+                        <div class="terrace">
+                            <h2>terrace</h2>
+                            <p>open for drinks only</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- restaurant menu -->
+    <div class="container-fluid res-menu-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="menu-heading text-center">
+                        <h5>Luxury Hotel</h5>
+                        <h1>Restaurant Menu</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="res-navbar  d-flex justify-content-center mt-5 mb-5">
+                            <ul class="nav nav-tabs  res-menu d-flex justify-content-between">
+                                <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#starters">starters</a></li>
+                                <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#mains">mains</a></li>
+                                <li class="nav-item"><a class="nav-link " data-bs-toggle="tab" href="#salads">salads</a></li>
+                                <li class="nav-item"><a class="nav-link " data-bs-toggle="tab" href="#wines">wines</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- starters menu -->
+                <!-- item menu left -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="starters">
+                        <div class="menu-main d-flex justify-content-between">
+                            <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+                                <!-- 1 -->
+                                <div class="menu1 d-flex justify-content-between">
+                                    <h2>Mozzarella Dippers </h2>
+                                    <h3>27$</h3>
+                                </div>
+                                <div class="menu-detail">
+                                    <p>Fried mozzarella sticks, marinara sauce</p>
+                                </div>
+
+                                <!-- 2 -->
+                                <div class="menu2 d-flex justify-content-between">
+                                    <h2>Onion Rings </h2>
+                                    <h3>32$</h3>
+                                </div>
+                                <div class="menu-detail">
+                                    <p>Fried onion rings, smoked aioli</p>
+                                </div>
+
+                                <!-- 3 -->
+                                <div class="menu3 d-flex justify-content-between">
+                                    <h2>Fried Jalapeno </h2>
+                                    <h3>52$</h3>
+                                </div>
+                                <div class="menu-detail">
+                                    <p>Fried jalapeno pickles, cheddar sauce</p>
+                                </div>
+                            </div>
+
+                            <!-- item menu right -->
+                            <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+                                <!-- 4 -->
+                                <div class="menu4 d-flex justify-content-between">
+                                    <h2>Buffalo Wings </h2>
+                                    <h3>37$</h3>
+                                </div>
+                                <div class="menu-detail">
+                                    <p>Spicy chicken wings, blue cheese sauce, carrot, celery</p>
+                                </div>
+
+                                <!-- 5 -->
+                                <div class="menu5 d-flex justify-content-between">
+                                    <h2>Chilli Con Carne </h2>
+                                    <h3>32$</h3>
+                                </div>
+                                <div class="menu-detail">
+                                    <p>Spicy ground beef, bacon, kidney beans</p>
+                                </div>
+
+                                <!-- 6 -->
+                                <div class="menu6 d-flex justify-content-between">
+                                    <h2>Potato Skins </h2>
+                                    <h3>42$</h3>
+                                </div>
+                                <div class="menu-detail">
+                                    <p>Crispy potato skins; bacon & cheddar or vegetables</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- mains menu -->
+                    <!-- item menu left -->
+                    <div class="tab-pane" id="mains">
+                        <div class="menu-main d-flex justify-content-between">
+                            <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+                                <!-- 1 -->
+                                <div class="menu1 d-flex justify-content-between">
+                                    <h2>Rusty's Burgers </h2>
+                                    <h3>27$</h3>
+                                </div>
+                                <div class="menu-detail">
+                                    <p>Smoked pulled beef ribs, bbq sauce, cheddar, crispy onion</p>
+                                </div>
+
+                                <!-- 2 -->
+                                <div class="menu2 d-flex justify-content-between">
+                                    <h2>Cajun Fish Steak </h2>
+                                    <h3>32$</h3>
+                                </div>
+                                <div class="menu-detail">
+                                    <p>Cajun spicied seabass, deep fried baby potatoes, side saladi</p>
+                                </div>
+
+                                <!-- 3 -->
+                                <div class="menu3 d-flex justify-content-between">
+                                    <h2>Southern Fried Chicken </h2>
+                                    <h3>52$</h3>
+                                </div>
+                                <div class="menu-detail">
+                                    <p>Cajun coated chicken breast, fries and honey mustard</p>
+                                </div>
+                            </div>
+
+                            <!-- item menu right -->
+                            <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+                                <!-- 4 -->
+                                <div class="menu4 d-flex justify-content-between">
+                                    <h2>Crab Cake </h2>
+                                    <h3>37$</h3>
+                                </div>
+                                <div class="menu-detail">
+                                    <p>Breaded crab cakes, tartar sauce, apple and fennel salad</p>
+                                </div>
+
+                                <!-- 5 -->
+                                <div class="menu5 d-flex justify-content-between">
+                                    <h2>Baby Back Ribs </h2>
+                                    <h3>32$</h3>
+                                </div>
+                                <div class="menu-detail">
+                                    <p>Bbq glazed baby pork ribs, coleslaw, fries</p>
+                                </div>
+
+                                <!-- 6 -->
+                                <div class="menu6 d-flex justify-content-between">
+                                    <h2>Smokehouse Combo </h2>
+                                    <h3>42$</h3>
+                                </div>
+                                <div class="menu-detail">
+                                    <p>Smoked beef brisket, rib and sausage, coleslaw, cornbread</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- salads menu -->
+                    <!-- item menu left -->
+                    <div class="tab-pane" id="salads">
+                        <div class="menu-main d-flex justify-content-between">
+                            <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+                                <!-- 1 -->
+                                <div class="menu1 d-flex justify-content-between">
+                                    <h2>Ceaser Salad </h2>
+                                    <h3>47$</h3>
+                                </div>
+                                <div class="menu-detail">
+                                    <p>Romaine lettuce, croutons, parmigiano, Ceaser dressing.</p>
+                                </div>
+
+                                <!-- 2 -->
+                                <div class="menu2 d-flex justify-content-between">
+                                    <h2>Waldorf Salad </h2>
+                                    <h3>52$</h3>
+                                </div>
+                                <div class="menu-detail">
+                                    <p>Lettuce, celery, apple, grape, walnut, waldorf sauce</p>
+                                </div>
+
+                                <!-- 3 -->
+                                <div class="menu3 d-flex justify-content-between">
+                                    <h2>Quinoa & Avocado Salad </h2>
+                                    <h3>52$</h3>
+                                </div>
+                                <div class="menu-detail">
+                                    <p>Quinoa, avocado, mixed greens. Nuts, dried and fresh fruits</p>
+                                </div>
+                            </div>
+
+                            <!-- item menu right -->
+                            <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+                                <!-- 4 -->
+                                <div class="menu4 d-flex justify-content-between">
+                                    <h2>Grilled Salmon Salad </h2>
+                                    <h3>35$</h3>
+                                </div>
+                                <div class="menu-detail">
+                                    <p>Grilled salmon, mixed greens, capers, orange slices</p>
+                                </div>
+
+                                <!-- 5 -->
+                                <div class="menu5 d-flex justify-content-between">
+                                    <h2>Chicken Cobb Salad </h2>
+                                    <h3>30$</h3>
+                                </div>
+                                <div class="menu-detail">
+                                    <p>Iceberg lettuce, cherry tomatoes, blue cheese, avocado, bacon</p>
+                                </div>
+
+                                <!-- 6 -->
+                                <div class="menu6 d-flex justify-content-between">
+                                    <h2>Salad Chicken </h2>
+                                    <h3>45$</h3>
+                                </div>
+                                <div class="menu-detail">
+                                    <p>Ceaser dressing. Optional grilled chicken breast</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- wines menu -->
+                    <!-- item menu left -->
+                    <div class="tab-pane" id="wines">
+                        <div class="menu-main d-flex justify-content-between">
+                            <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+                                <!-- 1 -->
+                                <div class="menu1 d-flex justify-content-between">
+                                    <h2>Château d'Yquem 2011 </h2>
+                                    <h3>400$</h3>
+                                </div>
+                                <div class="menu-detail">
+                                    <p>Dessert Wine, Bordeaux, Graves, Sauternes</p>
+                                </div>
+
+                                <!-- 2 -->
+                                <div class="menu2 d-flex justify-content-between">
+                                    <h2>Alvear Cream NV </h2>
+                                    <h3>30$</h3>
+                                </div>
+                                <div class="menu-detail">
+                                    <p>Dessert, Fortified Wine, Andalucia</p>
+                                </div>
+
+                                <!-- 3 -->
+                                <div class="menu3 d-flex justify-content-between">
+                                    <h2>Chateau D'yquem 1990 </h2>
+                                    <h3>900$</h3>
+                                </div>
+                                <div class="menu-detail">
+                                    <p>Dessert Wine, Bordeaux, Graves, Sauternes</p>
+                                </div>
+                            </div>
+
+                            <!-- item menu right -->
+                            <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+                                <!-- 4 -->
+                                <div class="menu4 d-flex justify-content-between">
+                                    <h2>La Grande Année 2007 </h2>
+                                    <h3>450$</h3>
+                                </div>
+                                <div class="menu-detail">
+                                    <p>Rosé, Champagne</p>
+                                </div>
+
+                                <!-- 5 -->
+                                <div class="menu5 d-flex justify-content-between">
+                                    <h2>Sine Qua Non 2012 </h2>
+                                    <h3>520$</h3>
+                                </div>
+                                <div class="menu-detail">
+                                    <p>Syrah, Shiraz & Blends, California</p>
+                                </div>
+
+                                <!-- 6 -->
+                                <div class="menu6 d-flex justify-content-between">
+                                    <h2>W.S. Keyes Winery 2006 </h2>
+                                    <h3>240$</h3>
+                                </div>
+                                <div class="menu-detail">
+                                    <p>Merlot, California, Napa, Howell Mountain</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- testimonials -->
+    <div class="container-fluid testimonal-bg">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center testi-row">
+                <div class="col-10 col-sm-10 col-md-8 col-lg-8 testi-main">
+                    <div class="testimonials-heading">
+                        <h5>testimonials</h5>
+                        <h1>what client's say?</h1>
+                        <!-- slider -->
+                        <div id="carouselExampleIndicators1" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <p class="client-feedback">
+                                        Hotel dapibus asue metus the nec feusiate eraten miss hendreri net ve ante the
+                                        lemon sanleo nectan feugiat erat hendrerit necuis ve ante otel inilla duiman at
+                                        finibus viverra neca the sene on satien the miss drana inc fermen norttito sit
+                                        space, mus nellentesque habitan.
+                                    </p>
+                                    <div class="clients d-flex justify-content-between">
+                                        <div class="client-detail  d-flex">
+                                            <img src="./img/team1.jpg" alt="">
+                                            <div class="px-4">
+                                                <span class="cl-ratings-star">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </span>
+                                                <h2>emily brown</h2>
+                                                <h6>guest review</h6>
+                                            </div>
+                                        </div>
+                                        <div class="quotes">
+                                            <img src="./img/quot.png" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <p class="client-feedback">
+                                        Hotel dapibus asue metus the nec feusiate eraten miss hendreri net ve ante the
+                                        lemon sanleo nectan feugiat erat hendrerit necuis ve ante otel inilla duiman at
+                                        finibus viverra neca the sene on satien the miss drana inc fermen norttito sit
+                                        space, mus nellentesque habitan.
+                                    </p>
+                                    <div class="clients d-flex justify-content-between">
+                                        <div class="client-detail d-flex">
+                                            <img src="./img/team2.jpg" alt="">
+                                            <div class="px-4">
+                                                <span class="cl-ratings-star">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </span>
+                                                <h2>nolan white</h2>
+                                                <h6>guest review</h6>
+                                            </div>
+                                        </div>
+                                        <div class="quotes">
+                                            <img src="./img/quot.png" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <p class="client-feedback">
+                                        Hotel dapibus asue metus the nec feusiate eraten miss hendreri net ve ante the
+                                        lemon sanleo nectan feugiat erat hendrerit necuis ve ante otel inilla duiman at
+                                        finibus viverra neca the sene on satien the miss drana inc fermen norttito sit
+                                        space, mus nellentesque habitan.
+                                    </p>
+                                    <div class="clients d-flex justify-content-between">
+                                        <div class="client-detail d-flex">
+                                            <img src="./img/team4.jpg" alt="">
+                                            <div class="px-4">
+                                                <span class="cl-ratings-star">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </span>
+                                                <h2>olivia martin</h2>
+                                                <h6>guest review</h6>
+                                            </div>
+                                        </div>
+                                        <div class="quotes">
+                                            <img src="./img/quot.png" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="container-fluid footer">
+        <div class="container">
+            <div class="row">
+                <!-- about hotel -->
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 gx-5">
+                    <div class="footer-about-hotel">
+                        <h1>about hotel</h1>
+                        <p>Welcome to the best five-star deluxe hotel in New York. Hotel elementum sesue the aucan
+                            vestibulum aliquam justo in sapien rutrum volutpat.</p>
+                        <button class="fah-btn">english <i class="fa-solid fa-globe"></i></button>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 gx-5  px-5">
+                    <div class="footer-explore">
+                        <h1>explore</h1>
+                        <ul class="footer-nav mt-4">
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">rooms & suits</a></li>
+                            <li><a href="#">restaurant</a></li>
+                            <li><a href="#">spa & wellness</a></li>
+                            <li><a href="#">about hotel</a></li>
+                            <li><a href="#">contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 gx-5">
+                    <div class="footer-contact">
+                        <h1>contact</h1>
+                        <p>1616 Broadway NY, New York 10001
+                            United States of America</p>
+                        <span class="footer-call-icon d-flex align-items-start">
+                            <i class="fa-solid fa-phone"></i>
+                            <h2>855 100 4444</h2>
+                        </span>
+                        <p class="mail"> info@luxuryhotel.com</p>
+                        <div class="footer-social-icon">
+                            <i class="fa-brands fa-instagram-square"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-youtube"></i>
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-pinterest-p"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- copyright -->
+    <div class="container-fluid copy-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="copy-main d-flex justify-content-center">
+                        <p>© Copyright 2022 by DuruThemes.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

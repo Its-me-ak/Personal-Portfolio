@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Time</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        width: 100%;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+          ),
+          url(./FrFPqmOaIAE-zTB.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      .main-box {
+        width: 22%;
+        height: 200px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 10px;
+        margin-right: 40px;
+      }
+
+      .days,
+      .hours,
+      .minutes,
+      .seconds {
+        height: 140px;
+        width: 90px;
+        background-color: #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .days span,
+      .hours span,
+      .minutes span,
+      .seconds span {
+        padding: 16px 12px;
+        background-color: #195156;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .days p,
+      .hours p,
+      .minutes p,
+      .seconds p {
+        margin-top: 5px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 14px;
+        text-transform: capitalize;
+      }
+
+      @media screen and (min-width: 481px) and (max-width: 991px) {
+        body {
+          padding: 0px 15px;
+          width: 100%;
+        }
+
+        .main-box {
+          width: 100%;
+          margin-right: 0;
+          padding: 0px 10px;
+        }
+
+        .days,
+        .hours,
+        .minutes,
+        .seconds {
+          height: 150px;
+          width: 100px;
+        }
+
+        .days span,
+        .hours span,
+        .minutes span,
+        .seconds span {
+          padding: 26px 16px;
+          font-size: 22px;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        body {
+          padding: 0px 15px;
+          width: 100%;
+        }
+        .main-box {
+          width: 100%;
+          padding: 0px 10px;
+          margin-right: 0;
+        }
+
+        .days,
+        .hours,
+        .minutes,
+        .seconds {
+          height: 150px;
+          width: 100px;
+        }
+
+        .days span,
+        .hours span,
+        .minutes span,
+        .seconds span {
+          padding: 20px 12px;
+          font-size: 20px;
+        }
+      }
+
+      @media screen and (max-width: 340px) {
+        body {
+          padding: 0px 15px;
+        }
+        h1 {
+          font-size: 18px;
+        }
+
+        h2 {
+          font-size: 16px;
+        }
+
+        .main-box {
+          width: 100%;
+          padding: 0px 10px;
+        }
+
+        .days,
+        .hours,
+        .minutes,
+        .seconds {
+          height: 170px;
+          width: 70px;
+        }
+
+        .days span,
+        .hours span,
+        .minutes span,
+        .seconds span {
+          padding: 26px 10px;
+          font-size: 18px;
+        }
+
+        .days p,
+        .hours p,
+        .minutes p,
+        .seconds p {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main-box">
+      <div class="days">
+        <span id="theDay"></span>
+        <p>days</p>
+      </div>
+      <div class="hours">
+        <span id="theHour"></span>
+        <p>hours</p>
+      </div>
+      <div class="minutes">
+        <span id="theMin"></span>
+        <p>minutes</p>
+      </div>
+      <div class="seconds">
+        <span id="theSec"></span>
+        <p>seconds</p>
+      </div>
+    </div>
+
+    <script>
+      function countDown() {
+        let projectDate = new Date("Jun 7, 2023 14:30:00").getTime();
+        // console.log(projectDate);
+        let presentDate = new Date().getTime();
+        // console.log(presentDate);
+        let timeDiff = projectDate - presentDate;
+        // console.log(timeDiff);
+
+        let day = Math.floor(timeDiff / (1000 * 24 * 60 * 60));
+        // console.log(day + " days");
+
+        let hour = Math.floor(
+          (timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        // console.log(hour + " hours");
+
+        let minute = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+        // console.log(minute + " minutes");
+
+        let second = Math.floor((timeDiff % (1000 * 60)) / 1000);
+        // console.log(second + " seconds");
+
+        // add zero
+        if (day < 10) day = "0" + day;
+        if (hour < 10) hour = "0" + hour;
+        if (minute < 10) minute = "0" + minute;
+        if (second < 10) second = "0" + second;
+
+        document.querySelector("#theDay").innerHTML = day;
+        document.querySelector("#theHour").innerHTML = hour;
+        document.querySelector("#theMin").innerHTML = minute;
+        document.querySelector("#theSec").innerHTML = second;
+      }
+      setInterval(countDown, 1000);
+    </script>
+  </body>
+</html>

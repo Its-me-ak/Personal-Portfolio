@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator in Javascript</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+            background-color: #d6d6d6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calc-main {
+            width: 600px;
+            height: 450px;
+            background-color: #d6d6d6;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.445),
+                -2px -2px 10px 5px rgba(255, 255, 255, 0.9);
+            border-radius: 5px;
+            padding: 20px 30px;
+        }
+
+        .input {
+            width: 70%;
+            margin: 20px 32px;
+            padding: 12px 8px;
+            border: none;
+            outline: none;
+            background-color: #d6d6d6;
+            box-shadow: inset -5px -5px 5px rgba(255, 255, 255, 60%), inset 5px 5px 5px rgb(0 0 0 / 10%);
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .last {
+            margin-left: 60px;
+        }
+
+        .row1,
+        .row2 {
+            margin-left: 160px;
+        }
+
+        button {
+            margin-top: 25px;
+            margin-left: 25px;
+        }
+
+        .button {
+            padding: 11px 24px;
+            background-color: #010101;
+            color: #fff;
+            border: none;
+            font-weight: 700;
+            border-radius: 5px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.445),
+                -3px -2px 6px 1px rgba(255, 255, 255, 0.9);
+            cursor: pointer;
+        }
+
+        @media screen and (max-width:768px) {
+            .calc-main {
+            width: 95%;
+            height: auto;
+        }
+
+        .input {
+            width: 100%;
+            margin-left: 0px;
+        }
+
+        .last {
+            margin-left: 0px;
+        }
+
+        .row1,
+        .row2 {
+            margin-left: 0px;
+            display: inline-block;
+        }
+
+        button {
+            margin-top: 25px;
+            margin-left: 5px;
+        }
+
+        .button {
+            padding: 11px 24px;
+            background-color: #010101;
+            color: #fff;
+            border: none;
+            font-weight: 700;
+            border-radius: 5px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.445),
+                -3px -2px 6px 1px rgba(255, 255, 255, 0.9);
+            cursor: pointer;
+        }
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="calc-main">
+        <div class="num1">
+            <label for="">Number 1</label>
+            <input type="text" class="input" autocomplete="off" id="value1">
+        </div>
+        <div class="num2">
+            <label for="">Number 2</label>
+            <input type="text" class="input" autocomplete="off" id="value2">
+        </div>
+        <div class="res">
+            <label for="">Result</label>
+            <input type="text" class="input last" autocomplete="off" id="result">
+        </div>
+        <div class="row1">
+            <button type="button" class="button" onclick="addFunc();">Add</button>
+            <button type="button" class="button" onclick="subFunc();">Sub</button>
+        </div>
+        <div class="row2">
+            <button type="button" class="button" onclick="mtyFunc();">Mul</button>
+            <button type="button" class="button" onclick="divFunc();">Div</button>
+        </div>
+    </div>
+
+    <script>
+        // addition
+        function addFunc() {
+            let addVal1 = document.querySelector("#value1").value;
+            let addVal2 = document.querySelector("#value2").value;
+            let addResult = document.querySelector("#result");
+            addVal1 = Number(addVal1)
+            addVal2 = Number(addVal2)
+            addResult.value = addVal1 + addVal2;
+        }
+
+        // substraction
+        function subFunc() {
+            let subVal1 = document.querySelector("#value1").value;
+            let subVal2 = document.querySelector("#value2").value;
+            let subResult = document.querySelector("#result");  
+            subVal1 = Number(subVal1)
+            subVal2 = Number(subVal2)
+            subResult.value = subVal1 - subVal2;
+        }
+
+        // multiplication
+        function mtyFunc() {
+            let mulVal1 = document.querySelector("#value1").value;
+            let mulVal2 = document.querySelector("#value2").value;
+            let mulResult = document.querySelector("#result");
+            mulVal1 = Number(mulVal1)
+            mulVal2 = Number(mulVal2)
+            mulResult.value = mulVal1 * mulVal2;
+        }
+
+        // dividation
+        function divFunc() {
+            let divVal1 = document.querySelector("#value1").value;
+            let divVal2 = document.querySelector("#value2").value;
+            let divResult = document.querySelector("#result");
+            divVal1 = Number(divVal1)
+            divVal2 = Number(divVal2)
+            divResult.value = divVal1 / divVal2;
+        }
+
+    </script>
+</body>
+
+</html>

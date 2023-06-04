@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+            background-color: #d6d6d6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 15px;
+        }
+
+        .tip-main-box {
+            width: 500px;
+            height: auto;
+            background-color: #d6d6d6;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.445),
+                -2px -2px 10px 5px rgba(255, 255, 255, 0.9);
+            border-radius: 5px;
+            padding:30px;
+        }
+
+        .input {
+            width: 85%;
+            margin: 25px 32px;
+            padding: 12px 8px;
+            border: none;
+            outline: none;
+            background-color: #d6d6d6;
+            box-shadow: inset -5px -5px 5px rgba(255, 255, 255, 60%), inset 5px 5px 5px rgb(0 0 0 / 10%);
+            letter-spacing: 1px;
+            font-size: 16px;
+        }
+        label{
+            display: block;
+            font-weight: 700;
+            margin-left: 30px;
+            margin-bottom: -12px;
+
+        }
+        .btn{
+            margin-left: 30px;
+            padding: 10px 15px;
+            background: #fb0501;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.445), -3px -2px 6px 1px rgba(255, 255, 255, 0.9);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="tip-main-box">
+        <div class="bill-amnt">
+            <label for="">Bill Amount</label>
+            <input type="text" class="input" autocomplete="off" id="bill_amount">
+        </div>
+        <div class="tip-prcnt">
+            <label for="">Tip Percentage</label>
+            <input type="text" class="input" autocomplete="off" id="tip_percent">
+        </div>
+        <div class="tip-amnt">
+            <label for="">Tip Amount</label>
+            <input type="text" class="input last" autocomplete="off" id="tip_amount" disabled>
+        </div>
+        <div class="total">
+            <label for="">Total Bill</label>
+            <input type="text" class="input last" autocomplete="off" id="total_bill" disabled>
+        </div>
+       <button type="button" class="btn" id="" onclick="tipCalcFn();">Calculate</button>
+    </div>
+
+    <script>
+        const tipCalcFn = ()=>{
+            let amount = document.querySelector("#bill_amount").value;
+            // console.log(amount);
+            let tipPercent = document.querySelector("#tip_percent").value;
+            // console.log(tipPercent);
+            let tipAmount = amount * (tipPercent/100);
+            document.querySelector("#tip_amount").value = tipAmount;
+            // console.log(tipAmount);
+            let totalBill = tipAmount + Number(amount);
+            document.querySelector("#total_bill").value = totalBill;
+            // console.log(totalBill);
+        }
+    </script>
+
+</body>
+</html>

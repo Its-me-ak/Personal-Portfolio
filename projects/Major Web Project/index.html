@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;500;600&family=IBM+Plex+Sans:wght@300;400&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <!-- bootstrp -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- popup -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Fam Studio</title>
+</head>
+
+<body>
+    <!-- hero slider -->
+    <a href="#homepage">
+        <div class="gtt-btn" id="topBtn">
+            <i class="fa-solid fa-arrow-turn-up"></i>
+        </div>
+    </a>
+    <div class="hero-main" id="homepage">
+        <div class="row ">
+            <!-- header -->
+            <header class="header d-flex align-items-center" id="nav">
+                <div class="container-lg d-flex justify-content-between">
+                    <div class="logo d-flex align-items-center">
+                        <img src="./img/fam.png" class="img-fluid light" alt="">
+                    </div>
+                    <nav class="navigation">
+                        <label id="checkbtn" class="check">
+                            <i class="fa-solid fa-bars-staggered"></i>
+                        </label>
+                        <ul id="menulink" class="hide">
+                            <li><a href="index.html" class="active">home</a></li>
+                            <li><a href="about.html">about</a></li>
+                            <li><a href="service.html">services</a></li>
+                            <li><a href="portfolio.html">portfolio</a></li>
+                            <li><a href="blog.html">blog</a></li>
+                            <li><a href="contact.html">contact</a></li>
+                            <li id="icon"><i class="fa-solid fa-moon"></i></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <div class="col-12">
+                <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active hero" data-bs-interval="10000">
+                            <img src="./img/hero1.jpg" class="d-block w-100" alt="...">
+                            <div class="overlay"></div>
+                            <div class="col-12 hero-mdl-caption">
+                                <div class="carousel-caption  d-md-block slide-caption">
+                                    <h5>welcome to</h5>
+                                    <h1 class="text-uppercase fw-bold">fam photography</h1>
+                                    <p>I specialize in all type of photography</p>
+                                    <button class="btn-5">contact us</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item hero" data-bs-interval="5000">
+                            <img src="img/hero2.jpg" class="d-block w-100" alt="...">
+                            <div class="overlay"></div>
+                            <div class="col-12 hero-mdl-caption">
+                                <div class="carousel-caption  d-md-block slide-caption">
+                                    <h5>welcome to</h5>
+                                    <h1 class="text-uppercase fw-bold">fam photography</h1>
+                                    <p>I specialize in all type of photography</p>
+                                    <button class="btn-5">contact us</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item hero">
+                            <img src="./img/hero3.jpg" class="d-block w-100" alt="...">
+                            <div class="overlay"></div>
+                            <div class="col-12 hero-mdl-caption">
+                                <div class="carousel-caption  d-md-block slide-caption">
+                                    <h5>welcome to</h5>
+                                    <h1 class="text-uppercase fw-bold">fam photography</h1>
+                                    <p>I specialize in all type of photography</p>
+                                    <button class="btn-5">contact us</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="container categories-main-bg">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-between align-items-center flex-wrap">
+                <div class="category-heading">
+                    <h1>categories</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+                    <p> sed do eiusmod tempor incididunt ut labore et dolore .</p>
+                </div>
+                <div class="category-btn">
+                    <a href="category.html">
+                        <button class="btn-1">load more</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row ">
+            <!-- cg-1  -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 g-5">
+                <img src="./img/ct-1.jpg" alt="" class="img-fluid">
+                <div class="category-content">
+                    <h4>wedding photography</h4>
+                    <p>Wedding photography is the photography of activities relating to weddings. It encompasses
+                        photographs of the couple before marriage (for announcements, portrait displays, or thank you
+                        cards) of the wedding. </p>
+                </div>
+            </div>
+
+            <!-- cg-2  -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 g-5">
+                <img src="./img/ct-2.jpg" alt="" class="img-fluid">
+                <div class="category-content">
+                    <h4>fashion photography</h4>
+                    <p>Fashion photography captures models in a glamorous light display fashion items such as clothes,
+                        shoes and other accessories. This type of photography is conducted mostly for advertisements and
+                        fashion magazines. </p>
+                </div>
+            </div>
+
+            <!-- cg-3  -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 g-5">
+                <img src="./img/ct-3.jpg" alt="" class="img-fluid">
+                <div class="category-content">
+                    <h4>HDR photography</h4>
+                    <p>HDR photography is one of the most creative types of photography and requires extreme skill on
+                        part of the photographers. It is created by blending three different types of pictures into a
+                        single picture that highlights. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio -->
+    <div class="container portfolio-main-bg">
+        <div class="row">
+            <div class="col-12 d-flex align-items-center flex-column">
+                <div class="portfolio-heading text-center">
+                    <h5>portfolio</h5>
+                    <h1>our special work</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row portfolio-lightbox mt-5">
+            <!-- 1 -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 g-5 ">
+                <div class="img-item ">
+                    <a href="./img/xxx1.jpg" target="_blank"><i class="fa-solid fa-plus"></i>
+                        <img src="./img/xxx1.jpg" alt="" class="img-fluid">
+                    </a>
+                    <div class="pf-img-hover">
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 g-5 ">
+                <div class="img-item ">
+                    <a href="./img/xxx2.jpg" target="_blank"><i class="fa-solid fa-plus"></i>
+                        <img src="./img/xxx2.jpg" alt="" class="img-fluid">
+                    </a>
+                    <div class="pf-img-hover">
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 g-5 ">
+                <div class="img-item">
+                    <a href="./img/xxx3.jpg" target="_blank"><i class="fa-solid fa-plus"></i>
+                        <img src="./img/xxx3.jpg" alt="" class="img-fluid">
+                    </a>
+                    <div class="pf-img-hover">
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 g-5 ">
+                <div class="img-item ">
+                    <a href="./img/xxx4.jpg" target="_blank"><i class="fa-solid fa-plus"></i>
+                        <img src="./img/xxx4.jpg" alt="" class="img-fluid">
+                    </a>
+                    <div class="pf-img-hover">
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 g-5 ">
+                <div class="img-item ">
+                    <a href="./img/xxx5.jpg" target="_blank"><i class="fa-solid fa-plus"></i>
+                        <img src="./img/xxx5.jpg" alt="" class="img-fluid">
+                    </a>
+                    <div class="pf-img-hover">
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 g-5 ">
+                <div class="img-item ">
+                    <a href="./img/xxx6.jpg" target="_blank"><i class="fa-solid fa-plus"></i>
+                        <img src="./img/xxx6.jpg" alt="" class="img-fluid">
+                    </a>
+                    <div class="pf-img-hover">
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 7 -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 g-5">
+                <div class="img-item ">
+                    <a href="./img/xxx7.jpg" target="_blank"><i class="fa-solid fa-plus"></i>
+                        <img src="./img/xxx7.jpg" alt="" class="img-fluid">
+                    </a>
+                    <div class="pf-img-hover">
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8 -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 g-5 ">
+                <div class="img-item ">
+                    <a href="./img/xxx8.jpg" target="_blank"><i class="fa-solid fa-plus"></i>
+                        <img src="./img/xxx8.jpg" alt="" class="img-fluid">
+                    </a>
+                    <div class="pf-img-hover">
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9 -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 g-5 ">
+                <div class="img-item ">
+                    <a href="./img/xxx9.jpg" target="_blank"><i class="fa-solid fa-plus"></i>
+                        <img src="./img/xxx9.jpg" alt="" class="img-fluid">
+                    </a>
+                    <div class="pf-img-hover">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="portfolio-btn d-flex justify-content-center mt-5">
+            <button class="pf-btn">load more</button>
+        </div>
+
+    </div>
+
+    <!-- Contact / Sign up -->
+    <div class="container-fluid contact-main">
+        <div class="container">
+            <div class="row d-flex justify-content-between">
+                <!-- contact -->
+                <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                    <div class="contact">
+                        <h1>contact us</h1>
+                        <h4 class="mt-5">address</h4>
+                        <p>C-9/15, 3rd Floor Sector 7, Rohini, Delhi</p>
+
+                        <h4 class="mt-5">we are open</h4>
+                        <p>Mon - Sat (8:00-19:00)</p>
+                        <p>Sun (10:00-16:00)</p>
+
+                        <h4 class="mt-5">booking</h4>
+                        <p>+91 9129-1235-17</p>
+                        <p>akibkhan@9984gmail.com</p>
+
+                    </div>
+                </div>
+
+                <!-- sign up -->
+                <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+
+                    <div class="sign-up">
+                        <h1 class="mb-4">sign up</h1>
+                        <form action="">
+                            <div class="form-input">
+                                <input type="text" placeholder="USERNAME" id="usernames" name="username"
+                                    autocomplete="off">
+                                <h5 id="usercheck" style="color: red;"> **Username is missing</h5>
+                            </div>
+
+                            <div class="form-input">
+                                <input type="email" placeholder="EMAIL" id="email" name="email" autocomplete="off"
+                                    required>
+                                <!-- <h5 id="mailcheck" style="color: red;"> **Email is missing</h5> -->
+                                <h5 id="emailvalid" class="form-text
+                                text-muted invalid-feedback" style="color: red;">
+                                    Your email must be a valid email
+                                </h5>
+                                <!-- <i class="fas fa-check-circle iconcheck mailcheck"></i>
+                                <i class="fas fa-exclamation-circle iconerr mailerr"></i> -->
+                                <!-- <div class="mailError"></div> -->
+                            </div>
+
+                            <div class="form-input">
+                                <input type="password" placeholder="PASSWORD" id="password" name="pass"
+                                    autocomplete="off">
+                                <h5 id="passcheck" style="color: red;"> **Please Fill the password</h5>
+                                <!-- <i class="fas fa-check-circle iconcheck passcheck"></i>
+                                <i class="fas fa-exclamation-circle iconerr passerr"></i>
+                                <div class="passError"></div> -->
+                            </div>
+
+                            <div class="form-input">
+                                <input type="password" placeholder="CONFIRM PASSWORD" id="conpassword" name="username"
+                                    autocomplete="off">
+                                <h5 id="conpasscheck" style="color: red;">**Password didn't match</h5>
+                                <!-- <i class="fas fa-check-circle iconcheck cpasscheck"></i>
+                                <i class="fas fa-exclamation-circle iconerr cpasserr"></i>
+                                <div class="cnfpassError"></div> -->
+                            </div>
+
+                            <div class="form-btn">
+                                <input type="submit" value="Submit" class="btn" id="submitbtn">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-content d-flex flex-column align-items-center">
+                    <p>2022 <span>FAM </span>, All rights reserved. Theme by <span> ADMEC </span></p>
+                    <span class="footer-icon d-flex justify-content-between mt-4">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-google-plus-g"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <i class="fa-brands fa-pinterest-p"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/script.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script>
+        // lightbox
+        $(document).ready(function () {
+            $('.portfolio-lightbox').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                closeOnContentClick: false,
+                closeBtnInside: false,
+                mainClass: 'mfp-with-zoom mfp-img-mobile',
+                image: {
+                    verticalFit: true,
+                    titleSrc: function (item) {
+                        return item.el.attr('title') + ' &middot; <a class="image-source-link" href="' + item.el.attr('data-source') + '" target="_blank">image source</a>';
+                    }
+                },
+                gallery: {
+                    enabled: true
+                },
+                zoom: {
+                    enabled: true,
+                    duration: 300, // don't foget to change the duration also in CSS
+                    opener: function (element) {
+                        return element.find('img');
+                    }
+                }
+            });
+        });
+
+        // Document is ready
+        $(document).ready(function () {
+            // Validate Username
+            $("#usercheck").hide();
+            let usernameError = true;
+            $("#usernames").keyup(function () {
+                validateUsername();
+            });
+
+            function validateUsername() {
+                let usernameValue = $("#usernames").val();
+                if (usernameValue.length == "") {
+                    $("#usercheck").show();
+                    usernameError = false;
+                    return false;
+                } else if (usernameValue.length < 3 || usernameValue.length > 10) {
+                    $("#usercheck").show();
+                    $("#usercheck").html("**length of username must be between 3 and 10");
+                    usernameError = false;
+                    return false;
+                } else {
+                    $("#usercheck").hide();
+                }
+            }
+
+            // Validate Email
+            const email = document.getElementById("email");
+            email.addEventListener("blur", () => {
+                let regex = /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
+                let s = email.value;
+                if (regex.test(s)) {
+                    email.classList.remove("is-invalid");
+                    emailError = true;
+                } else {
+                    email.classList.add("is-invalid");
+                    emailError = false;
+                }
+            });
+
+            // function validateEmail() {
+            //     let usernameValue = $("#email").val();
+            //     if (usernameValue.length == "") {
+            //         $("#mailcheck").show();
+            //         usernameError = false;
+            //         return false;
+            //     } if (usernameValue.length < 3 || usernameValue.length > 18) {
+            //         $("#mailcheck").show();
+            //         $("#mailcheck").html("**length of username must be between 3 and 18");
+            //         usernameError = false;
+            //         return false;
+            //     } else {
+            //         $("#mailcheck").hide();
+            //     }
+            // }
+
+            // Validate Password
+            $("#passcheck").hide();
+            let passwordError = true;
+            $("#password").keyup(function () {
+                validatePassword();
+            });
+            function validatePassword() {
+                let passwordValue = $("#password").val();
+                if (passwordValue.length == "") {
+                    $("#passcheck").show();
+                    passwordError = false;
+                    return false;
+                }
+                if (passwordValue.length < 3 || passwordValue.length > 10) {
+                    $("#passcheck").show();
+                    $("#passcheck").html(
+                        "**length of your password must be between 3 and 10"
+                    );
+                    $("#passcheck").css("color", "red");
+                    passwordError = false;
+                    return false;
+                } else {
+                    $("#passcheck").hide();
+                }
+            }
+
+            // Validate Confirm Password
+            $("#conpasscheck").hide();
+            let confirmPasswordError = true;
+            $("#conpassword").keyup(function () {
+                validateConfirmPassword();
+            });
+            function validateConfirmPassword() {
+                let confirmPasswordValue = $("#conpassword").val();
+                let passwordValue = $("#password").val();
+                if (passwordValue != confirmPasswordValue) {
+                    $("#conpasscheck").show();
+                    $("#conpasscheck").html("**Password didn't Match");
+                    $("#conpasscheck").css("color", "red");
+                    confirmPasswordError = false;
+                    return false;
+                } else {
+                    $("#conpasscheck").hide();
+                }
+            }
+
+            // Submit button
+            $("#submitbtn").click(function () {
+                validateUsername();
+                validatePassword();
+                validateConfirmPassword();
+                // validateEmail();
+                if (
+                    usernameError == true &&
+                    passwordError == true &&
+                    confirmPasswordError == true &&
+                    emailError == true
+                ) {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+        });
+
+
+    </script>
+
+</body>
+
+</html>

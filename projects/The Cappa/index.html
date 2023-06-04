@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;500;600&family=Gilda+Display&display=swap"
+        rel="stylesheet">
+    <!-- bootstrp -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>The Cappa Luxery Hotel</title>
+</head>
+
+<body>
+    <!-- header -->
+    <!-- hero slider -->
+    <a href="#homepage">
+        <div class="gtt-btn fixBtn" id="topBtn">
+            <i class="fa-solid fa-angle-up"></i>
+        </div>
+    </a>
+    <div class="hero-main" id="homepage">
+        <div class="row ">
+            <header class="header d-flex align-items-center">
+                <div class="container d-flex justify-content-between">
+                    <div class="logo d-flex justify-content-center align-items-center">
+                        <img src="./img/logo.png" class="img-fluid light" alt="">
+                        <img src="./img/logo-dark.png" alt="" class="img-fluid dark">
+                    </div>
+                    <nav class="navigation">
+                        <label for="" class="checkbtn" id="check">
+                            <i class="fas fa-bars"></i>
+                        </label>
+                        <ul id="menulink" class="hide">
+                            <li><a href="index.html" class="active">home</a></li>
+                            <li><a href="about.html">about</a></li>
+                            <li><a href="restaurant.html">restaurant</a></li>
+                            <li><a href="gallary.html">gallary</a></li>
+                            <li><a href="contact.html">contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <div class="col-12">
+
+                <div id="carouselExampleDark" class="carousel  slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators d-flex flex-column align-items-end">
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active hero" data-bs-interval="10000">
+                            <img src="./img/hero2.jpg" class="d-block w-100" alt="...">
+                            <div class="overlay"></div>
+                            <div class="col-12 hero-mdl-caption">
+                                <div class="carousel-caption  d-md-block slide-caption">
+                                    <span class="ratings-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <h5>luxuery hotel & best resort</h5>
+                                    <h1 class="text-uppercase fw-bold">enjoy a luxuery experience</h1>
+                                    <a href="#" class="r-s-btn">rooms % suits </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item hero" data-bs-interval="2000">
+                            <img src="./img/hero3.jpg" class="d-block w-100" alt="...">
+                            <div class="overlay"></div>
+                            <div class="col-12 hero-mdl-caption">
+                                <div class="carousel-caption d-md-block slide-caption">
+                                    <span class="ratings-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <h5>unique place to relax & enjoy</h5>
+                                    <h1 class="text-uppercase fw-bold">perfect base for you</h1>
+                                    <a href="#" class="r-s-btn">rooms % suits </a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="carousel-item hero">
+                            <img src="./img/hero1.jpg" class="d-block w-100" alt="...">
+                            <div class="overlay"></div>
+                            <div class="col-12 hero-mdl-caption">
+                                <div class="carousel-caption d-md-block slide-caption">
+                                    <span class="ratings-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <h5>the ultimate luxury experience</h5>
+                                    <h1 class="text-uppercase fw-bold">enjoy the best moments</h1>
+                                    <a href="#" class="r-s-btn">rooms % suits </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- hero call -->
+                    <div class="hero-call d-flex align-items-center">
+                        <div class="call-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <span class="hero-call-number">
+                            <p>Reservation</p>
+                            <h2>855 100 4444</h2>
+                        </span>
+                    </div>
+                    <!-- hero checkin form -->
+                    <div class="row hero-form justify-content-center">
+                        <div class="col-12 col-sm-10 col-md-6 col-lg-2 mb-md-4 mb-sm-4 mb-4 g-0">
+                            <input type="text" class="form-control hero-input" placeholder="Check in"
+                                aria-label="First name">
+                        </div>
+                        <div class="col-12 col-sm-10 col-md-6 col-lg-2 mb-md-4 mb-sm-4 mb-4 g-0">
+                            <input type="text" class="form-control hero-input" placeholder="Check out"
+                                aria-label="First name">
+                        </div>
+                        <div class=" col-12 col-sm-10 col-md-3 col-lg-2 mb-md-4 mb-sm-4 mb-4 g-0">
+                            <input type="text" class="form-control hero-input" placeholder="Adult"
+                                aria-label="First name">
+                        </div>
+                        <div class="col-12 col-sm-10 col-md-3 col-lg-2 mb-md-4 mb-sm-4 mb-4 g-0">
+                            <input type="text" class="form-control hero-input" placeholder="Children"
+                                aria-label="First name">
+                        </div>
+                        <div class="col-12 col-sm-10 col-md-3 col-lg-2 mb-md-4 mb-sm-4 mb-4 g-0">
+                            <input type="text" class="form-control hero-input" placeholder="Room"
+                                aria-label="First name">
+                        </div>
+                        <div class="col-12 col-sm-10 col-md-3 col-lg-2 g-0">
+                            <button class="hero-form-btn">check now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- experience section -->
+    <div class="container expereince-main">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="exp-content">
+                    <span class="ratings-star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <h5>the cappa luxuery hotel</h5>
+                    <h1>Enjoy a Luxury Experience</h1>
+                    <p>Welcome to the best five-star deluxe hotel in New York. Hotel elementum sesue the aucan
+                        vestibulum aliquam justo in sapien rutrum volutpat. Donec in quis the pellentesque velit.
+                        Donec
+                        id velit ac arcu posuere blane. <br> <br>
+
+                        Hotel ut nisl quam nestibulum ac quam nec odio elementum sceisue the aucan ligula. Orci
+                        varius
+                        natoque penatibus et magnis dis parturient monte nascete ridiculus mus nellentesque habitant
+                        morbine.</p>
+                    <div class="exp-call mt-5">
+                        <span class="call-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </span>
+                        <span class="exp-number mx-3">
+                            <p>Reservation</p>
+                            <h2>855 100 4444</h2>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 g-5">
+                <div class="exp-img1">
+                    <img src="./img/8.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 gx-5">
+                <div class="exp-img2">
+                    <img src="./img/2.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- rooms & suits -->
+    <div class="container-fluid rooms-suits">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="room-suit-heading">
+                        <h5>the cappa luxuery hotel</h5>
+                        <h1>Rooms & Suits</h1>
+                    </div>
+                </div>
+                <!-- room1 -->
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4  g-5">
+                    <div class="room-suit-card">
+                        <img src="./img/rooms1.jpg" class="img-fluid" alt="">
+
+                        <button type="button" class="room-suit-btn">
+                            book
+                        </button>
+                        <div class="card-con">
+                            <p>150$ / night</p>
+                            <h2>junior suit</h2>
+                            <div class="card-con-line"></div>
+                        </div>
+                        <div class="card-con-hide d-flex justify-content-between align-items-center">
+                            <span class="card-con-icon">
+                                <i class="fa-solid fa-bed"></i>
+                                <i class="fa-solid fa-bath"></i>
+                                <i class="fa-solid fa-mug-saucer"></i>
+                                <i class="fa-solid fa-shower"></i>
+                            </span>
+                            <div class="card-con-link">
+                                <a href="#">details</a> <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- room2 -->
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 g-5">
+                    <div class="room-suit-card">
+                        <img src="./img/rooms2.jpg" class="img-fluid" alt="">
+                        <button type="button" class="room-suit-btn">
+                            book
+                        </button>
+                        <div class="card-con">
+                            <p>200$ / night</p>
+                            <h2>family room</h2>
+                            <div class="card-con-line"></div>
+                        </div>
+                        <div class="card-con-hide d-flex justify-content-between align-items-center">
+                            <span class="card-con-icon">
+                                <i class="fa-solid fa-bed"></i>
+                                <i class="fa-solid fa-bath"></i>
+                                <i class="fa-solid fa-mug-saucer"></i>
+                                <i class="fa-solid fa-shower"></i>
+                            </span>
+                            <div class="card-con-link">
+                                <a href="#">details</a> <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- room3 -->
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 g-5">
+                    <div class="room-suit-card">
+                        <img src="./img/rooms3.jpg" class="img-fluid" alt="">
+                        <button type="button" class="room-suit-btn">
+                            book
+                        </button>
+                        <div class="card-con">
+                            <p>250$ / night</p>
+                            <h2>double room</h2>
+                            <div class="card-con-line"></div>
+                        </div>
+                        <div class="card-con-hide d-flex justify-content-between align-items-center">
+                            <span class="card-con-icon">
+                                <i class="fa-solid fa-bed"></i>
+                                <i class="fa-solid fa-bath"></i>
+                                <i class="fa-solid fa-mug-saucer"></i>
+                                <i class="fa-solid fa-shower"></i>
+                            </span>
+                            <div class="card-con-link">
+                                <a href="#">details</a> <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- room4 -->
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 g-5">
+                    <div class="room-suit-card">
+                        <img src="./img/rooms4.jpg" class="img-fluid" alt="">
+                        <button type="button" class="room-suit-btn mt-3">
+                            book
+                        </button>
+                        <div class="card-con">
+                            <p>300$ / night</p>
+                            <h2>delux room</h2>
+                            <div class="card-con-line2"></div>
+                        </div>
+                        <div class="card-con-hide d-flex justify-content-between align-items-center">
+                            <span class="card-con-icon">
+                                <i class="fa-solid fa-bed"></i>
+                                <i class="fa-solid fa-bath"></i>
+                                <i class="fa-solid fa-mug-saucer"></i>
+                                <i class="fa-solid fa-shower"></i>
+                            </span>
+                            <div class="card-con-link">
+                                <a href="#">details</a> <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- room5 -->
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 g-5">
+                    <div class="room-suit-card">
+                        <img src="./img/rooms5.jpg" class="img-fluid" alt="">
+                        <button type="button" class="room-suit-btn mt-3">
+                            book
+                        </button>
+                        <div class="card-con">
+                            <p>150$ / night</p>
+                            <h2>superior room</h2>
+                            <div class="card-con-line2"></div>
+                        </div>
+                        <div class="card-con-hide d-flex justify-content-between align-items-center">
+                            <span class="card-con-icon">
+                                <i class="fa-solid fa-bed"></i>
+                                <i class="fa-solid fa-bath"></i>
+                                <i class="fa-solid fa-mug-saucer"></i>
+                                <i class="fa-solid fa-shower"></i>
+                            </span>
+                            <div class="card-con-link">
+                                <a href="#">details</a> <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- extra service section -->
+    <div class="container-fluid extra-service-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="extra-service-content">
+                        <h5>best price</h5>
+                        <h1>extra service</h1>
+                        <p>The best prices for your relaxing vacation. The utanislen quam nestibulum ac quame odion
+                            elementum sceisue the aucan. <br> <br>
+
+                            Orci varius natoque penatibus et magnis disney parturient monte nascete ridiculus mus nellen
+                            etesque habitant morbine.</p>
+                        <div class="exp-call">
+                            <span class="call-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </span>
+                            <span class="exp-number">
+                                <p>for information</p>
+                                <h2>855 100 4444</h2>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- service 1 -->
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 g-5 gy-lg-0 gy-md-0">
+                    <div class="card border-0">
+                        <img src="./img/service1.jpg" class="img-fluid card-img-top" alt="...">
+                        <div class="card-body">
+                            <h2>Room cleaning</h2>
+                            <span class="dollor">$50</span>
+                            <span>/ month</span>
+                            <p>
+                                <span><i class="fa-solid fa-check"></i> Hotel ut nisan the
+                                    duru</span>
+                            </p>
+                            <p>
+                                <span><i class="fa-solid fa-check"></i> Orci miss natoque vasa
+                                    ince</span>
+                            </p>
+                            <p>
+                                <span><i class="fa-solid fa-xmark"></i> Clean sorem ipsum
+                                    morbin</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- service2 -->
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 g-5 gy-lg-0 gy-md-0">
+                    <div class="card border-0">
+                        <img src="./img/service2.jpg" class="img-fluid card-img-top" alt="...">
+                        <div class="card-body">
+                            <h2>Drinks included</h2>
+                            <span class="dollor">$30</span>
+                            <span>/ month</span>
+                            <p>
+                                <span><i class="fa-solid fa-check"></i> Hotel ut nisan the
+                                    duru</span>
+                            </p>
+                            <p>
+                                <span><i class="fa-solid fa-check"></i> Orci miss natoque vasa
+                                    ince</span>
+                            </p>
+                            <p>
+                                <span><i class="fa-solid fa-xmark"></i> Clean sorem ipsum
+                                    morbin</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- promo video -->
+    <div class="container-fluid promo-vid">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="promo-vid-content d-flex justify-content-center align-items-center flex-column">
+                        <span class="ratings-star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <h5>the cappa luxury hotel</h5>
+                        <h1>promotional video</h1>
+                        <div class="promo-vid-icon">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- hotel facilities -->
+    <div class="container-fluid facilities-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="facility-heading">
+                        <h5>our services</h5>
+                        <h1>hotel facilities</h1>
+                    </div>
+                </div>
+
+                <!-- card1 -->
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 g-5">
+                    <div class="card">
+                        <div class="card-body facilities">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-earth-asia"></i>
+                            </div>
+                            <div class="card-icon-low">
+                                <i class="fa-solid fa-earth-asia"></i>
+                            </div>
+                            <h1 class="card-title">pick up & drop </h1>
+                            <p class="card-text">We’ll pick up from airport while you comfy on your ride, mus
+                                nellentesque habitant.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- card2 -->
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 g-5">
+                    <div class="card">
+                        <div class="card-body facilities">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-car"></i>
+                            </div>
+                            <div class="card-icon-low">
+                                <i class="fa-solid fa-car"></i>
+                            </div>
+                            <h1 class="card-title">parking space </h1>
+                            <p class="card-text">Fusce tincidunt nis ace park norttito sit amet space, mus
+                                nellentesque
+                                habitant.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 g-5">
+                    <div class="card">
+                        <div class="card-body facilities">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-bed-pulse"></i>
+                            </div>
+                            <div class="card-icon-low">
+                                <i class="fa-solid fa-bed-pulse"></i>
+                            </div>
+                            <h1 class="card-title">room service </h1>
+                            <p class="card-text">Room tincidunt nis ace park norttito sit amet space, mus
+                                nellentesque
+                                habitant.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- card4 -->
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 g-5">
+                    <div class="card">
+                        <div class="card-body facilities">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-water-ladder"></i>
+                            </div>
+                            <div class="card-icon-low">
+                                <i class="fa-solid fa-water-ladder"></i>
+                            </div>
+                            <h1 class="card-title">swimming pool </h1>
+                            <p class="card-text">Swimming pool tincidunt nise ace park norttito sit space, mus
+                                nellentesque.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- card5 -->
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 g-5">
+                    <div class="card">
+                        <div class="card-body facilities">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-wifi"></i>
+                            </div>
+                            <div class="card-icon-low">
+                                <i class="fa-solid fa-wifi"></i>
+                            </div>
+                            <h1 class="card-title">fibre internet</h1>
+                            <p class="card-text">Wifi tincidunt nis ace park norttito sit amet space, mus
+                                nellentesque
+                                habitant.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- card6 -->
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 g-5">
+                    <div class="card">
+                        <div class="card-body facilities">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-utensils"></i>
+                            </div>
+                            <div class="card-icon-low">
+                                <i class="fa-solid fa-utensils"></i>
+                            </div>
+                            <h1 class="card-title">breakfast</h1>
+                            <p class="card-text">Eat tincidunt nisa ace park norttito sit amet space, mus
+                                nellentesque
+                                habitant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- testimonials -->
+    <div class="container-fluid testimonal-bg">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center testi-row">
+                <div class="col-10 col-sm-10 col-md-8 col-lg-8  testi-main">
+                    <div class="testimonials-heading">
+                        <h5>testimonials</h5>
+                        <h1>what client's say?</h1>
+                        <div class="client-line"></div>
+                        <!-- slider -->
+                        <div id="carouselExampleIndicators1" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <p class="client-feedback">
+                                        Hotel dapibus asue metus the nec feusiate eraten miss hendreri net ve ante
+                                        the
+                                        lemon sanleo nectan feugiat erat hendrerit necuis ve ante otel inilla duiman
+                                        at
+                                        finibus viverra neca the sene on satien the miss drana inc fermen norttito
+                                        sit
+                                        space, mus nellentesque habitan.
+                                    </p>
+                                    <div class="clients d-flex justify-content-between">
+                                        <div class="client-detail  d-flex align-items-center">
+                                            <img src="./img/team1.jpg" alt="">
+                                            <div class="px-4">
+                                                <span class="cl-ratings-star">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </span>
+                                                <h2>emily brown</h2>
+                                                <h6>guest review</h6>
+                                            </div>
+                                        </div>
+                                        <div class="quotes">
+                                            <img src="./img/quot.png" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <p class="client-feedback">
+                                        Hotel dapibus asue metus the nec feusiate eraten miss hendreri net ve ante
+                                        the
+                                        lemon sanleo nectan feugiat erat hendrerit necuis ve ante otel inilla duiman
+                                        at
+                                        finibus viverra neca the sene on satien the miss drana inc fermen norttito
+                                        sit
+                                        space, mus nellentesque habitan.
+                                    </p>
+                                    <div class="clients d-flex justify-content-between">
+                                        <div class="client-detail d-flex align-items-center">
+                                            <img src="./img/team2.jpg" alt="">
+                                            <div class="px-4">
+                                                <span class="cl-ratings-star">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </span>
+                                                <h2>nolan white</h2>
+                                                <h6>guest review</h6>
+                                            </div>
+                                        </div>
+                                        <div class="quotes">
+                                            <img src="./img/quot.png" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <p class="client-feedback">
+                                        Hotel dapibus asue metus the nec feusiate eraten miss hendreri net ve ante
+                                        the
+                                        lemon sanleo nectan feugiat erat hendrerit necuis ve ante otel inilla duiman
+                                        at
+                                        finibus viverra neca the sene on satien the miss drana inc fermen norttito
+                                        sit
+                                        space, mus nellentesque habitan.
+                                    </p>
+                                    <div class="clients d-flex justify-content-between">
+                                        <div class="client-detail d-flex align-items-center">
+                                            <img src="./img/team4.jpg" alt="">
+                                            <div class="px-4">
+                                                <span class="cl-ratings-star">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </span>
+                                                <h2>olivia martin</h2>
+                                                <h6>guest review</h6>
+                                            </div>
+                                        </div>
+                                        <div class="quotes">
+                                            <img src="./img/quot.png" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- what we have section -->
+    <div class="container-fluid we-have-main">
+        <div class="container">
+            <div class="row">
+                <!-- the restaurant -->
+                <div class="restaurant d-flex flex-wrap">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 g-0">
+                        <div class="restaurant-img">
+                            <img src="./img/res1.jpg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 g-0">
+                        <div class="restaurant-content">
+                            <h5>discover</h5>
+                            <h1>the restaurant</h1>
+                            <p>Restaurant inilla duiman at elit finibus viverra nec a lacus themo the nesudea
+                                seneoice
+                                misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami
+                                acsestion
+                                augue artine.</p>
+                            <a href="#" class="lm">learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- spa center -->
+                <div class="spa d-flex flex-wrap">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 g-0">
+                        <div class="spa-content">
+                            <h5>experiences</h5>
+                            <h1>spa center</h1>
+                            <p>Spa center inilla duiman at elit finibus viverra nec a lacus themo the nesudea
+                                seneoice
+                                misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami
+                                acsestion
+                                augue artine.</p>
+                            <a href="#" class="lm">learn more</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 g-0">
+                        <div class="restaurant-img">
+                            <img src="./img/spa.jpg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- fitness center -->
+                <div class="fitness d-flex flex-wrap">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 g-0">
+                        <div class="restaurant-img">
+                            <img src="./img/gym.jpg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 g-0">
+                        <div class="fitness-content">
+                            <h5>modern</h5>
+                            <h1>fitness center</h1>
+                            <p>Fitness center inilla duiman at elit finibus viverra nec a lacus themo the nesudea
+                                seneoice
+                                misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami
+                                acsestion
+                                augue artine.</p>
+                            <a href="#" class="lm">learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- the health -->
+                <div class="health d-flex flex-wrap">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 g-0">
+                        <div class="health-content">
+                            <h5>experiences</h5>
+                            <h1>the health club & pool</h1>
+                            <p>The health club & pool at elit finibus viverra nec a lacus themo the nesudea seneoice
+                                misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami
+                                acsestion
+                                augue artine.</p>
+                            <a href="#" class="lm">learn more</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 g-0">
+                        <div class="restaurant-img">
+                            <img src="./img/pool.jpg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- news  section-->
+    <div class="container-fluid news-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="news-heading">
+                        <h5>hotel blog</h5>
+                        <h1>our news</h1>
+                    </div>
+                </div>
+                <!-- news slider -->
+                <!-- slider1 -->
+                <div class="col-12  col-sm-12 col-md-6 col-lg-4 g-5">
+                    <div class="news-restaurant">
+                        <div class="overflow">
+                            <img src="./img/news1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="news-date">
+                            <p>dec</p>
+                            <h4>02</h4>
+                        </div>
+                        <div class="col-12">
+                            <div class="news-res-content">
+                                <h5>restaurant</h5>
+                                <h1>historic restaurant inovated</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- slider2 -->
+                <div class="col-12  col-sm-12 col-md-6 col-lg-4 g-5">
+                    <div class="news-spa">
+                        <div class="overflow">
+                            <img src="./img/news2.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="news-date">
+                            <p>dec</p>
+                            <h4>04</h4>
+                        </div>
+                        <div class="col-12">
+                            <div class="news-spa-content">
+                                <h5>spa</h5>
+                                <h1>benefits of spa treatments</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- slider3 -->
+                <div class="col-12  col-sm-12 col-md-6 col-lg-4 g-5">
+                    <div class="news-bathroom">
+                        <div class="overflow">
+                            <img src="./img/news3.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="news-date">
+                            <p>dec</p>
+                            <h4>06</h4>
+                        </div>
+                        <div class="col-12">
+                            <div class="news-bathroom-content">
+                                <h5>bathrooms</h5>
+                                <h1>hotel bathroom collections</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- check in -->
+    <div class="container-fluid check-in-main">
+        <div class="container">
+            <div class="row d-flex justify-content-between align-items-center">
+                <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+                    <div class="checkin-info">
+                        <span class="checkin-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <h6>Each of our guest rooms feature a private bath, wi-fi, cable television and include full
+                            breakfast.</h6>
+                        <div class="checkin-call d-flex justify-content-start align-items-center">
+                            <span class="checkin-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </span>
+                            <span class="checkin-number">
+                                <p>Reservation</p>
+                                <h2>855 100 4444</h2>
+                            </span>
+                        </div>
+                        <p class="check-callus">
+                            <span>
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            Call us, it's toll-free.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+                    <div class="hotel-booking mt-5 mb-5">
+                        <h5>rooms & suits</h5>
+                        <h1>hotel booking form</h1>
+                        <div class="row">
+                            <div class="col mb-4 mt-5">
+                                <input type="text" placeholder="Check-in" class="booking-input">
+                            </div>
+                            <div class="col-12 mb-4">
+                                <input type="text" placeholder="Check-out" class="booking-input">
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                <input type="text" placeholder="Adults" class="booking-input adult">
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                <input type="text" placeholder="Children" class="booking-input">
+                            </div>
+                            <div class="col-12 col-lg-12 mt-5">
+                                <button class="booking-btn">check availbility</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid branding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12  brand d-flex justify-content-between align-items-center">
+                    <img src="./img/brand1.png" class="img-fluid" alt="">
+                    <img src="./img/brand2.png" class="img-fluid" alt="">
+                    <img src="./img/brand3.png" class="img-fluid brand3" alt="">
+                    <img src="./img/brand4.png" class="img-fluid brand4" alt="">
+                    <img src="./img/brand5.png" class="img-fluid brand5" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="container-fluid footer">
+        <div class="container">
+            <div class="row">
+                <!-- about hotel -->
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 gx-5">
+                    <div class="footer-about-hotel">
+                        <h1>about hotel</h1>
+                        <p>Welcome to the best five-star deluxe hotel in New York. Hotel elementum sesue the aucan
+                            vestibulum aliquam justo in sapien rutrum volutpat.</p>
+                        <button class="fah-btn">english <i class="fa-solid fa-globe"></i></button>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 gx-5  px-5">
+                    <div class="footer-explore">
+                        <h1>explore</h1>
+                        <ul class="footer-nav mt-4">
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">rooms & suits</a></li>
+                            <li><a href="#">restaurant</a></li>
+                            <li><a href="#">spa & wellness</a></li>
+                            <li><a href="#">about hotel</a></li>
+                            <li><a href="#">contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 gx-5">
+                    <div class="footer-contact">
+                        <h1>contact</h1>
+                        <p>1616 Broadway NY, New York 10001
+                            United States of America</p>
+                        <span class="footer-call-icon d-flex align-items-start">
+                            <i class="fa-solid fa-phone"></i>
+                            <h2>855 100 4444</h2>
+                        </span>
+                        <p class="mail"> info@luxuryhotel.com</p>
+                        <div class="footer-social-icon">
+                            <i class="fa-brands fa-instagram-square"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-youtube"></i>
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-pinterest-p"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- copyright -->
+    <div class="container-fluid copy-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="copy-main d-flex justify-content-center">
+                        <p>© Copyright 2022 by DuruThemes.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/script.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

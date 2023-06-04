@@ -1,0 +1,1224 @@
+.header {
+  padding: 0 !important;
+}
+.header .logo h1 {
+  font-size: 4.5rem;
+  font-weight: 900;
+}
+.header .logo a {
+  text-decoration: none;
+}
+
+.navigation li {
+  margin: 0 1.5rem;
+  list-style: none;
+}
+.navigation li a {
+  background: var(--menu-color);
+  text-decoration: none;
+  color: var(--title-color);
+  padding: 0.8rem 1.5rem;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+.navigation li a:hover {
+  background-image: linear-gradient(to right, #dd2575 0%, #f7595c 51%, #dd2575 100%);
+  background-size: 200% auto;
+  color: #f4f4f4;
+}
+.navigation li a i {
+  padding-right: 0.6rem;
+  font-size: 1.6rem;
+}
+.navigation li a i.bx-moon {
+  padding-right: 0rem;
+  font-size: 2.2rem;
+}
+.navigation ul {
+  list-style: none;
+  display: flex;
+}
+.navigation ul li {
+  margin: 0 1.5rem;
+}
+.navigation ul li a {
+  background: var(--menu-color);
+  text-decoration: none;
+  color: var(--title-color);
+  padding: 0.8rem 1.5rem;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+.navigation ul li a:hover {
+  background-image: linear-gradient(to right, #dd2575 0%, #f7595c 51%, #dd2575 100%);
+  background-size: 200% auto;
+  color: #f4f4f4;
+}
+.navigation ul li a.active {
+  background-image: linear-gradient(to right, #dd2575 0%, #f7595c 51%, #dd2575 100%);
+  background-size: 200% auto;
+  color: #f4f4f4;
+}
+.navigation ul li a i {
+  padding-right: 0.6rem;
+  font-size: 1.6rem;
+}
+.navigation ul li a i.bx-moon {
+  padding-right: 0rem;
+  font-size: 2.2rem;
+}
+.navigation label {
+  margin-left: 1.5rem;
+  display: none;
+}
+.navigation label i {
+  background: var(--menu-color);
+  text-decoration: none;
+  color: #444;
+  padding: 0.8rem 1.5rem;
+  text-transform: capitalize;
+  font-size: 2.2rem;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.navigation label i:hover {
+  background-image: linear-gradient(to right, #dd2575 0%, #f7595c 51%, #dd2575 100%);
+  background-size: 200% auto;
+  color: var(--menu-color);
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  .header {
+    padding: 0 1.5rem !important;
+  }
+  .navigation ul {
+    display: none;
+  }
+  .navigation label {
+    display: block;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .header .logo h1 {
+    font-size: 4rem;
+  }
+  .navigation ul {
+    display: none;
+  }
+  .navigation label {
+    display: block;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .header .logo h1 {
+    font-size: 3.5rem;
+  }
+  .navigation li {
+    margin: 0;
+  }
+  .navigation li a {
+    font-size: 1.4rem;
+  }
+  .navigation li a i.bx-moon {
+    font-size: 1.8rem;
+  }
+  .navigation label i {
+    font-size: 1.8rem;
+  }
+  .navigation ul {
+    display: none;
+  }
+  .navigation label {
+    display: block;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --hero-bg:#f8f7f3;
+  --primary-color: #fff;
+  --scondary-color: #121414;
+  --menu-color: #fff;
+  --title-color: #1f1f1f;
+  --light-text: rgb(68 86 108);
+  --web-design: #fcf4ff;
+  --wp-dev: #fff4f4;
+  --front-end: #f3faff;
+  --skill-bar-light: #edf2f2;
+  --form-color: #f8fbfb;
+  --form-border: #969696;
+  --contact-box1: #fcf4ff;
+  --contact-box2: #fff4f4;
+  --contact-box3: #f3faff;
+}
+
+.dark-theme {
+  --dark-bg: #06090c;
+  --primary-color: #010203;
+  --scondary-color: #f4f4f4;
+  --menu-color: #010203;
+  --title-color: #f4f4f4;
+  --light-text: #777;
+  --web-design: transparent;
+  --wp-dev: transparent;
+  --front-end: transparent;
+  --border-color: #12161a;
+  --form-color: transparent;
+  --skill-bar-light: #12161a;
+  --form-border: #12161a;
+  --contact-box1: #06090c;
+  --contact-box2: #06090c;
+  --contact-box3: #06090c;
+}
+
+.contact-form form input::-moz-placeholder, .contact-form form textarea::-moz-placeholder {
+  color: var(--light-text);
+}
+
+.contact-form form input::placeholder,
+.contact-form form textarea::placeholder {
+  color: var(--light-text);
+}
+
+html {
+  font-size: 10px;
+}
+
+body p {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  color: var(--light-text);
+  font-weight: 600;
+}
+
+.hero-bg {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2.5rem 5rem 5rem;
+}
+
+.wrapper-background h1.contact::after, .wrapper-background h1.portfolio::after, .hero-bg .wrapper-background h1.skill::after, .hero-bg .wrapper-background h1::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 150px;
+  height: 2px;
+  background-color: transparent;
+  background-image: linear-gradient(to right, #dd2575 0%, #f7595c 51%, #dd2575 100%);
+  background-size: 200% auto;
+}
+
+.project-menu ul li.active, .project-menu ul li:hover, .wrapper-background .project-wrap span, .hero-bg .wrapper-background .about-detail h3 span, .header .logo h1 {
+  color: transparent;
+  background: linear-gradient(to right, #dd2575 0%, #f7595c 51%, #dd2575 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+}
+
+.hero-bg .wrapper-background .personal-info .phone a,
+.hero-bg .wrapper-background .personal-info .location a,
+.hero-bg .wrapper-background .personal-info .email a,
+.hero-bg .wrapper-background .personal-info .bday a, .hero-wrapper .profile-wrapper .hero-social-link a {
+  text-decoration: none;
+  font-size: 2.2rem;
+  border-radius: 0.8rem;
+  margin: 0.5rem 1rem;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1450980392);
+  background-color: var(--menu-color);
+}
+
+.wrapper-background .address-box, .wrapper-background .email-box, .wrapper-background .phone-box, .wrapper-background .portfolio-box.pf-bx3, .wrapper-background .portfolio-box.pf-bx2, .wrapper-background .portfolio-box.pf-bx1 {
+  padding: 2.5rem;
+  border-radius: 1rem;
+  height: 250px;
+}
+
+#preloader-wapper {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  overflow: hidden;
+  position: fixed;
+  z-index: 99999999;
+  display: flex;
+}
+
+#preloader-wapper::before,
+#preloader-wapper::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: rgb(9, 7, 12);
+  top: 0;
+  left: 0;
+  transition: 0.4s;
+}
+
+#preloader-wapper::after {
+  top: auto;
+  bottom: 0;
+}
+
+#preloader-wapper.loaded::before,
+#preloader-wapper.loaded::after {
+  height: 0%;
+}
+
+.loader-middle {
+  position: relative;
+  width: 50%;
+  height: 1px;
+  overflow: hidden;
+  margin: auto;
+  transition: all 0.8s;
+  z-index: 555;
+}
+
+.loader-middle::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  left: 50%;
+  background-image: linear-gradient(to right, #dd2575 0%, #f7595c 51%, #dd2575 100%);
+  animation: showLine 700ms ease-in-out forwards;
+  transform: translateX(-50%);
+}
+
+@keyframes showLine {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+.loader-middle::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -100px;
+  top: 0;
+  animation: loader-middle 2s cubic-bezier(0.86, 0, 0.07, 1) infinite;
+  animation-delay: 1200ms;
+}
+
+@keyframes loader-middle {
+  0% {
+    left: -100%;
+    background: #fff;
+  }
+  100% {
+    left: 100%;
+    background: #fff;
+  }
+}
+.loader-middle.loaded {
+  width: 100%;
+  opacity: 0;
+}
+
+.loader-middle.loaded::after {
+  opacity: 0;
+}
+
+.cursor {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 1px solid #e73a6c;
+  transition: all 200ms ease-out;
+  position: fixed;
+  z-index: 999;
+  pointer-events: none;
+  left: 50;
+  top: 50;
+  transform: translate(calc(-50% + 15px), -50%);
+}
+
+.cursor2 {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: transparent;
+  background-image: linear-gradient(to right, #dd2575 0%, #f7595c 51%, #dd2575 100%);
+  background-size: 200% auto;
+  opacity: 0.7;
+  position: fixed;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
+}
+
+.hover {
+  background-color: transparent;
+  background-image: linear-gradient(to right, #dd2575 0%, #f7595c 51%, #dd2575 100%);
+  opacity: 0.5;
+}
+
+.cursorinnerhover {
+  width: 50px;
+  height: 50px;
+  opacity: 0.5;
+}
+
+.hero-bg {
+  background-color: var(--hero-bg);
+}
+
+.hero-bg.dark-bg {
+  background-color: var(--dark-bg);
+}
+
+.hero-wrapper {
+  width: 100%;
+}
+.hero-wrapper .profile-wrapper {
+  height: 85vh;
+}
+.hero-wrapper .profile-wrapper .hero-img img {
+  width: 220px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.hero-wrapper .profile-wrapper .hero-name h1 {
+  font-size: 3.6rem;
+  color: var(--scondary-color);
+  font-weight: 700;
+  text-transform: capitalize;
+  padding-top: 0.5rem;
+}
+.hero-wrapper .profile-wrapper .hero-name h3 {
+  font-size: 2rem;
+  color: var(--light-text);
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+.hero-wrapper .profile-wrapper .hero-social-link a {
+  transition: 0.5s;
+  background-color: var(--menu-color);
+}
+.hero-wrapper .profile-wrapper .hero-social-link a:hover {
+  background-image: linear-gradient(to right, #dd2575 0%, #f7595c 51%, #dd2575 100%);
+  background-size: 200% auto;
+  transition: 0.5s;
+}
+.hero-wrapper .profile-wrapper .hero-social-link a:hover i {
+  color: #fff;
+}
+.hero-wrapper .profile-wrapper .hero-social-link a span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+.hero-wrapper .profile-wrapper .hero-social-link i.bxl-instagram {
+  color: #b83286;
+}
+.hero-wrapper .profile-wrapper .hero-social-link i.bxl-twitter {
+  color: #1c99e6;
+}
+.hero-wrapper .profile-wrapper .hero-social-link i.bxl-linkedin {
+  color: #0076b3;
+}
+.hero-wrapper .profile-wrapper .hero-social-link i.bxl-github {
+  color: #161414;
+}
+.hero-wrapper .hero-cv .submit-btn {
+  background-image: linear-gradient(to right, #dd2575 0%, #f7595c 51%, #dd2575 100%);
+  background-size: 200% auto;
+  margin: 2.5rem 1rem;
+  padding: 1.2rem 3.5rem;
+  text-align: center;
+  transition: 0.5s;
+  border-radius: 3rem;
+  display: block;
+  border: none;
+  outline: none;
+}
+.hero-wrapper .hero-cv .submit-btn:hover {
+  background-position: right center;
+}
+.hero-wrapper .hero-cv .submit-btn a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.hero-wrapper .hero-cv .submit-btn a i {
+  font-size: 2.2rem;
+  color: #fff;
+  padding-right: 0.6rem;
+}
+
+.hero-bg .wrapper-background {
+  background: var(--primary-color);
+  padding: 3.5rem 6rem;
+  border-radius: 1rem;
+  margin-top: 4rem;
+}
+.hero-bg .wrapper-background h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--scondary-color);
+  position: relative;
+  display: inline-block;
+}
+.hero-bg .wrapper-background h1::after {
+  right: -100%;
+  top: 55%;
+}
+.hero-bg .wrapper-background h1.skill::after {
+  right: -200%;
+  top: 55%;
+}
+.hero-bg .wrapper-background .about-img {
+  margin-top: 4rem;
+}
+.hero-bg .wrapper-background .about-img img {
+  border-radius: 1.2rem;
+}
+.hero-bg .wrapper-background .about-detail,
+.hero-bg .wrapper-background .personal-info {
+  padding-left: 2.5rem;
+}
+.hero-bg .wrapper-background .about-detail {
+  margin-top: 4rem;
+}
+.hero-bg .wrapper-background .about-detail h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--scondary-color);
+  text-transform: capitalize;
+}
+.hero-bg .wrapper-background .personal-info > h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--scondary-color);
+  text-transform: capitalize;
+}
+.hero-bg .wrapper-background .personal-info .phone,
+.hero-bg .wrapper-background .personal-info .location,
+.hero-bg .wrapper-background .personal-info .email,
+.hero-bg .wrapper-background .personal-info .bday {
+  margin: 0.9rem 0;
+}
+.hero-bg .wrapper-background .personal-info .phone a,
+.hero-bg .wrapper-background .personal-info .location a,
+.hero-bg .wrapper-background .personal-info .email a,
+.hero-bg .wrapper-background .personal-info .bday a {
+  margin: 1rem 0rem;
+}
+.hero-bg .wrapper-background .personal-info .phone h6,
+.hero-bg .wrapper-background .personal-info .location h6,
+.hero-bg .wrapper-background .personal-info .email h6,
+.hero-bg .wrapper-background .personal-info .bday h6 {
+  color: var(--light-text);
+  text-transform: capitalize;
+  font-size: 1.2rem;
+}
+.hero-bg .wrapper-background .personal-info .phone h2,
+.hero-bg .wrapper-background .personal-info .location h2,
+.hero-bg .wrapper-background .personal-info .email h2,
+.hero-bg .wrapper-background .personal-info .bday h2 {
+  font-size: 1.6rem;
+  color: var(--scondary-color);
+}
+.hero-bg .wrapper-background .personal-info .phone i.bx-mobile {
+  color: #e93b81;
+}
+.hero-bg .wrapper-background .personal-info .location i.bxs-map {
+  color: #fd7590;
+}
+.hero-bg .wrapper-background .personal-info .email i.bxs-envelope-open {
+  color: #78d9e0;
+}
+.hero-bg .wrapper-background .personal-info .bday i.bxs-calendar {
+  color: #c17ceb;
+}
+
+.wrapper-background .my-proffession {
+  margin: 3.5rem 0 8rem;
+}
+.wrapper-background .my-proffession .web-design {
+  padding: 2rem 1.5rem;
+  background: var(--web-design);
+  margin-top: 2.5rem;
+  border-radius: 0.8rem;
+  border: 1px solid var(--border-color);
+}
+.wrapper-background .my-proffession .web-design span i {
+  font-size: 4rem;
+  color: #d566ff;
+}
+.wrapper-background .my-proffession .web-design h2 {
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  color: var(--scondary-color);
+}
+.wrapper-background .my-proffession .wp-development {
+  padding: 2rem 1.5rem;
+  background: var(--wp-dev);
+  margin-top: 2.5rem;
+  border-radius: 0.8rem;
+  border: 1px solid var(--border-color);
+}
+.wrapper-background .my-proffession .wp-development span i {
+  font-size: 4rem;
+  color: #e1ac29;
+}
+.wrapper-background .my-proffession .wp-development h2 {
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  color: var(--scondary-color);
+}
+.wrapper-background .my-proffession .front-end {
+  padding: 2rem 1.5rem;
+  background: var(--front-end);
+  margin-top: 2.5rem;
+  border-radius: 0.8rem;
+  border: 1px solid var(--border-color);
+}
+.wrapper-background .my-proffession .front-end span i {
+  font-size: 4rem;
+  color: #269fff;
+}
+.wrapper-background .my-proffession .front-end h2 {
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  color: var(--scondary-color);
+}
+.wrapper-background .skill-percent h2 {
+  color: var(--scondary-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+.wrapper-background .skill-full {
+  height: 8px;
+  background-color: var(--skill-bar-light);
+  border-radius: 5px;
+}
+.wrapper-background .skill-full .progress {
+  height: 8px;
+  background-color: var(--skill-bar-light);
+}
+
+.wrapper-background h1.portfolio::after {
+  right: -115%;
+}
+.wrapper-background .portfolio-box {
+  margin-bottom: 4rem;
+  position: static !important;
+}
+.wrapper-background .portfolio-box.pf-bx1 {
+  background: var(--web-design);
+  border: 1px solid var(--border-color);
+}
+.wrapper-background .portfolio-box.pf-bx2 {
+  border: 1px solid var(--border-color);
+  background: var(--wp-dev);
+}
+.wrapper-background .portfolio-box.pf-bx3 {
+  border: 1px solid var(--border-color);
+  background: var(--front-end);
+}
+.wrapper-background .project-wrap {
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  border-radius: 4px;
+  z-index: 0;
+  margin-bottom: 30px;
+}
+.wrapper-background .project-wrap::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -50%;
+  background: #060918;
+  width: 100%;
+  height: 50%;
+  opacity: 0.7;
+  transition: all 0.6s ease;
+}
+.wrapper-background .project-wrap::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -50%;
+  background: #060918;
+  width: 100%;
+  height: 50%;
+  opacity: 0.7;
+  transition: all 0.6s ease;
+}
+.wrapper-background .project-wrap:hover::before {
+  top: 0%;
+}
+.wrapper-background .project-wrap:hover::after {
+  bottom: 0%;
+}
+.wrapper-background .project-wrap .project-text {
+  padding: 20px;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.wrapper-background .project-wrap:hover .project-text {
+  opacity: 1;
+}
+.wrapper-background .project-wrap span {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.wrapper-background .project-wrap h3 a {
+  font-size: 1.8rem;
+  color: #f4f4f4;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.wrapper-background .project-wrap .icon {
+  width: 40px;
+  height: 40px;
+  background-image: linear-gradient(to right, #dd2575 0%, #f7595c 51%, #dd2575 100%);
+  background-size: 200% auto;
+  text-decoration: none;
+  color: #f4f4f4;
+  border-radius: 50%;
+  font-size: 1.8rem;
+}
+.wrapper-background .img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.project-menu ul {
+  list-style: none;
+}
+.project-menu ul li {
+  margin: 0 2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--scondary-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.wrapper-background h1.contact::after {
+  right: -135%;
+  top: 60%;
+}
+.wrapper-background .contact-info h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: var(--scondary-color);
+  font-weight: 700;
+}
+.wrapper-background .contact-info img {
+  width: 30px;
+  margin-right: 1rem;
+}
+.wrapper-background .phone-box {
+  background: var(--contact-box1);
+  height: 130px;
+  margin-top: 3rem;
+  border: 1px solid var(--border-color);
+}
+.wrapper-background .email-box {
+  background: var(--contact-box2);
+  height: 130px;
+  margin-top: 3rem;
+  border: 1px solid var(--border-color);
+}
+.wrapper-background .address-box {
+  background: var(--contact-box3);
+  border: 1px solid var(--border-color);
+  height: auto;
+  margin-top: 3rem;
+}
+.wrapper-background .contact-form {
+  padding: 3rem;
+  margin-top: 3rem;
+  background-color: var(--form-color);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+}
+.wrapper-background .contact-form h3 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: var(--light-text);
+}
+.wrapper-background .contact-form h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--scondary-color);
+}
+.wrapper-background .contact-form form .form-input {
+  position: relative;
+}
+.wrapper-background .contact-form form .form-input i {
+  position: absolute;
+  font-size: 1.5rem;
+  right: 10px;
+  top: 10px;
+  visibility: hidden;
+}
+.wrapper-background .contact-form form .form-input i.iconcheck {
+  color: seagreen;
+  visibility: hidden;
+}
+.wrapper-background .contact-form form .form-input i.iconerr {
+  color: red;
+  visibility: hidden;
+}
+.wrapper-background .contact-form form .form-input .nameError,
+.wrapper-background .contact-form form .form-input .emailError,
+.wrapper-background .contact-form form .form-input .mobError,
+.wrapper-background .contact-form form .form-input .msgError {
+  font-size: 1.4rem;
+  color: red;
+}
+.wrapper-background .contact-form form input,
+.wrapper-background .contact-form form textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--form-border);
+  border-radius: 0px;
+  box-shadow: none;
+  font-size: 1.6rem;
+  color: var(--light-text);
+}
+.wrapper-background .contact-form form textarea {
+  resize: none;
+}
+.wrapper-background .contact-form form .name:focus {
+  border-color: #f23c2f;
+  transition: 0.3s;
+}
+.wrapper-background .contact-form form .name:focus::-moz-placeholder {
+  color: #f23c2f;
+}
+.wrapper-background .contact-form form .name:focus::placeholder {
+  color: #f23c2f;
+}
+.wrapper-background .contact-form form .email:focus {
+  border-color: #750eeb;
+  transition: 0.3s;
+}
+.wrapper-background .contact-form form .email:focus::-moz-placeholder {
+  color: #750eeb;
+}
+.wrapper-background .contact-form form .email:focus::placeholder {
+  color: #750eeb;
+}
+.wrapper-background .contact-form form .phone:focus {
+  border-color: #b83286;
+  transition: 0.3s;
+}
+.wrapper-background .contact-form form .phone:focus::-moz-placeholder {
+  color: #b83286;
+}
+.wrapper-background .contact-form form .phone:focus::placeholder {
+  color: #b83286;
+}
+.wrapper-background .contact-form form .msg:focus {
+  border-color: #dd0031;
+  transition: 0.3s;
+}
+.wrapper-background .contact-form form .msg:focus::-moz-placeholder {
+  color: #dd0031;
+}
+.wrapper-background .contact-form form .msg:focus::placeholder {
+  color: #dd0031;
+}
+.wrapper-background .contact-form form .submit-btn {
+  background-image: linear-gradient(to right, #dd2575 0%, #f7595c 51%, #dd2575 100%);
+  background-size: 200% auto;
+  text-decoration: none;
+  color: #f4f4f4;
+  padding: 1rem 1.8rem;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1450980392);
+  transition: 0.4s;
+}
+.wrapper-background .contact-form form .submit-btn:hover {
+  background-position: right center;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  .hero-bg {
+    padding: 2.5rem 0rem 5rem;
+  }
+  .hero-wrapper .profile-wrapper .hero-img img {
+    width: 280px;
+    margin-bottom: 1.5rem;
+  }
+  .hero-bg .wrapper-background {
+    padding: 3.5rem 2rem;
+  }
+  .hero-bg .wrapper-background .about-img img {
+    height: 450px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .hero-bg .wrapper-background .about-detail,
+  .hero-bg .wrapper-background .personal-info {
+    padding-left: 0rem;
+  }
+  .hero-bg .personal-info {
+    margin-top: 3rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  body p {
+    font-size: 1.5rem;
+  }
+  .hero-bg {
+    padding: 2.5rem 0rem 5rem;
+  }
+  .hero-wrapper .profile-wrapper .hero-img img {
+    width: 280px;
+    margin-bottom: 1.5rem;
+  }
+  .hero-bg .wrapper-background {
+    padding: 3.5rem 1.5rem;
+  }
+  .hero-bg .wrapper-background h1 {
+    font-size: 3rem;
+  }
+  .hero-bg .wrapper-background h1::after {
+    display: none;
+  }
+  .hero-bg .wrapper-background .about-detail,
+  .hero-bg .wrapper-background .personal-info {
+    padding-left: 0rem;
+  }
+  .hero-bg .wrapper-background .about-detail {
+    margin-top: 2rem;
+  }
+  .hero-bg .wrapper-background .about-detail h3 {
+    font-size: 2rem;
+  }
+  .hero-bg .wrapper-background .personal-info {
+    margin-top: 3rem;
+  }
+  .hero-bg .wrapper-background .personal-info > h2 {
+    font-size: 2.2rem;
+  }
+  .hero-bg .wrapper-background .personal-info .phone h2,
+  .hero-bg .wrapper-background .personal-info .location h2,
+  .hero-bg .wrapper-background .personal-info .email h2,
+  .hero-bg .wrapper-background .personal-info .bday h2 {
+    font-size: 1.5rem;
+  }
+  .wrapper-background .my-proffession {
+    margin: 4.5rem 0 8rem;
+  }
+  .wrapper-background .my-proffession .web-design {
+    padding: 1.5rem;
+  }
+  .wrapper-background .my-proffession .web-design span i {
+    font-size: 3rem;
+  }
+  .wrapper-background .my-proffession .web-design h2 {
+    font-size: 1.8rem;
+  }
+  .wrapper-background .my-proffession .wp-development {
+    padding: 1.5rem;
+  }
+  .wrapper-background .my-proffession .wp-development span i {
+    font-size: 3rem;
+  }
+  .wrapper-background .my-proffession .wp-development h2 {
+    font-size: 1.8rem;
+  }
+  .wrapper-background .my-proffession .front-end {
+    padding: 1.5rem;
+  }
+  .wrapper-background .my-proffession .front-end span i {
+    font-size: 3rem;
+  }
+  .wrapper-background .my-proffession .front-end h2 {
+    font-size: 1.8rem;
+  }
+  .wrapper-background .portfolio-box.pf-bx1, .wrapper-background .portfolio-box.pf-bx2, .wrapper-background .portfolio-box.pf-bx3, .wrapper-background .phone-box, .wrapper-background .email-box, .wrapper-background .address-box {
+    padding: 1.5rem;
+  }
+  .wrapper-background .portfolio-box {
+    margin-bottom: 5rem;
+  }
+  .wrapper-background .project-wrap:hover .project-text {
+    opacity: 1;
+  }
+  .wrapper-background .project-wrap span {
+    font-size: 1.2rem;
+  }
+  .wrapper-background .project-wrap h3 a {
+    font-size: 1.4rem;
+  }
+  .wrapper-background .project-wrap .icon {
+    width: 30px;
+    height: 30px;
+    font-size: 1.4rem;
+  }
+  .project-menu {
+    margin-top: 2rem;
+  }
+  .project-menu ul {
+    justify-content: start !important;
+    padding-left: 0rem;
+  }
+  .project-menu ul li {
+    margin: 0 1.5rem;
+    font-size: 1.5rem;
+  }
+  .project-menu ul li:nth-child(1) {
+    margin: 0;
+  }
+  .wrapper-background .contact-info h3 {
+    font-size: 1.8rem;
+  }
+  .wrapper-background .phone-box {
+    height: 110px;
+  }
+  .wrapper-background .email-box {
+    height: 110px;
+  }
+  .wrapper-background .contact-form {
+    padding: 1.5rem;
+    margin-top: 5rem;
+  }
+  .wrapper-background .contact-form h3 {
+    font-size: 2rem;
+  }
+  .wrapper-background .contact-form h2 {
+    font-size: 2.4rem;
+  }
+  .wrapper-background .contact-form form input,
+  .wrapper-background .contact-form form textarea {
+    font-size: 1.5rem;
+  }
+  .wrapper-background .contact-form form .submit-btn {
+    padding: 0.9rem 1.6rem;
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  .about-img img {
+    height: 450px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 600px) {
+  .about-img img {
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media screen and (max-width: 480px) {
+  body p {
+    font-size: 1.5rem;
+  }
+  .hero-bg {
+    padding: 2.5rem 0rem 5rem;
+  }
+  .hero-wrapper .profile-wrapper .hero-img img {
+    width: 220px;
+    margin-bottom: 2rem;
+  }
+  .hero-wrapper .profile-wrapper .hero-name h1 {
+    font-size: 3rem;
+  }
+  .hero-wrapper .profile-wrapper .hero-name h3 {
+    font-size: 1.8rem;
+  }
+  .hero-wrapper .profile-wrapper .hero-social-link {
+    margin: 1rem 0;
+  }
+  .hero-wrapper .profile-wrapper .hero-social-link a {
+    font-size: 1.8rem;
+    height: 35px;
+    width: 35px;
+  }
+  .hero-wrapper .hero-cv .submit-btn a {
+    font-size: 1.5rem;
+  }
+  .hero-bg .wrapper-background {
+    padding: 3.5rem 1.5rem;
+  }
+  .hero-bg .wrapper-background h1 {
+    font-size: 3rem;
+  }
+  .hero-bg .wrapper-background h1::after {
+    display: none;
+  }
+  .hero-bg .wrapper-background .about-detail,
+  .hero-bg .wrapper-background .personal-info {
+    padding-left: 0rem;
+  }
+  .hero-bg .wrapper-background .about-detail {
+    margin-top: 2rem;
+  }
+  .hero-bg .wrapper-background .about-detail h3 {
+    font-size: 2rem;
+  }
+  .hero-bg .wrapper-background .personal-info {
+    margin-top: 5rem;
+  }
+  .hero-bg .wrapper-background .personal-info > h2 {
+    font-size: 2.2rem;
+  }
+  .hero-bg .wrapper-background .personal-info .phone h2,
+  .hero-bg .wrapper-background .personal-info .location h2,
+  .hero-bg .wrapper-background .personal-info .email h2,
+  .hero-bg .wrapper-background .personal-info .bday h2 {
+    font-size: 1.5rem;
+  }
+  .wrapper-background .my-proffession {
+    margin: 4.5rem 0 8rem;
+  }
+  .wrapper-background .my-proffession .web-design {
+    padding: 1.5rem;
+  }
+  .wrapper-background .my-proffession .web-design span i {
+    font-size: 3rem;
+  }
+  .wrapper-background .my-proffession .web-design h2 {
+    font-size: 1.8rem;
+  }
+  .wrapper-background .my-proffession .wp-development {
+    padding: 1.5rem;
+  }
+  .wrapper-background .my-proffession .wp-development span i {
+    font-size: 3rem;
+  }
+  .wrapper-background .my-proffession .wp-development h2 {
+    font-size: 1.8rem;
+  }
+  .wrapper-background .my-proffession .front-end {
+    padding: 1.5rem;
+  }
+  .wrapper-background .my-proffession .front-end span i {
+    font-size: 3rem;
+  }
+  .wrapper-background .my-proffession .front-end h2 {
+    font-size: 1.8rem;
+  }
+  .wrapper-background .portfolio-box.pf-bx1, .wrapper-background .portfolio-box.pf-bx2, .wrapper-background .portfolio-box.pf-bx3, .wrapper-background .phone-box, .wrapper-background .email-box, .wrapper-background .address-box {
+    padding: 1.5rem;
+  }
+  .wrapper-background .portfolio-box {
+    margin-bottom: 5rem;
+  }
+  .wrapper-background .project-wrap:hover .project-text {
+    opacity: 1;
+  }
+  .wrapper-background .project-wrap span {
+    font-size: 1.2rem;
+  }
+  .wrapper-background .project-wrap h3 a {
+    font-size: 1.4rem;
+  }
+  .wrapper-background .project-wrap .icon {
+    width: 30px;
+    height: 30px;
+    font-size: 1.4rem;
+  }
+  .project-menu {
+    margin-top: 2rem;
+  }
+  .project-menu ul {
+    justify-content: start !important;
+    padding-left: 0rem;
+  }
+  .project-menu ul li {
+    margin: 0 1.5rem;
+    font-size: 1.5rem;
+  }
+  .wrapper-background .contact-info h3 {
+    font-size: 1.8rem;
+  }
+  .wrapper-background .phone-box {
+    height: 110px;
+  }
+  .wrapper-background .email-box {
+    height: 110px;
+  }
+  .wrapper-background .contact-form {
+    padding: 1.5rem;
+    margin-top: 5rem;
+  }
+  .wrapper-background .contact-form h3 {
+    font-size: 2rem;
+  }
+  .wrapper-background .contact-form h2 {
+    font-size: 2.4rem;
+  }
+  .wrapper-background .contact-form form input,
+  .wrapper-background .contact-form form textarea {
+    font-size: 1.5rem;
+  }
+  .wrapper-background .contact-form form .submit-btn {
+    padding: 0.9rem 1.6rem;
+    font-size: 1.4rem;
+  }
+}/*# sourceMappingURL=main.css.map */

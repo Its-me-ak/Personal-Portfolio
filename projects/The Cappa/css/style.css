@@ -1,0 +1,2398 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+    /* font-family: 'Gilda Display', serif; */
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: #aa8453;
+    color: #fff;
+}
+
+html {
+    font-size: 10px;
+}
+
+.hero-main {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero img {
+    height: 100vh;
+    object-fit: cover;
+}
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* header */
+.header {
+    width: 100%;
+    position: fixed;
+    z-index: 11;
+}
+
+.sticky {
+    position: fixed;
+    top: -100px;
+    left: 0;
+    height: 80px;
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.062);
+    transform: translateY(100px);
+    transition: 0.5s ease;
+    z-index: 111;
+}
+
+.logo {
+    width: 15%;
+}
+
+.logo .dark {
+    display: none;
+}
+
+.navigation {
+    width: 60%;
+}
+
+.navigation ul {
+    padding: 3rem 0rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.navigation ul li a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.navigation ul li a:hover {
+    color: #aa8453;
+    transition: 0.2s;
+}
+
+.navigation ul li a.active {
+    color: #aa8453;
+}
+
+.checkbtn {
+    display: none;
+    font-size: 2rem;
+    color: #aa8453;
+    float: right;
+    line-height: 6rem;
+    margin-right: 4rem;
+}
+
+
+
+.sticky ul {
+    padding: 2rem 0rem;
+}
+
+.sticky .navigation ul li a {
+    color: #333;
+    transition: 0.2;
+}
+
+.sticky .navigation ul li a:hover {
+    color: #aa8453;
+    transition: 0.2s;
+}
+
+.sticky .navigation ul li a.active {
+    color: #aa8453;
+}
+
+.gtt-btn {
+    position: fixed;
+    right: 25px;
+    border: 1px solid #aa8453;
+    padding: 1rem 1.6rem;
+    bottom: 25px;
+    z-index: 11111;
+    color: #aa8453;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    visibility: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.gtt-btn.fixBtn {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s ease;
+}
+
+.hero-main .carousel-indicators {
+    height: 100vh;
+}
+
+.hero-main .carousel-indicators button {
+    background-color: #aa8453;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border: none;
+    width: 12px;
+    height: 12px;
+    margin: 5px 6px;
+}
+
+.hero-mdl-caption {
+    width: 80%;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.ratings-star i {
+    font-size: 1.5rem;
+    padding: 3px;
+    color: #e4a853;
+}
+
+.slide-caption h5 {
+    font-size: 1.6rem;
+    font-family: 'Gilda Display', serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    margin-top: 3rem;
+}
+
+.slide-caption h1 {
+    color: #fff;
+    font-family: 'Gilda Display', serif;
+    font-size: 5rem;
+    letter-spacing: 1.3rem;
+    line-height: 6.5rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+a.r-s-btn {
+    padding: 1rem 2rem;
+    border: 1px solid #fff;
+    background: unset;
+    letter-spacing: 2px;
+    color: #fff;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    transition: 0.3s all;
+    border-radius: 0%;
+}
+
+a.r-s-btn:hover {
+    z-index: 2;
+    color: #333;
+}
+
+a.r-s-btn::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    right: 0;
+    background-color: #f8f5f0;
+    transition: 0.3s all;
+}
+
+a.r-s-btn:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* hero-call */
+.hero-call {
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
+    z-index: 11;
+    transform: rotate(-90deg);
+}
+
+.hero-call .call-icon i {
+    padding: 1.5rem;
+    font-size: 2rem;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.486);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.hero-call .call-icon i:hover {
+    border: 1px solid #e4a853;
+    transition: 0.2s;
+}
+
+.hero-call-number p {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 5px;
+}
+
+.hero-call-number h2 {
+    font-size: 2.4rem;
+    color: #aa8453;
+    letter-spacing: 4px;
+}
+
+/* hero-form */
+.hero-form {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 80%;
+}
+
+.hero-input {
+    padding: 1.5rem 1rem;
+    font-size: 1.6rem;
+    border: none;
+    color: #333;
+    border-radius: 0;
+    outline: none;
+}
+
+::placeholder {
+    color: #333 !important;
+}
+
+.hero-form-btn {
+    padding: 1.5rem 3.5rem;
+    font-size: 1.6rem;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #aa8453;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+.hero-form-btn:hover {
+    background-color: #222;
+    transition: 0.5s;
+}
+
+/* exp section */
+.expereince-main {
+    padding: 13rem 0rem;
+}
+
+.exp-content h5 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #666;
+    margin-top: 2rem;
+}
+
+.exp-content h1 {
+    font-size: 4.8rem;
+    text-transform: capitalize;
+    font-family: 'Gilda Display', serif;
+    margin-top: 1rem;
+}
+
+.exp-content p {
+    font-size: 1.6rem;
+    color: #666;
+}
+
+.exp-call {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.call-icon i {
+    font-size: 3.6rem;
+    color: #8e6d45;
+    margin-right: 1rem;
+}
+
+.exp-number h2 {
+    color: #666;
+}
+
+.exp-number h2 {
+    color: #8e6d45;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+}
+
+.exp-img1 {
+    margin-top: 6rem;
+}
+
+/* room % suit */
+.rooms-suits {
+    background-color: #f8f5f0;
+    padding: 13rem 0rem 15rem;
+}
+
+.room-suit-heading h5 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #666;
+}
+
+.room-suit-heading h1 {
+    font-size: 4.8rem;
+    text-transform: capitalize;
+    font-family: 'Gilda Display', serif;
+    margin-top: 1rem;
+}
+
+/* rooms card */
+.room-suit-card {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.room-suit-card img {
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.2s;
+}
+
+.room-suit-card img:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+}
+
+.room-suit-btn {
+    position: absolute;
+    top: 8%;
+    right: 1%;
+    transform: rotate(-90deg);
+    background: unset;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.555);
+    padding: 0.5rem 1.2rem;
+    font-size: 1.4rem;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.card-con {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    transition: 0.2s;
+}
+
+.room-suit-card:hover .card-con {
+    transform: translateY(-100%);
+    transition: 0.2s;
+}
+
+.card-con p {
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.card-con h2 {
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+    font-family: 'Gilda Display', serif;
+    position: relative;
+}
+
+.card-con .card-con-line {
+    width: 65px;
+    height: 1px;
+    background-color: #f6f6f688;
+    margin-top: 8px;
+    transition: 0.4s;
+    margin-top: 1rem;
+}
+
+.room-suit-card:hover .card-con-line {
+    width: 313px;
+    transition: 0.7s ease-in;
+    transition-delay: 0.1s;
+}
+
+.card-con .card-con-line2 {
+    width: 65px;
+    height: 1px;
+    background-color: #f6f6f688;
+    margin-top: 8px;
+    transition: 0.4s;
+    margin-top: 1rem;
+}
+
+.room-suit-card:hover .card-con-line2 {
+    width: 493px;
+    transition: 0.7s ease-in;
+    transition-delay: 0.1s;
+}
+
+.card-con-hide {
+    width: 100%;
+    position: absolute;
+    transform: translateY(0%);
+    transition: 0.2s;
+}
+
+.room-suit-card:hover .card-con-hide {
+    transform: translateY(-240%);
+    transition: 0.2s;
+}
+
+.card-con-icon {
+    margin-left: 1rem;
+}
+
+.card-con-icon i {
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.856);
+    margin-left: 1rem;
+}
+
+.card-con-link {
+    margin-right: 2rem;
+}
+
+.card-con-link a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.card-con-link a:hover {
+    color: #aa8453;
+    transition: 0.2s;
+}
+
+.card-con-link i {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.card-con-link i:hover {
+    color: #aa8453;
+    transition: 0.2s;
+}
+
+/* extra service */
+.extra-service-bg {
+    background-color: #222222;
+    padding: 13rem 0rem;
+}
+
+.extra-service-content h5 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #aa8453
+}
+
+.extra-service-content h1 {
+    font-size: 4.8rem;
+    text-transform: capitalize;
+    font-family: 'Gilda Display', serif;
+    margin-top: 1rem;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.extra-service-content p {
+    font-size: 1.6rem;
+    color: #adadad;
+    line-height: 2.7rem;
+}
+
+.exp-number p {
+    color: #adadad;
+}
+
+
+.card-body {
+    background-color: #f8f5f0;
+    padding: 3rem;
+}
+
+.card-body h2 {
+    font-size: 2.4rem;
+    font-family: 'Gilda Display', serif;
+}
+
+span.dollor {
+    font-size: 4.8rem;
+    font-family: 'Gilda Display', serif;
+    color: #8e6d45;
+}
+
+span.month {
+    color: #333;
+}
+
+.card-body span i {
+    font-size: 1.6rem;
+    margin-right: 1rem;
+}
+
+.card-body span i.fa-check {
+    color: #8e6d45;
+}
+
+.card-body p {
+    font-size: 1.6rem;
+    color: #666;
+}
+
+/* promo video */
+.promo-vid {
+    height: 80vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/slider-vid.jpg');
+}
+
+.promo-vid-content {
+    height: 80vh
+}
+
+.promo-vid-content h5 {
+    font-size: 1.6rem;
+    color: #fff;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-top: 1.4rem;
+}
+
+.promo-vid-content h1 {
+    font-size: 4.8rem;
+    color: #fff;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-family: 'Gilda Display', serif;
+    margin-top: 1rem;
+}
+
+.promo-vid-icon i {
+    font-size: 2.4rem;
+    color: #8e6d45;
+    padding: 3.2rem 3.5rem;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    position: relative;
+    transition: 0.3s;
+}
+
+.promo-vid-icon i::after {
+    content: '';
+    position: absolute;
+    padding: 5.1rem 5.2rem;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.507);
+    top: -7.5px;
+    left: -9px;
+}
+
+.promo-vid-icon i:hover {
+    background-color: transparent;
+    color: #fff;
+    transition: 0.3s;
+}
+
+
+/* hotel facilities */
+.facilities-main {
+    background-color: #fff;
+    padding: 13rem 0rem;
+}
+
+.facility-heading h5 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: #666;
+    letter-spacing: 5px;
+}
+
+.facility-heading h1 {
+    font-size: 4.8rem;
+    color: #333;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-family: 'Gilda Display', serif;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.facilities {
+    position: relative;
+    background-color: #fff;
+}
+
+.card {
+    border: 1px solid rgba(102, 102, 102, 0.15);
+}
+
+.facilities .card-icon i {
+    font-size: 3rem;
+    color: #8e6d45;
+}
+
+.card-icon-low i {
+    font-size: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.03;
+}
+
+.facilities h1 {
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    font-family: 'Gilda Display', serif;
+    margin-top: 2rem;
+}
+
+.facilities p {
+    font-size: 1.6rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+/* testimonials */
+.testimonal-bg {
+    height: 80vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/slider-vid.jpg');
+}
+
+.testi-row {
+    height: 80vh;
+}
+
+.testi-main {
+    height: 60vh;
+}
+
+.testimonials-heading h5 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #fff;
+}
+
+.testimonials-heading h1 {
+    font-size: 3.2rem;
+    text-transform: capitalize;
+    color: #fff;
+    font-family: 'Gilda Display', serif;
+    margin-top: 1rem;
+}
+
+p.client-feedback {
+    font-size: 1.6rem;
+    color: #fff;
+    line-height: 2.7rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.client-line {
+    width: 75px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.411);
+    margin: 1rem 0rem;
+}
+
+.clients {
+    margin-bottom: 8rem;
+}
+
+.client-detail img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+.client-detail h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+.client-detail h6 {
+    font-size: 1.3rem;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.cl-ratings-star i {
+    font-size: 1rem;
+    color: #e4a853;
+}
+
+.quotes img {
+    height: 80px;
+    opacity: 0.2;
+}
+
+.testi-main .carousel-indicators button {
+    background: #aa8453;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border: none;
+    width: 12px;
+    height: 12px;
+}
+
+/* what we have */
+.we-have-main {
+    padding: 13rem 0rem;
+}
+
+.restaurant-content,
+.spa-content,
+.fitness-content,
+.health-content {
+    background-color: #f8f5f0;
+    padding: 7.38rem 3.5rem;
+}
+
+.restaurant-content h5,
+.spa-content h5,
+.fitness-content h5,
+.health-content h5 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #666;
+}
+
+.restaurant-content h1,
+.spa-content h1,
+.fitness-content h1,
+.health-content h1 {
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-family: 'Gilda Display', serif;
+    margin-top: 1rem;
+}
+
+.restaurant-content p,
+.spa-content p,
+.fitness-content p,
+.health-content p {
+    font-size: 1.6rem;
+    color: #666;
+    line-height: 2.7rem;
+    margin-top: 1rem;
+}
+
+a.lm {
+    padding: 1rem 2rem;
+    background-color: #ab8a62;
+    letter-spacing: 2px;
+    color: #fff;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    transition: 0.4s all;
+    margin-top: 2rem;
+}
+
+a.lm::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    right: 0;
+    background-color: #222;
+    color: #fff;
+    transition: 0.4s all;
+}
+
+a.lm:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* news */
+.news-bg {
+    background-color: #222222;
+    padding: 10rem 0rem 20rem;
+}
+
+.news-heading h5 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #8e6d45;
+}
+
+.news-heading h1 {
+    font-size: 4.8rem;
+    text-transform: capitalize;
+    color: #fff;
+    font-family: 'Gilda Display', serif;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.news-restaurant,
+.news-spa,
+.news-bathroom {
+    position: relative;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.news-restaurant img,
+.news-spa img,
+.news-bathroom img {
+    transition: 0.5s ease-in-out;
+}
+
+.news-restaurant img:hover,
+.news-spa img:hover,
+.news-bathroom img:hover {
+    transform: scale(1.1);
+    transition-delay: 0.2s;
+    transition: 0.5s ease-in-out;
+}
+
+.news-date {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    border: 1px solid #fff;
+    padding: 1rem;
+}
+
+.news-date p {
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.news-date h4 {
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.news-res-content {
+    padding: 3rem 4rem 3rem 2.5rem;
+    width: 88%;
+    position: absolute;
+    background-color: #f8f5f0;
+    bottom: -60px;
+    left: 22px;
+    transition: 0.2s ease-in-out;
+}
+
+.news-spa-content h5,
+.news-bathroom-content h5,
+.news-res-content h5 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.news-spa-content h1,
+.news-bathroom-content h1,
+.news-res-content h1 {
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    font-family: 'Gilda Display', serif;
+    color: #333;
+}
+
+.news-restaurant:hover .news-res-content {
+    transform: translateY(-55%);
+    transition: 0.2s ease-in-out;
+}
+
+.news-spa-content {
+    padding: 3rem 11rem 3rem 2.5rem;
+    position: absolute;
+    background-color: #f8f5f0;
+    bottom: -60px;
+    left: 25px;
+    transition: 0.2s ease-in-out;
+}
+
+.news-spa:hover .news-spa-content {
+    transform: translateY(-55%);
+    transition: 0.2s ease-in-out;
+}
+
+.news-bathroom-content {
+    padding: 3rem 11rem 3rem 2.5rem;
+    position: absolute;
+    background-color: #f8f5f0;
+    bottom: -60px;
+    left: 22px;
+    transition: 0.2s ease-in-out;
+}
+
+.news-bathroom:hover .news-bathroom-content {
+    transform: translateY(-55%);
+    transition: 0.2s ease-in-out;
+}
+
+/* check in */
+.check-in-main {
+    padding: 7rem 0rem 2rem;
+    /* height: 80vh; */
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/slider-vid.jpg');
+}
+
+.checkin-info {
+    padding: 0rem 0rem 3rem 0rem;
+}
+
+.checkin-rating i {
+    font-size: 1.4rem;
+    color: #e4a853;
+}
+
+.checkin-info h6 {
+    font-size: 2.4rem;
+    color: #fff;
+    font-family: 'Gilda Display', serif;
+    margin: 3rem 0rem;
+    line-height: 3rem;
+}
+
+.checkin-icon i {
+    font-size: 3rem;
+    color: #fff;
+    margin-right: 1.5rem;
+}
+
+.checkin-number p {
+    font-size: 1.5rem;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.checkin-number h2 {
+    font-size: 2.4rem;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.check-callus {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+.hotel-booking {
+    background-color: #f8f5f0;
+    padding: 6rem 3rem;
+}
+
+.hotel-booking h5 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #666;
+}
+
+.hotel-booking h1 {
+    text-transform: capitalize;
+    font-size: 2.4rem;
+    color: #000;
+    font-family: 'Gilda Display', serif;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.booking-input {
+    padding: 1.5rem 1rem;
+    font-size: 1.6rem;
+    border: none;
+    color: #333;
+    border-radius: 0;
+    outline: none;
+    width: 100%;
+}
+
+.booking-btn {
+    background: #aa8453;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 1.8rem 1.5rem;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    transition: 0.5s;
+}
+
+.booking-btn:hover {
+    background: #222;
+    transition: 0.5s;
+}
+
+.branding {
+    background-color: #ffffff;
+    padding: 2rem 0rem;
+}
+
+.brand img {
+    width: 200px;
+}
+
+/* footer */
+.footer {
+    background-color: #222222;
+    padding: 11rem 0rem;
+}
+
+.footer-about-hotel h1 {
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    color: #fff;
+    font-family: 'Gilda Display', serif;
+}
+
+.footer-about-hotel p {
+    color: #adadad;
+    font-size: 1.6rem;
+    line-height: 2.7rem;
+    margin-top: 2rem;
+}
+
+.fah-btn {
+    background: #282828;
+    border: none;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    color: #666;
+    margin-top: 2rem;
+}
+
+.fah-btn i {
+    margin-left: 2rem;
+}
+
+.footer-explore {
+    padding-left: 5rem;
+}
+
+.footer-explore h1 {
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    color: #fff;
+    font-family: 'Gilda Display', serif;
+}
+
+.footer-explore ul {
+    list-style-type: none;
+    padding-left: 0rem;
+}
+
+.footer-explore ul li a {
+    text-decoration: none;
+    color: #adadad;
+    line-height: 3rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    transition: 0.3s;
+
+}
+
+.footer-explore ul li a:hover {
+    margin-left: 1rem;
+    transition: 0.3s;
+}
+
+.footer-contact h1 {
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    color: #fff;
+    font-family: 'Gilda Display', serif;
+}
+
+.footer-contact p {
+    font-size: 1.5rem;
+    color: #adadad;
+    margin-top: 2rem;
+}
+
+.footer-call-icon {
+    margin: 2rem 0rem;
+}
+
+.footer-call-icon h2 {
+    margin-left: 1rem;
+    font-size: 2.4rem;
+    font-family: 'Gilda Display', serif;
+    color: #fff;
+}
+
+.footer-call-icon i {
+    color: #fff;
+    font-size: 2.4rem;
+}
+
+p.mail {
+    border-bottom: 1px solid #8e6d45;
+    width: 140px;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.footer-social-icon {
+    margin-top: 2rem;
+}
+
+.footer-social-icon i {
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 0rem 0.6rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.footer-social-icon i:hover {
+    color: #8e6d45;
+    transition: 0.2s;
+}
+
+/* copyright */
+.copy-bg {
+    background-color: #1e1e1e;
+    padding: 2.5rem 0rem;
+}
+
+.copy-main p {
+    font-size: 1.4rem;
+    color: #adadad;
+}
+
+
+
+/* about page */
+/* hero */
+.about-main-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/about-hero.jpg');
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+}
+
+.about-page-heading {
+    padding: 11rem 0rem;
+}
+
+.about-page-heading h5 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 5px;
+}
+
+.about-page-heading h1 {
+    font-size: 6rem;
+    color: #fff;
+    text-transform: capitalize;
+    font-family: 'Gilda Display', serif;
+    margin-top: 1rem;
+}
+
+/* team */
+.team-bg {
+    background-color: #f8f5f0;
+    padding: 12rem 0rem;
+}
+
+
+.team-heading h5 {
+    font-size: 1.6rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.team-heading h1 {
+    font-size: 4.8rem;
+    color: #333;
+    text-transform: capitalize;
+    font-family: 'Gilda Display', serif;
+    margin-top: 5px;
+}
+
+.about-card-body {
+    background-color: #fff;
+    padding: 3.5rem 0rem;
+    position: relative;
+}
+
+.card {
+    overflow: hidden;
+}
+
+.about-card-body h2 {
+    font-size: 2.4rem;
+    font-family: 'Gilda Display', serif;
+    color: #333;
+}
+
+.about-card-body p {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.team-social {
+    position: absolute;
+    bottom: 0%;
+    transform: translateY(100%);
+    padding: 3.5rem 0rem;
+    background-color: #fff;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.card:hover .team-social {
+    transform: translateY(0%);
+    position: absolute;
+    transition: 0.3s;
+}
+
+.team-icon i {
+    font-size: 1.6rem;
+    padding: 6px;
+    color: #aa8453;
+    cursor: pointer;
+}
+
+.team-icon i:hover {
+    color: #222;
+}
+
+.team-social h6 {
+    font-size: 1.5rem;
+    color: #adadad;
+    margin-top: 5px;
+}
+
+/* restaurant page */
+/* hero */
+.restaurant-hero {
+    width: 100%;
+    overflow: hidden;
+}
+
+.restaurant-hero .carousel-indicators button {
+    background: #aa8453;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border: none;
+    width: 12px;
+    height: 12px;
+    margin: 2rem 6px;
+}
+
+.res-hero-icon {
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 2;
+
+}
+
+.res-hero-icon i {
+    color: #fff;
+    padding: 1.45rem 1.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.336);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.res-hero-icon i:hover {
+    border: 1px solid #e4a8537c;
+    transition: 0.2s;
+}
+
+/* rule */
+.rule-bg {
+    padding: 12rem 0rem;
+}
+
+.rule-ratings i {
+    font-size: 1.4rem;
+    color: #e9b771;
+    padding: 0rem 0.2rem;
+}
+
+.rule-content h5 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #666;
+    margin-top: 1.5rem;
+}
+
+.rule-content h1 {
+    font-size: 4.8rem;
+    color: #333;
+    text-transform: capitalize;
+    margin-top: 1rem;
+    font-family: 'Gilda Display', serif;
+}
+
+.rule-content>p {
+    font-size: 1.6rem;
+    color: #666;
+    line-height: 2.8rem;
+    margin: 1rem 0rem;
+}
+
+.hours h2 {
+    font-size: 2.6rem;
+    color: #333;
+    text-transform: capitalize;
+    margin: 3rem 0rem 2rem;
+    font-family: 'Gilda Display', serif;
+}
+
+.hours i {
+    font-size: 1.8rem;
+    color: #8e6d45;
+}
+
+.hours p {
+    font-size: 1.6rem;
+    color: #666;
+    line-height: 2.8rem;
+    margin-left: 1.5rem;
+    margin-top: 7px;
+}
+
+.dc h2 {
+    font-size: 2.6rem;
+    color: #333;
+    text-transform: capitalize;
+    margin: 2.5rem 0rem 1.5rem;
+    font-family: 'Gilda Display', serif;
+}
+
+.dc p {
+    font-size: 1.6rem;
+    color: #666;
+    line-height: 2.8rem;
+}
+
+.terrace h2 {
+    font-size: 2.6rem;
+    color: #333;
+    text-transform: capitalize;
+    margin: 2.5rem 0rem 1.5rem;
+    font-family: 'Gilda Display', serif;
+}
+
+.terrace p {
+    font-size: 1.6rem;
+    color: #666;
+    line-height: 2.8rem;
+}
+
+/* restaurant-menu */
+.res-menu-bg {
+    background-color: #222222;
+    padding: 12rem 0rem;
+}
+
+.menu-heading h5 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #aa8453;
+}
+
+.menu-heading h1 {
+    font-size: 4.8rem;
+    color: #fff;
+    text-transform: capitalize;
+    margin-top: 1rem;
+    font-family: 'Gilda Display', serif;
+}
+
+.res-menu {
+    width: 75%;
+    margin: 1rem 0rem 2rem;
+}
+
+.res-navbar ul {
+    list-style: none;
+}
+
+.res-navbar ul li a {
+    font-size: 2rem;
+    color: #fff;
+    text-transform: capitalize;
+    cursor: pointer;
+    padding: 0.7rem 4.5rem;
+}
+
+.nav-tabs {
+    border: none;
+}
+
+.nav-tabs .nav-link {
+    color: #fff;
+    border: none;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: transparent;
+    border: 2px solid #aa8453;
+    color: #fff;
+    padding: 0.7rem 4.5rem;
+}
+
+.nav-item .nav-link {
+    transition: none;
+}
+
+.menu1,
+.menu2,
+.menu3,
+.menu4,
+.menu5,
+.menu6 {
+    border-bottom: 2px dotted #e4a853;
+    padding-top: 2rem;
+}
+
+.menu1 h2,
+.menu2 h2,
+.menu3 h2,
+.menu4 h2,
+.menu5 h2,
+.menu6 h2 {
+    font-size: 2rem;
+    color: #aa8453;
+    font-family: 'Gilda Display', serif;
+    text-transform: capitalize;
+}
+
+.menu1 h3,
+.menu2 h3,
+.menu3 h3,
+.menu4 h3,
+.menu5 h3,
+.menu6 h3 {
+    font-size: 2rem;
+    color: #adadad;
+    font-family: 'Gilda Display', serif;
+    text-transform: capitalize;
+}
+
+.menu-detail p {
+    font-size: 1.6rem;
+    color: #adadad;
+}
+
+
+/* gallary page */
+/* hero */
+.gallary-main-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/gal-hero.jpg');
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+}
+
+.gallary-page-heading {
+    padding: 11rem 0rem;
+}
+
+.gallary-page-heading h5 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 5px;
+}
+
+.gallary-page-heading h1 {
+    font-size: 6rem;
+    color: #fff;
+    text-transform: capitalize;
+    font-family: 'Gilda Display', serif;
+    margin-top: 1rem;
+}
+
+.gallary-main {
+    padding: 12rem 0rem;
+}
+
+.gallary-heading h5 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #666;
+    margin-top: 1.5rem;
+}
+
+.gallary-heading h1 {
+    font-size: 4.8rem;
+    color: #333;
+    text-transform: capitalize;
+    margin-top: 1rem;
+    font-family: 'Gilda Display', serif;
+}
+
+.gallary-img {
+    overflow: hidden;
+}
+
+.gallary-img img {
+    transition: 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+.gallary-img img:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
+
+.vid-gallary-bg {
+    background-color: #f8f5f0;
+    padding: 12rem 0rem;
+}
+
+.vid-gallary-heading h5 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #666;
+    margin-top: 1.5rem;
+}
+
+.vid-gallary-heading h1 {
+    font-size: 4.8rem;
+    color: #333;
+    text-transform: capitalize;
+    margin-top: 1rem;
+    font-family: 'Gilda Display', serif;
+    margin-bottom: 2rem;
+}
+
+.vid-gallary {
+    position: relative;
+}
+
+.vid-icon i {
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 1.4rem 1.6rem;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.vid-icon i:hover {
+    background-color: #fff;
+    color: #aa8453;
+}
+
+/* contact page */
+.contact-main-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/contact-hero.jpg');
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+}
+
+.contact-page-heading {
+    padding: 11rem 0rem;
+}
+
+.contact-page-heading h5 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 5px;
+}
+
+.contact-page-heading h1 {
+    font-size: 6rem;
+    color: #fff;
+    text-transform: capitalize;
+    font-family: 'Gilda Display', serif;
+    margin-top: 1rem;
+}
+
+.contact-bg {
+    padding: 12rem 0rem;
+}
+
+.contact-details h2 {
+    font-size: 2.4rem;
+    color: #333;
+    text-transform: capitalize;
+    font-family: 'Gilda Display', serif;
+}
+
+.contact-details>p {
+    font-size: 1.5rem;
+    color: #666;
+    line-height: 2.8rem;
+    margin: 2rem 0rem;
+}
+
+.contact-reservation h5 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin-top: 1rem;
+}
+
+.contact-reservation h2 {
+    font-size: 2.2rem;
+    color: #8e6d45;
+    font-family: 'Gilda Display', serif;
+}
+
+.contact-reservation>p {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.phn-icon i,
+.mail-icon i,
+.address-icon i {
+    font-size: 3rem;
+    color: #8e6d45;
+    margin-right: 2rem;
+}
+
+.contact-form h2 {
+    font-size: 2.4rem;
+    color: #333;
+    text-transform: capitalize;
+    font-family: 'Gilda Display', serif;
+}
+
+.contact-form form {
+    margin: 2rem 0rem;
+}
+
+.form-input,
+.form-msg {
+    padding: 1rem;
+    font-size: 1.4rem;
+    color: #333;
+    outline: none;
+    margin: 1rem 0rem;
+}
+
+.form-btn {
+    padding: 1rem 2.5rem;
+    background-color: #ab8a62;
+    letter-spacing: 2px;
+    color: #fff;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    transition: 0.4s all;
+    border: none;
+}
+
+.form-btn::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    right: 0;
+    background-color: #222;
+    color: #fff;
+    transition: 0.4s all;
+}
+
+.form-btn:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+/* map */
+.map-bg {
+    padding-bottom: 10rem;
+}
+
+.map iframe {
+    width: 100%;
+    filter: grayscale(0);
+}
+
+
+
+
+/* responsive */
+/* tablet */
+@media screen and (min-width:577px) and (max-width:768px) {
+
+
+    .logo {
+        width: 30%;
+        display: flex;
+        height: 85px;
+        align-items: center;
+    }
+
+    .checkbtn {
+        display: block;
+        position: absolute;
+        z-index: 1000;
+        right: 0;
+        cursor: pointer;
+        bottom: 14px;
+    }
+
+    .checkbtn i {
+        font-size: 2.8rem;
+    }
+
+    .navigation ul {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+        height: auto;
+        /* padding-top: 2.2rem; */
+        line-height: 3rem;
+        padding-bottom: 2rem;
+        text-align: center;
+        margin-top: 8rem;
+        z-index: 11111;
+    }
+
+    .navigation ul li {
+        padding-top: 2rem;
+    }
+
+    .navigation ul li a {
+        color: #333;
+        text-align: left;
+    }
+
+    .hide {
+        display: none !important;
+    }
+
+    .show {
+        display: block !important;
+    }
+
+    .navigation ul li a {
+        font-size: 1.6rem;
+    }
+
+    .gtt-btn {
+        right: 20px;
+        font-size: 1.4rem;
+        padding: 0.8rem 1.3rem;
+    }
+
+
+    .hero-mdl-caption h5 {
+        font-size: 1.2rem;
+    }
+
+    .hero-mdl-caption h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-call .call-icon {
+        display: none;
+    }
+
+    .hero-call .hero-call-number {
+        display: none;
+    }
+
+    .hero-form {
+        position: relative;
+        bottom: auto;
+        padding: 5rem;
+        background: #f8f5f0;
+        width: 100%;
+    }
+
+    .hero-form-btn {
+        width: 100%;
+        font-size: 1.4rem;
+    }
+
+    .service-img {
+        margin-top: 3rem;
+    }
+
+    .promo-vid-content h1 {
+        text-align: center;
+    }
+
+    .room-suit-card:hover .card-con-line {
+        width: 460px;
+        transition: 0.7s ease-in;
+        transition-delay: 0.1s;
+    }
+
+    .room-suit-card:hover .card-con-line2 {
+        width: 460px;
+        transition: 0.7s ease-in;
+        transition-delay: 0.1s;
+    }
+
+    .spa {
+        flex-direction: column-reverse;
+    }
+
+    .health {
+        flex-direction: column-reverse;
+    }
+
+    .news-res-content {
+        width: 91%;
+        padding: 1.5rem 7rem 1.5rem 2.5rem;
+        position: absolute;
+        background-color: #f8f5f0;
+        bottom: -40px;
+        left: 22px;
+        transition: 0.2s ease-in-out;
+    }
+
+    .news-restaurant:hover .news-res-content {
+        transform: translateY(-85%);
+        transition: 0.2s ease-in-out;
+    }
+
+    .news-spa {
+        margin-top: 5rem;
+    }
+
+    .news-spa-content {
+        width: 91%;
+        padding: 1.5rem 7rem 1.5rem 2.5rem;
+        position: absolute;
+        background-color: #f8f5f0;
+        bottom: -40px;
+        left: 22px;
+        transition: 0.2s ease-in-out;
+    }
+
+    .news-spa:hover .news-spa-content {
+        transform: translateY(-85%);
+        transition: 0.2s ease-in-out;
+    }
+
+    .news-bathroom {
+        margin-top: 5rem;
+    }
+
+    .news-bathroom-content {
+        width: 91%;
+        padding: 1.5rem 7rem 1.5rem 2.5rem;
+        position: absolute;
+        background-color: #f8f5f0;
+        bottom: -40px;
+        left: 22px;
+        transition: 0.2s ease-in-out;
+    }
+
+    .news-bathroom:hover .news-bathroom-content {
+        transform: translateY(-85%);
+        transition: 0.2s ease-in-out;
+    }
+
+    .news-bg {
+        background-color: #222222;
+        padding: 10rem 0rem 14rem;
+    }
+
+    .adult {
+        margin-bottom: 1.6rem;
+    }
+
+    .brand5 {
+        display: none;
+    }
+
+    .brand img {
+        width: 150px;
+    }
+
+    .footer-explore ul {
+        padding-left: 0rem;
+    }
+
+
+    /* res page */
+    .menu-main {
+        flex-direction: column;
+    }
+
+    .res-menu {
+        width: 100%;
+    }
+
+    .res-navbar ul li a {
+        font-size: 1.8rem;
+    }
+
+    /* contact page */
+    .contact-form {
+        margin-top: 3rem;
+    }
+
+    .footer-explore {
+        padding-left: 0rem;
+        margin: 3rem 0rem;
+    }
+}
+
+@media screen and (max-width:576px) {
+
+    .logo {
+        width: 30%;
+        display: flex;
+        height: 85px;
+        align-items: center;
+    }
+
+    .checkbtn {
+        display: block;
+        position: absolute;
+        z-index: 1000;
+        right: 0;
+        cursor: pointer;
+        bottom: 16px;
+    }
+
+    .checkbtn i {
+        font-size: 2.2rem;
+    }
+
+    .navigation ul {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+        height: auto;
+        /* padding-top: 2.2rem; */
+        line-height: 3rem;
+        padding-bottom: 2rem;
+        text-align: center;
+        margin-top: 8rem;
+        z-index: 11111;
+    }
+
+    .navigation ul li {
+        padding-top: 2rem;
+    }
+
+    .navigation ul li a {
+        color: #333;
+        text-align: left;
+    }
+
+    .hide {
+        display: none !important;
+    }
+
+    .show {
+        display: block !important;
+    }
+
+    .navigation ul li a {
+        font-size: 1.6rem;
+    }
+
+    .ratings-star i {
+        font-size: 1.2rem;
+    }
+
+    .hero-mdl-caption h5 {
+        font-size: 1.2rem;
+        line-height: 2.6rem;
+        text-align: center;
+    }
+
+    .hero-mdl-caption h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .hero-call .call-icon {
+        display: none;
+    }
+
+    .hero-call .hero-call-number {
+        display: none;
+    }
+
+    .hero-form {
+        position: relative;
+        bottom: auto;
+        padding: 5rem;
+        background: #f8f5f0;
+        width: 100%;
+    }
+
+    .hero-form-btn {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    .expereince-main {
+        padding: 13rem 2rem;
+    }
+
+    .exp-call {
+        margin-bottom: 2rem;
+    }
+
+    .rooms-suits {
+        padding: 13rem 2rem 15rem;
+    }
+
+    .extra-service-bg {
+        padding: 13rem 2rem;
+    }
+
+    .service-img {
+        margin-top: 3rem;
+    }
+
+    .promo-vid-content h1 {
+        text-align: center;
+    }
+
+    .facilities-main {
+        padding: 13rem 2rem;
+    }
+
+    .we-have-main {
+        padding: 13rem 2rem;
+    }
+
+    .news-bg {
+        background-color: #222222;
+        padding: 10rem 2rem 12rem;
+    }
+
+    .check-in-main {
+        padding: 5rem 2rem;
+    }
+
+    .adult {
+        margin-bottom: 1.6rem;
+    }
+
+    .brand4,
+    .brand5 {
+        display: none;
+    }
+
+    .brand img {
+        width: 100px;
+    }
+
+    .spa {
+        flex-direction: column-reverse;
+    }
+
+    .health {
+        flex-direction: column-reverse;
+    }
+
+    .footer-explore {
+        padding-left: 0rem;
+        margin: 3rem 0rem;
+    }
+
+    .footer-explore ul {
+        padding-left: 0rem;
+    }
+
+
+
+    /* about page */
+    .team-bg {
+        padding: 12rem 2rem;
+    }
+
+    /* restaurant page */
+    .rule-bg {
+        padding: 12rem 2rem;
+    }
+
+    .res-menu-bg {
+        background-color: #222222;
+        padding: 12rem 2rem;
+    }
+
+    .menu-main {
+        flex-direction: column;
+        padding: 0rem 1.5rem;
+    }
+
+    .res-menu {
+        width: 100%;
+    }
+
+    .res-navbar ul li a {
+        font-size: 1.6rem;
+    }
+
+    /* gallary page */
+    .gallary-main {
+        padding: 12rem 1.5rem;
+    }
+
+    .vid-gallary-bg {
+        padding: 12rem 1.5rem;
+    }
+
+    /* contact page */
+    .contact-bg {
+        padding: 12rem 2rem;
+    }
+
+    .contact-form {
+        margin-top: 3rem;
+    }
+
+    .map-bg {
+        padding: 0rem 2rem 10rem 2rem;
+    }
+}
+
+@media screen and (min-width:381px) and (max-width:480px) {
+
+    .exp-call {
+        margin-bottom: 2rem;
+    }
+
+    .room-suit-heading h5 {
+        letter-spacing: 4px;
+    }
+
+    .room-suit-card:hover .card-con-line {
+        width: 360px;
+        transition: 0.7s ease-in;
+        transition-delay: 0.1s;
+    }
+
+    .room-suit-card:hover .card-con-line2 {
+        width: 360px;
+        transition: 0.7s ease-in;
+        transition-delay: 0.1s;
+    }
+
+    .news-res-content {
+        width: 85%;
+        padding: 1.5rem 1.2rem 2.5rem;
+    }
+
+    .news-restaurant:hover .news-res-content {
+        transform: translateY(-60%);
+        transition: 0.2s ease-in-out;
+    }
+
+    .news-spa {
+        margin-top: 5rem;
+    }
+
+    .news-spa-content {
+        width: 85%;
+        padding: 1.5rem 1.5rem 2.5rem;
+    }
+
+    .news-spa:hover .news-spa-content {
+        transform: translateY(-60%);
+    }
+
+    .news-bathroom {
+        margin-top: 5rem;
+    }
+
+    .news-bathroom-content {
+        width: 85%;
+        padding: 1.5rem 1.5rem 2.5rem;
+    }
+
+    .news-bathroom:hover .news-bathroom-content {
+        transform: translateY(-60%);
+    }
+
+    /* restaurant page */
+    .nav-tabs .nav-link.active {
+        padding: 0.7rem 3.5rem;
+    }
+}
+
+@media screen and (max-width:360px) {
+
+    .exp-call {
+        margin-bottom: 2rem;
+    }
+
+    .room-suit-heading h5 {
+        letter-spacing: 4px;
+    }
+
+    .room-suit-card:hover .card-con-line {
+        width: 250px;
+        transition: 0.7s ease-in;
+        transition-delay: 0.1s;
+    }
+
+    .room-suit-card:hover .card-con-line2 {
+        width: 250px;
+        transition: 0.7s ease-in;
+        transition-delay: 0.1s;
+    }
+
+    .news-res-content {
+        width: 85%;
+        padding: 1.5rem 1.2rem 2.5rem;
+    }
+
+    .news-restaurant:hover .news-res-content {
+        transform: translateY(-60%);
+        transition: 0.2s ease-in-out;
+    }
+
+    .news-spa {
+        margin-top: 5rem;
+    }
+
+    .news-spa-content {
+        width: 85%;
+        padding: 1.5rem 1.5rem 2.5rem;
+    }
+
+    .news-spa:hover .news-spa-content {
+        transform: translateY(-60%);
+    }
+
+    .news-bathroom {
+        margin-top: 5rem;
+    }
+
+    .news-bathroom-content {
+        width: 85%;
+        padding: 1.5rem 1.5rem 2.5rem;
+    }
+
+    .news-bathroom:hover .news-bathroom-content {
+        transform: translateY(-60%);
+    }
+
+        /* restaurant page */
+        .nav-tabs .nav-link.active {
+            padding: 0.7rem 3.5rem;
+        }
+}

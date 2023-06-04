@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/style2.css">
+    <title>Clock in JS</title>
+</head>
+
+<body>
+    <div class="clock-bg">
+        <div class="digital-clock">
+            <div class="day" id="getDay">
+                <span class="sun"> sun</span>
+                <span class="mon"> mon</span>
+                <span class="tue"> tue</span>
+                <span class="wed"> wed</span>
+                <span class="thu"> thu</span>
+                <span class="fri"> fri</span>
+                <span class="sat"> sat</span>
+           
+            </div>
+
+            <div class="time">
+                <span class="icon"><i class="fas fa-clock"></i></span>
+                <span class="hours" id="Hrs"></span>
+                <span class="dot">:</span>
+                <span class="minutes" id="Mnts"></span>
+                <span class="dot">:</span>
+                <span class="second" id="Secs"></span>
+                <span class="am-pm" id="apFormat"></span>
+            </div>
+            <div class="dmy">
+                <span class="date" id="date"></span>
+                <span class="month" id="mnth"></span>
+                <span class="year" id="yr"></span>
+            </div>
+        </div>
+    </div>
+    <div class="btm">
+        <h1>digital clock</h1>
+    </div>
+
+    <script>
+        function dgClock() {
+            var date = new Date();
+            // console.log(date);
+            var hours = date.getHours();
+            var min = date.getMinutes();
+            var sec = date.getSeconds();
+            // am-pm format
+            var apFor = "am";
+            if (hours >= 12) apFor = "pm"
+
+            // convert 24 hours into 12hours format
+            if (hours > 12) hours = hours - 12;
+
+            // add zero
+            if (hours < 10) hours = "0" + hours;
+            if (min < 10) min = "0" + min;
+            if (sec < 10) sec = "0" + sec;
+
+            document.querySelector("#Hrs").innerHTML = hours;
+            document.querySelector("#Mnts").innerHTML = min;
+            document.querySelector("#Secs").innerHTML = sec;
+            document.querySelector("#apFormat").innerHTML = apFor;
+        }
+        dgClock();
+        setInterval(dgClock, 1000);
+
+        // get date, dayname month, year
+        var today = new Date();
+        var day = today.getDay();
+        console.log(day);
+        var date = today.getDate();
+        console.log(date);
+        var month = today.toLocaleString("default", { month: "long" });
+        console.log(month);
+        var year = today.getFullYear();
+        console.log(year);
+
+        switch (day) {
+            case 0:
+                document.querySelector(".sun").style.color = "#000";
+                console.log("sunday");
+                break;
+            case 1:
+                document.querySelector(".mon").style.color = "#000";
+                console.log("monday");
+                break;
+            case 2:
+                document.querySelector(".tue").style.color = "#000";
+                console.log("tuesday");
+                break;
+            case 3:
+                document.querySelector(".wed").style.color = "#000";
+                console.log("wednesday");
+                break;
+            case 4:
+                document.querySelector(".thu").style.color = "#000";
+                console.log("thursday");
+                break;
+            case 5:
+                document.querySelector(".fri").style.color = "#000";
+                console.log("friday");
+                break;
+            case 6:
+                document.querySelector(".sat").style.color = "#000";
+                console.log("saturday");
+                break;
+
+            default:
+                console.log("not find any day");
+                break;
+        }
+
+        // print date month year
+
+        document.querySelector("#date").innerHTML = date;
+        document.querySelector("#mnth").innerHTML = month + ",";
+        document.querySelector("#yr").innerHTML = year;
+
+    </script>
+</body>
+
+</html>

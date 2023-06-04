@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Random</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 15px;
+        }
+        button{
+            padding: 8px 10px;
+            background-color: rgb(43, 58, 87);
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            font-weight: 700;
+            cursor: pointer;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="section">
+        <button id="button">Random Color</button>
+        <h2 id="colorCode">Color Code</h2>
+    </section>
+
+    <script>
+        let button = document.querySelector("#button");
+        let bgEl = document.querySelector("#section");
+        let h2El = document.querySelector("#colorCode");
+
+        button.addEventListener("click", () => {
+            let color = "#";
+            let symbols = "0123456789ABCDEF";
+            for (i = 0; i < 6; i++) {
+                color = color + symbols[Math.floor(Math.random() * 16)]
+            }
+            bgEl.style.backgroundColor = color
+            h2El.innerHTML = color
+        })
+    </script>
+</body>
+
+</html>
