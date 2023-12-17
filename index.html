@@ -36,44 +36,56 @@
     <div class="hero-bg" id="changeBg">
       <div class="container-fluid">
         <div class="row">
-          <!-- header -->
-          <header class="header d-flex" id="nav">
-            <div
-              class="container-fluid d-flex justify-content-between align-items-center"
-            >
-              <div class="logo d-flex justify-content-center align-items-start">
-                <a href="index.html">
-                  <h1>AkWeb</h1>
-                </a>
-              </div>
-              <nav class="navigation d-flex">
-                <ul id="menulink" class="hide">
-                  <li>
-                    <a href="#home" class="active"
-                      ><i class="bx bx-home"></i>home</a
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand logo" href="index.html">
+                <h1>AkWeb</h1>
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home"
+                      ><i class="bx bx-home"></i>Home</a
                     >
                   </li>
-                  <li>
-                    <a href="#about"><i class="bx bx-user"></i>about</a>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about"
+                      ><i class="bx bx-user"></i>About</a
+                    >
                   </li>
-                  <li>
-                    <a href="#works"><i class="bx bxl-netlify"></i>works</a>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#works"
+                      ><i class="bx bxl-netlify"></i>Works</a
+                    >
                   </li>
-                  <li>
-                    <a href="#contact"><i class="bx bxs-contact"></i>contact</a>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact"
+                      ><i class="bx bxs-contact"></i>Contact</a
+                    >
+                  </li>
+
+                  <li style="text-align: center">
+                    <button style="all: unset" id="themeChanger" class="theme">
+                      <a href="#"><i class="bx bx-moon"></i></a>
+                    </button>
                   </li>
                 </ul>
-                <li>
-                  <!-- <button style="all: unset" id="themeChanger" class="theme">
-                    <a href="#"><i class="bx bx-moon"></i></a>
-                  </button> -->
-                </li>
-                <label for="" class="checkbtn" id="check">
-                  <i class="bx bx-menu"></i>
-                </label>
-              </nav>
+              </div>
             </div>
-          </header>
+          </nav>
           <div class="hero-wrapper">
             <div
               class="col-12 d-flex justify-content-center align-items-center flex-column profile-wrapper"
@@ -117,13 +129,24 @@
           </div>
         </div>
 
+        <!-- GO TO TOP BUTTON -->
+        <a href="#changeBg">
+          <div class="go-top-btn" id="topBtn">
+            <i class="bx bx-arrow-to-top"></i>
+          </div>
+        </a>
+
         <!-- wrapper bg -->
         <div class="wrapper-background" id="about">
           <h1>about me</h1>
           <div class="row align-items-center">
             <div class="col-sm-12 col-md-4 col-lg-3">
               <div class="about-img">
-                <img src="img/hero.jpg" class="img-fluid" alt="" />
+                <img
+                  src="img/IMG_20220924_101049.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
               </div>
             </div>
 
@@ -131,13 +154,20 @@
               <div class="about-detail">
                 <h3>i'm mohd aquib a <span>frontend developer</span></h3>
                 <p>
-                  My name is Mohd Aquib. I am a Frontend Developer, and I'm very
-                  passionate and dedicated to my work. I took enjoy to do coding
-                  as a fronted developer. So I always try to do my best. I have
-                  good command in Adobe XD, HTML/CSS, JavaScript, jQuery,
-                  Bootstrap, WordPress etc. Whereby I always improving to
-                  problem solving and clean coding. I have acquired the skills
-                  and knowledge necessary to make your project a success.
+                  Hello World! I'm [Your Name], a passionate frontend
+                  developer with a flair for crafting immersive and visually
+                  appealing web experiences. 
+                  I thrive on
+                  turning innovative ideas into reality through the magic of
+                  code. My journey in the world of technology began with a love
+                  for elegant design and a knack for translating creative
+                  concepts into responsive, pixel-perfect websites.
+                  Fluent in the languages of
+                  the web, I'm well-versed in HTML, CSS, and JavaScript. I have
+                  a strong command of modern frontend frameworks such as React
+                  and Vue.js, and I'm always eager to explore new tools and
+                  technologies that push the boundaries of what's possible on
+                  the web.
                 </p>
               </div>
 
@@ -149,7 +179,7 @@
                     <div class="phone d-flex align-items-center">
                       <span>
                         <a
-                          href="#"
+                          href="tel:9129123517"
                           class="d-flex justify-content-center align-items-center"
                         >
                           <i class="bx bx-mobile"></i>
@@ -157,7 +187,9 @@
                       </span>
                       <div class="px-4">
                         <h6>phone</h6>
-                        <h2>+91-9129123517</h2>
+                        <a href="tel:9129123517">
+                          <h2>+91-9129123517</h2>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -175,7 +207,9 @@
                       </span>
                       <div class="px-4">
                         <h6>location</h6>
-                        <h2>Rohini Sector - 7 New Delhi - 110085</h2>
+                        <a href="#">
+                          <h2>Rohini Sector - 7 New Delhi - 110085</h2>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -185,7 +219,7 @@
                     <div class="email d-flex align-items-center">
                       <span>
                         <a
-                          href="#"
+                          href="mailto:myemail@site.com?Subject=Some%20subject"
                           class="d-flex justify-content-center align-items-center"
                         >
                           <i class="bx bxs-envelope-open"></i>
@@ -193,7 +227,11 @@
                       </span>
                       <div class="px-4">
                         <h6>email</h6>
-                        <h2>akibkhan9984@gmail.com</h2>
+                        <a
+                          href="mailto:myemail@site.com?Subject=Some%20subject"
+                        >
+                          <h2>akibkhan9984@gmail.com</h2>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -211,7 +249,9 @@
                       </span>
                       <div class="px-3">
                         <h6>birthday</h6>
-                        <h2>July 7, 2000</h2>
+                        <a href="#">
+                          <h2>July 7, 2000</h2>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -248,7 +288,7 @@
                     <i class="bx bxl-wordpress"></i>
                   </span>
                   <div class="wp-title ps-3">
-                    <h2>wordPress development</h2>
+                    <h2>wordPress design</h2>
                     <p>
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                       Sapiente, ullam molestias impedit ducimus error laudantium
@@ -410,7 +450,7 @@
                     class="skill-percent d-flex justify-content-between align-items-center"
                   >
                     <h2>jQuery</h2>
-                    <h2 class="jq">70%</h2>
+                    <h2 class="jq">65%</h2>
                   </div>
                   <div class="skill-full">
                     <div class="progress">
@@ -419,7 +459,7 @@
                         role="progressbar"
                         aria-valuemin="0"
                         aria-valuemax="100"
-                        aria-valuenow="70"
+                        aria-valuenow="65"
                         style="background-color: #be4d23"
                       ></div>
                     </div>
@@ -434,7 +474,7 @@
                     class="skill-percent d-flex justify-content-between align-items-center"
                   >
                     <h2>Angular</h2>
-                    <h2 class="ng">60%</h2>
+                    <h2 class="ng">55%</h2>
                   </div>
                   <div class="skill-full">
                     <div class="progress">
@@ -443,7 +483,7 @@
                         role="progressbar"
                         aria-valuemin="0"
                         aria-valuemax="100"
-                        aria-valuenow="60"
+                        aria-valuenow="55"
                         style="background-color: #dd0031"
                       ></div>
                     </div>
@@ -560,7 +600,9 @@
                   class="d-flex justify-content-end flex-wrap"
                   id="project-filter"
                 >
-                  <li class="filter filter-active active" data-filter=".all">All</li>
+                  <li class="filter filter-active active" data-filter=".all">
+                    All
+                  </li>
                   <li class="filter" data-filter=".html">HTML</li>
                   <li class="filter" data-filter=".javascript">JavaScript</li>
                   <!-- <li class="filter" data-filter=".jquery">jQuery</li> -->
@@ -605,7 +647,7 @@
                 </div>
               </div>
             </div>
-        
+
             <!-- project2 -->
             <div
               class="col-12 col-md-6 col-lg-4 col-xl-4 gx-5 project-item all javascript"
@@ -1062,7 +1104,7 @@
             </div>
 
             <!-- project16 -->
-             <div
+            <div
               class="col-12 col-md-6 col-lg-4 col-xl-4 gx-5 project-item all html"
             >
               <div class="portfolio-box pf-bx1 item html">
@@ -1171,11 +1213,14 @@
                     <div>
                       <span>javscript</span>
                       <h3>
-                        <a href="projects/Counter/counter.html" target="_blank">counter</a>
+                        <a href="projects/Counter/counter.html" target="_blank"
+                          >counter</a
+                        >
                       </h3>
                     </div>
                     <a
-                      href="projects/Counter/counter.html" target="_blank"
+                      href="projects/Counter/counter.html"
+                      target="_blank"
                       class="icon d-flex justify-content-center align-items-center"
                     >
                       <i class="bx bxs-arrow-to-right"></i>
@@ -1262,29 +1307,29 @@
             <!-- contact info -->
             <div class="col-lg-4 gx-3">
               <div class="contact-info">
-                <div class="phone-box d-flex align-items-start">
+                <div class="phone-box d-flex align-items-center">
                   <div class="phn-icon">
                     <img src="img/download.png" alt="" />
                   </div>
-                  <div class="phone">
+                  <div class="phone ms-2">
                     <h3>phone :</h3>
                     <p>+91-9129123517</p>
                   </div>
                 </div>
-                <div class="email-box d-flex align-items-start">
+                <div class="email-box d-flex align-items-center">
                   <div class="email-icon">
                     <img src="img/email.png" alt="" />
                   </div>
-                  <div class="email">
+                  <div class="email ms-2">
                     <h3>email :</h3>
                     <p>akibkhan9984@gmail.com</p>
                   </div>
                 </div>
-                <div class="address-box d-flex align-items-start">
+                <div class="address-box d-flex align-items-center">
                   <div class="add-icon">
                     <img src="img/location.png" alt="" />
                   </div>
-                  <div class="address">
+                  <div class="address ms-2">
                     <h3>address :</h3>
                     <p>Rohini Sector 7 - New Delhi - India (110085)</p>
                   </div>
@@ -1378,6 +1423,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="js/animate.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/script.js"></script>
     <script src="js/typed.js"></script>

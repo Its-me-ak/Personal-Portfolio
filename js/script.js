@@ -66,25 +66,31 @@ window.onscroll = function () {
 
 
 // DARK LIGHT MODE
-// let themeSwitcher = document.querySelector('#themeChanger');
-// let bodyEle = document.querySelector('body');
+let themeSwitcher = document.querySelector('#themeChanger');
+let bodyEle = document.querySelector('body');
 
-// let savedTheme = localStorage.getItem('theme')
-// // console.log(savedTheme);
+let savedTheme = localStorage.getItem('theme')
+// console.log(savedTheme);
 
-// if (savedTheme) {
-//     bodyEle.classList.add(savedTheme);
-// }
+if (savedTheme) {
+    bodyEle.classList.add(savedTheme);
+}
 
-// themeSwitcher.addEventListener('click', () => {
-//     bodyEle.classList.toggle('dark-theme');
-//     bodyEle.classList.toggle('light-theme');
+themeSwitcher.addEventListener('click', () => {
+    bodyEle.classList.toggle('dark-theme');
+    bodyEle.classList.toggle('light-theme');
 
-//     let currentTheme = bodyEle.classList.contains('light-theme') ? 'light-theme' : 'dark-theme';
+    let currentTheme = bodyEle.classList.contains('light-theme') ? 'light-theme' : 'dark-theme';
 
-//     localStorage.setItem('theme', currentTheme);
-// })
+    localStorage.setItem('theme', currentTheme);
+})
 
+
+// GO TO TOP BUTTON
+window.onscroll = () => {
+    let goToTopBtn = document.querySelector("#topBtn")
+    goToTopBtn.classList.toggle("fixBtn", window.scrollY > 500)
+}
 
 // MOVING CURSOR
 var cursor = document.querySelector('.cursor');
@@ -173,7 +179,7 @@ function formValidate() {
         }
         else {
             document.querySelector('.emailError').innerHTML = "";
-            document.querySelector('#email').style.borderBottom = "2px solid red";
+            document.querySelector('#email').style.borderBottom = "2px solid seagreen";
             document.querySelector('.emailerr').style.visibility = 'hidden';
             document.querySelector('.emailcheck').style.visibility = 'visible';
         }
@@ -214,11 +220,11 @@ function formValidate() {
 // Name
 function nameonKey() {
     let userName = document.querySelector("#name").value;
-    let regName = /^([a-zA-Z ]){4,25}$/;
+    let regName = /^([a-zA-Z ]){3,25}$/;
 
     if (userName !== "") {
 
-        if (userName.length < 4) {
+        if (userName.length < 3) {
             document.querySelector(".nameError").innerHTML = "**Name is too short";
             document.querySelector('.nameerr').style.visibility = 'visible';
             document.querySelector('.namecheck').style.visibility = 'hidden';
@@ -311,6 +317,8 @@ function mobonKey() {
         return false;
     }
 }
+
+
 
 
 

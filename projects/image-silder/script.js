@@ -45,4 +45,11 @@ document.querySelector("#thumbnail_10").onclick = changeImg;
 document.querySelector("#thumbnail_11").onclick = changeImg;
 document.querySelector("#thumbnail_12").onclick = changeImg;
 
+// let allImg = document.querySelectorAll('img');
+// console.log(allImg);
+
+// for(let i=0; i < allImg.length; i++){
+//     allImg.onclick = changeImg;
+// }
+
 

@@ -8,7 +8,7 @@
 }
 
 :root {
-  --hero-bg:#f8f7f3;
+  --hero-bg: #f8f7f3;
   --primary-color: #fff;
   --scondary-color: #121414;
   --menu-color: #fff;
@@ -26,7 +26,7 @@
 }
 
 .dark-theme {
-  --dark-bg: #06090c;
+  --hero-bg: #06090c;
   --primary-color: #010203;
   --scondary-color: #f4f4f4;
   --menu-color: #010203;
@@ -57,6 +57,7 @@ body p {
   line-height: 2.8rem;
   color: var(--light-text);
   font-weight: 600;
+  margin-bottom: 0rem;
 }
 
 %reuseable {
@@ -270,13 +271,44 @@ body p {
   height: 50px;
   opacity: 0.5;
 }
+
+// GO TO TOP BUTTON
+.go-top-btn {
+  position: fixed;
+  right: 25px;
+  background-image: linear-gradient(
+    to right,
+    #dd2575 0%,
+    #f7595c 51%,
+    #dd2575 100%
+  );
+  background-size: 200% auto;
+  padding: 8px 13px;
+  bottom: 25px;
+  z-index: 11111;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 18px;
+  visibility: hidden;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.go-top-btn.fixBtn {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.5s ease;
+}
+
+// HERO BG
 .hero-bg {
   @extend %reuseable;
   background-color: var(--hero-bg);
 }
 
 .hero-bg.dark-bg {
-  background-color: var(--dark-bg)
+  background-color: var(--dark-bg);
 }
 
 .hero-wrapper {
@@ -308,8 +340,21 @@ body p {
         padding-top: 0.5rem;
         padding-bottom: 1rem;
       }
+
+      // .title{
+      //   width: 350px;
+      //   height: 50px;
+      //   background-color: red;
+
+      //   .is-hidden {
+      //     display: none;
+      //   }
+      // }
     }
 
+    ul {
+      padding-left: 0rem !important;
+    }
     .hero-social-link {
       a {
         @extend %iconBxShadow;
@@ -352,7 +397,7 @@ body p {
       }
 
       i.bxl-github {
-        color: #161414;
+        color: #6f2c83;
       }
     }
   }
@@ -469,7 +514,7 @@ body p {
       .bday {
         margin: 0.9rem 0;
 
-        a {
+        span a {
           @extend %iconBxShadow;
           margin: 1rem 0rem;
         }
@@ -478,6 +523,12 @@ body p {
           color: var(--light-text);
           text-transform: capitalize;
           font-size: 1.2rem;
+        }
+        div a {
+          text-decoration: none;
+          h2 {
+            transition: 0.3s;
+          }
         }
 
         h2 {
@@ -490,11 +541,23 @@ body p {
         i.bx-mobile {
           color: #e93b81;
         }
+
+        div a h2 {
+          &:hover {
+            color: #e93b81;
+          }
+        }
       }
 
       .location {
         i.bxs-map {
           color: #fd7590;
+        }
+
+        div a h2 {
+          &:hover {
+            color: #fd7590;
+          }
         }
       }
 
@@ -502,11 +565,21 @@ body p {
         i.bxs-envelope-open {
           color: #78d9e0;
         }
+        div a h2 {
+          &:hover {
+            color: #78d9e0;
+          }
+        }
       }
 
       .bday {
         i.bxs-calendar {
           color: #c17ceb;
+        }
+        div a h2 {
+          &:hover {
+            color: #c17ceb;
+          }
         }
       }
     }
@@ -883,12 +956,12 @@ body p {
       }
 
       .msg:focus {
-        border-color: #dd0031;
+        border-color: #dfc907;
         transition: 0.3s;
       }
 
       .msg:focus::placeholder {
-        color: #dd0031;
+        color: #dfc907;
       }
 
       .submit-btn {
@@ -1175,7 +1248,7 @@ body p {
   }
 
   %reuseable {
-    padding: 2.5rem 0rem 5rem;
+    padding: 1.5rem 0rem 5rem;
   }
 
   .hero-wrapper {

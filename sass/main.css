@@ -1,23 +1,31 @@
-.header {
-  padding: 0 !important;
+.navbar-collapse {
+  justify-content: flex-end !important;
+  flex-grow: 0 !important;
 }
-.header .logo h1 {
+
+.logo {
+  text-decoration: none;
+}
+.logo h1 {
   font-size: 4.5rem;
   font-weight: 900;
 }
-.header .logo a {
-  text-decoration: none;
-}
 
-.navigation li {
-  margin: 0 1.5rem;
-  list-style: none;
+.navbar .nav-link {
+  justify-content: center;
 }
-.navigation li a {
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+.navbar ul li {
+  margin: 0 1.5rem;
+}
+.navbar ul li a {
   background: var(--menu-color);
   text-decoration: none;
   color: var(--title-color);
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem 1.5rem !important;
   text-transform: capitalize;
   font-size: 1.5rem;
   font-weight: 600;
@@ -26,124 +34,28 @@
   display: flex;
   align-items: center;
 }
-.navigation li a:hover {
+.navbar ul li a:hover {
   background-image: linear-gradient(to right, #dd2575 0%, #f7595c 51%, #dd2575 100%);
   background-size: 200% auto;
   color: #f4f4f4;
 }
-.navigation li a i {
+.navbar ul li a.active {
+  background-image: linear-gradient(to right, #dd2575 0%, #f7595c 51%, #dd2575 100%);
+  background-size: 200% auto;
+  color: #f4f4f4 !important;
+}
+.navbar ul li a i {
   padding-right: 0.6rem;
   font-size: 1.6rem;
 }
-.navigation li a i.bx-moon {
+.navbar ul li a i.bx-moon {
   padding-right: 0rem;
   font-size: 2.2rem;
-}
-.navigation ul {
-  list-style: none;
-  display: flex;
-}
-.navigation ul li {
-  margin: 0 1.5rem;
-}
-.navigation ul li a {
-  background: var(--menu-color);
-  text-decoration: none;
-  color: var(--title-color);
-  padding: 0.8rem 1.5rem;
-  text-transform: capitalize;
-  font-size: 1.5rem;
-  font-weight: 600;
-  border-radius: 0.8rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-}
-.navigation ul li a:hover {
-  background-image: linear-gradient(to right, #dd2575 0%, #f7595c 51%, #dd2575 100%);
-  background-size: 200% auto;
-  color: #f4f4f4;
-}
-.navigation ul li a.active {
-  background-image: linear-gradient(to right, #dd2575 0%, #f7595c 51%, #dd2575 100%);
-  background-size: 200% auto;
-  color: #f4f4f4;
-}
-.navigation ul li a i {
-  padding-right: 0.6rem;
-  font-size: 1.6rem;
-}
-.navigation ul li a i.bx-moon {
-  padding-right: 0rem;
-  font-size: 2.2rem;
-}
-.navigation label {
-  margin-left: 1.5rem;
-  display: none;
-}
-.navigation label i {
-  background: var(--menu-color);
-  text-decoration: none;
-  color: #444;
-  padding: 0.8rem 1.5rem;
-  text-transform: capitalize;
-  font-size: 2.2rem;
-  font-weight: 600;
-  border-radius: 0.8rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-.navigation label i:hover {
-  background-image: linear-gradient(to right, #dd2575 0%, #f7595c 51%, #dd2575 100%);
-  background-size: 200% auto;
-  color: var(--menu-color);
 }
 
-@media screen and (min-width: 769px) and (max-width: 1023px) {
-  .header {
-    padding: 0 1.5rem !important;
-  }
-  .navigation ul {
-    display: none;
-  }
-  .navigation label {
-    display: block;
-  }
-}
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .header .logo h1 {
-    font-size: 4rem;
-  }
-  .navigation ul {
-    display: none;
-  }
-  .navigation label {
-    display: block;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  .header .logo h1 {
-    font-size: 3.5rem;
-  }
-  .navigation li {
-    margin: 0;
-  }
-  .navigation li a {
-    font-size: 1.4rem;
-  }
-  .navigation li a i.bx-moon {
-    font-size: 1.8rem;
-  }
-  .navigation label i {
-    font-size: 1.8rem;
-  }
-  .navigation ul {
-    display: none;
-  }
-  .navigation label {
-    display: block;
+@media screen and (max-width: 991px) {
+  .navbar ul {
+    background-color: var(--primary-color);
   }
 }
 * {
@@ -154,7 +66,7 @@
 }
 
 :root {
-  --hero-bg:#f8f7f3;
+  --hero-bg: #f8f7f3;
   --primary-color: #fff;
   --scondary-color: #121414;
   --menu-color: #fff;
@@ -172,7 +84,7 @@
 }
 
 .dark-theme {
-  --dark-bg: #06090c;
+  --hero-bg: #06090c;
   --primary-color: #010203;
   --scondary-color: #f4f4f4;
   --menu-color: #010203;
@@ -208,6 +120,7 @@ body p {
   line-height: 2.8rem;
   color: var(--light-text);
   font-weight: 600;
+  margin-bottom: 0rem;
 }
 
 .hero-bg {
@@ -230,7 +143,7 @@ body p {
   background-size: 200% auto;
 }
 
-.project-menu ul li.active, .project-menu ul li:hover, .wrapper-background .project-wrap span, .hero-bg .wrapper-background .about-detail h3 span, .header .logo h1 {
+.project-menu ul li.active, .project-menu ul li:hover, .wrapper-background .project-wrap span, .hero-bg .wrapper-background .about-detail h3 span, .logo h1 {
   color: transparent;
   background: linear-gradient(to right, #dd2575 0%, #f7595c 51%, #dd2575 100%);
   -webkit-background-clip: text;
@@ -239,10 +152,10 @@ body p {
   background-size: 200% auto;
 }
 
-.hero-bg .wrapper-background .personal-info .phone a,
-.hero-bg .wrapper-background .personal-info .location a,
-.hero-bg .wrapper-background .personal-info .email a,
-.hero-bg .wrapper-background .personal-info .bday a, .hero-wrapper .profile-wrapper .hero-social-link a {
+.hero-bg .wrapper-background .personal-info .phone span a,
+.hero-bg .wrapper-background .personal-info .location span a,
+.hero-bg .wrapper-background .personal-info .email span a,
+.hero-bg .wrapper-background .personal-info .bday span a, .hero-wrapper .profile-wrapper .hero-social-link a {
   text-decoration: none;
   font-size: 2.2rem;
   border-radius: 0.8rem;
@@ -394,6 +307,29 @@ body p {
   opacity: 0.5;
 }
 
+.go-top-btn {
+  position: fixed;
+  right: 25px;
+  background-image: linear-gradient(to right, #dd2575 0%, #f7595c 51%, #dd2575 100%);
+  background-size: 200% auto;
+  padding: 8px 13px;
+  bottom: 25px;
+  z-index: 11111;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 18px;
+  visibility: hidden;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.go-top-btn.fixBtn {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.5s ease;
+}
+
 .hero-bg {
   background-color: var(--hero-bg);
 }
@@ -428,6 +364,9 @@ body p {
   padding-top: 0.5rem;
   padding-bottom: 1rem;
 }
+.hero-wrapper .profile-wrapper ul {
+  padding-left: 0rem !important;
+}
 .hero-wrapper .profile-wrapper .hero-social-link a {
   transition: 0.5s;
   background-color: var(--menu-color);
@@ -456,7 +395,7 @@ body p {
   color: #0076b3;
 }
 .hero-wrapper .profile-wrapper .hero-social-link i.bxl-github {
-  color: #161414;
+  color: #6f2c83;
 }
 .hero-wrapper .hero-cv .submit-btn {
   background-image: linear-gradient(to right, #dd2575 0%, #f7595c 51%, #dd2575 100%);
@@ -541,10 +480,10 @@ body p {
 .hero-bg .wrapper-background .personal-info .bday {
   margin: 0.9rem 0;
 }
-.hero-bg .wrapper-background .personal-info .phone a,
-.hero-bg .wrapper-background .personal-info .location a,
-.hero-bg .wrapper-background .personal-info .email a,
-.hero-bg .wrapper-background .personal-info .bday a {
+.hero-bg .wrapper-background .personal-info .phone span a,
+.hero-bg .wrapper-background .personal-info .location span a,
+.hero-bg .wrapper-background .personal-info .email span a,
+.hero-bg .wrapper-background .personal-info .bday span a {
   margin: 1rem 0rem;
 }
 .hero-bg .wrapper-background .personal-info .phone h6,
@@ -554,6 +493,18 @@ body p {
   color: var(--light-text);
   text-transform: capitalize;
   font-size: 1.2rem;
+}
+.hero-bg .wrapper-background .personal-info .phone div a,
+.hero-bg .wrapper-background .personal-info .location div a,
+.hero-bg .wrapper-background .personal-info .email div a,
+.hero-bg .wrapper-background .personal-info .bday div a {
+  text-decoration: none;
+}
+.hero-bg .wrapper-background .personal-info .phone div a h2,
+.hero-bg .wrapper-background .personal-info .location div a h2,
+.hero-bg .wrapper-background .personal-info .email div a h2,
+.hero-bg .wrapper-background .personal-info .bday div a h2 {
+  transition: 0.3s;
 }
 .hero-bg .wrapper-background .personal-info .phone h2,
 .hero-bg .wrapper-background .personal-info .location h2,
@@ -565,13 +516,25 @@ body p {
 .hero-bg .wrapper-background .personal-info .phone i.bx-mobile {
   color: #e93b81;
 }
+.hero-bg .wrapper-background .personal-info .phone div a h2:hover {
+  color: #e93b81;
+}
 .hero-bg .wrapper-background .personal-info .location i.bxs-map {
+  color: #fd7590;
+}
+.hero-bg .wrapper-background .personal-info .location div a h2:hover {
   color: #fd7590;
 }
 .hero-bg .wrapper-background .personal-info .email i.bxs-envelope-open {
   color: #78d9e0;
 }
+.hero-bg .wrapper-background .personal-info .email div a h2:hover {
+  color: #78d9e0;
+}
 .hero-bg .wrapper-background .personal-info .bday i.bxs-calendar {
+  color: #c17ceb;
+}
+.hero-bg .wrapper-background .personal-info .bday div a h2:hover {
   color: #c17ceb;
 }
 
@@ -873,14 +836,14 @@ body p {
   color: #b83286;
 }
 .wrapper-background .contact-form form .msg:focus {
-  border-color: #dd0031;
+  border-color: #dfc907;
   transition: 0.3s;
 }
 .wrapper-background .contact-form form .msg:focus::-moz-placeholder {
-  color: #dd0031;
+  color: #dfc907;
 }
 .wrapper-background .contact-form form .msg:focus::placeholder {
-  color: #dd0031;
+  color: #dfc907;
 }
 .wrapper-background .contact-form form .submit-btn {
   background-image: linear-gradient(to right, #dd2575 0%, #f7595c 51%, #dd2575 100%);
@@ -1079,7 +1042,7 @@ body p {
     font-size: 1.5rem;
   }
   .hero-bg {
-    padding: 2.5rem 0rem 5rem;
+    padding: 1.5rem 0rem 5rem;
   }
   .hero-wrapper .profile-wrapper .hero-img img {
     width: 220px;
